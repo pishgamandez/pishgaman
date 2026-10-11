@@ -13,6 +13,9 @@ import { FloatingAssistant } from './components/FloatingAssistant';
 import { FloatingContactButtons } from './components/FloatingContactButtons';
 import { Footer } from './components/Footer';
 import { ArticlesPage } from './components/ArticlesPage';
+import { ArticleDetailPage } from './components/ArticleDetailPage';
+import { articlesData } from './data/articles';
+import { Article } from './types';
 import { ShieldCheck, Award, Zap, Truck } from 'lucide-react';
 import { companyInfo } from './data/company';
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
@@ -61,18 +64,113 @@ function MainApp() {
   const [activeSection, setActiveSection] = useState('hero');
   const [consultPrefilledProduct, setConsultPrefilledProduct] = useState<string>('');
 
-  const handleNavigate = (sectionId: string) => {
-    setActiveSection(sectionId);
-    if (sectionId === 'articles') {
+  // Standalone URL and routing states
+  const [currentView, setCurrentView] = useState<'home' | 'articles-index' | 'article-detail'>('home');
+  const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
+
+  const isGhPages = typeof window !== 'undefined' && window.location.pathname.startsWith('/pishgaman');
+  const basePath = isGhPages ? '/pishgaman' : '';
+
+  // Synchronize route from browser URL
+  useEffect(() => {
+    const syncRouteFromPath = () => {
+      if (typeof window === 'undefined') return;
+      const path = window.location.pathname;
+
+      // 1. Check article detail match: e.g. /articles/:slug or /pishgaman/articles/:slug
+      const matchDetail = path.match(/(?:^|\/)(?:en\/|ar\/)?articles\/([a-zA-Z0-9_-]+)\/?$/);
+      if (matchDetail && matchDetail[1]) {
+        const slug = matchDetail[1];
+        const found = articlesData.find(a => a.slug === slug || a.aliases?.includes(slug) || a.id === slug);
+        if (found) {
+          setCurrentArticle(found);
+          setCurrentView('article-detail');
+          setActiveSection('articles');
+          return;
+        }
+      }
+
+      // 2. Check articles index: /articles/ or /pishgaman/articles/
+      if (/(?:^|\/)(?:en\/|ar\/)?articles\/?$/.test(path)) {
+        setCurrentArticle(null);
+        setCurrentView('articles-index');
+        setActiveSection('articles');
+        return;
+      }
+
+      // 3. Fallback to homepage
+      setCurrentArticle(null);
+      setCurrentView('home');
+    };
+
+    syncRouteFromPath();
+    window.addEventListener('popstate', syncRouteFromPath);
+    return () => window.removeEventListener('popstate', syncRouteFromPath);
+  }, []);
+
+  const handleNavigateToArticle = (slug: string) => {
+    const found = articlesData.find(a => a.slug === slug || a.aliases?.includes(slug) || a.id === slug);
+    if (found) {
+      const url = language === 'en'
+        ? `${basePath}/en/articles/${found.slug}/`
+        : language === 'ar'
+        ? `${basePath}/ar/articles/${found.slug}/`
+        : `${basePath}/articles/${found.slug}/`;
+
+      try {
+        window.history.pushState(null, '', url);
+      } catch {}
+
+      setCurrentArticle(found);
+      setCurrentView('article-detail');
+      setActiveSection('articles');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavigateToArticlesIndex = () => {
+    const url = language === 'en'
+      ? `${basePath}/en/articles/`
+      : language === 'ar'
+      ? `${basePath}/ar/articles/`
+      : `${basePath}/articles/`;
+
+    try {
+      window.history.pushState(null, '', url);
+    } catch {}
+
+    setCurrentArticle(null);
+    setCurrentView('articles-index');
+    setActiveSection('articles');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavigateToHome = (sectionId: string = 'hero') => {
+    const url = `${basePath}/`;
+    try {
+      window.history.pushState(null, '', url);
+    } catch {}
+
+    setCurrentArticle(null);
+    setCurrentView('home');
+    setActiveSection(sectionId);
+
+    if (sectionId === 'hero') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
+  };
+
+  const handleNavigate = (sectionId: string) => {
+    if (sectionId === 'articles') {
+      handleNavigateToArticlesIndex();
       return;
     }
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    handleNavigateToHome(sectionId);
   };
 
   const handleOpenConsultForProduct = (productName: string) => {
@@ -92,19 +190,36 @@ function MainApp() {
         setSearchQuery={setSearchQuery}
       />
 
-      {activeSection === 'articles' ? (
-        /* Dedicated Scientific & Trending Articles Tab View */
+      {currentView === 'article-detail' && currentArticle ? (
+        /* Standalone Dedicated Article Page (No Modal) */
         <main className="flex-1">
-          <ArticlesPage
-            onBackToHome={() => handleNavigate('hero')}
+          <ArticleDetailPage
+            article={currentArticle}
+            allArticles={articlesData}
+            products={products}
+            onBackToArticles={handleNavigateToArticlesIndex}
+            onNavigateToArticle={handleNavigateToArticle}
             onSelectProductByName={(name) => {
               const found = products.find(p => p.nameFa.includes(name) || name.includes(p.nameFa) || p.nameEn.toLowerCase().includes(name.toLowerCase()));
               if (found) setSelectedProduct(found);
             }}
+            onOpenConsult={() => handleNavigateToHome('consult')}
+          />
+        </main>
+      ) : currentView === 'articles-index' ? (
+        /* Dedicated Scientific & Regional Articles Index Tab View */
+        <main className="flex-1">
+          <ArticlesPage
+            onBackToHome={() => handleNavigateToHome('hero')}
+            onSelectProductByName={(name) => {
+              const found = products.find(p => p.nameFa.includes(name) || name.includes(p.nameFa) || p.nameEn.toLowerCase().includes(name.toLowerCase()));
+              if (found) setSelectedProduct(found);
+            }}
+            onSelectArticle={(art) => handleNavigateToArticle(art.slug)}
           />
         </main>
       ) : (
-        /* Home Main View */
+        /* Home Main View - 100% Untouched */
         <main className="flex-1">
           {/* 2. Hero Section with Real Farm Wheat Field Background */}
           <section id="hero">

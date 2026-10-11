@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Main Homepages & Trilingual Versions -->
+  <!-- 1. Homepages -->
   <url>
     <loc>https://pishgamandez.github.io/pishgaman/</loc>
     <lastmod>2026-10-11</lastmod>
@@ -9,201 +9,759 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/?lang=en" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/" />
   </url>
-
-  <!-- Agronomic Nutrition Articles Section (Trending Agricultural Topics) -->
   <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles</loc>
+    <loc>https://pishgamandez.github.io/pishgaman/?lang=en</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/" />
+  </url>
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/?lang=ar</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/" />
+  </url>
+
+  <!-- 2. Articles Index Pages -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/" />
+  </url>
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/" />
+  </url>
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/" />
   </url>
 
-  <!-- 10 High-Authority Trending Agronomic Articles -->
+  <!-- Article: heat-drought-stress (FA) -->
   <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/amino-acids-heat-stress-crops</loc>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/heat-drought-stress/</loc>
     <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/seaweed-extract-root-vigor-cold-tolerance</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/high-potassium-fertigation-fruit-sizing-brix</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/liquid-sulfur-soil-desalination-mildew-prevention</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/calcium-boron-synergy-blossom-end-rot</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/salinity-stress-pishgaman-solutions</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/humic-acid-soil-conditioning-yield</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/iron-deficiency-chlorosis-remediation</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/pollination-fruit-set-enhancement</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#articles/soil-ph-ec-management-guide</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <!-- Products Section -->
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#products</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/heat-drought-stress/" />
   </url>
 
-  <!-- 16 Strategic Flagship Products -->
+  <!-- Article: heat-drought-stress (EN) -->
   <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-challenger</loc>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/heat-drought-stress/</loc>
     <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-humifarm</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-jumper</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-full-charger</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-red-full</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-doping</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-siligard</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-stormy</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-fiction</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-top-star</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-tiger-k</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-tiger-p</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-sulmax</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-salt-stop</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-angela</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#product-ph-best</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/heat-drought-stress/" />
   </url>
 
-  <!-- Technical Sections -->
+  <!-- Article: heat-drought-stress (AR) -->
   <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#guide</loc>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/heat-drought-stress/</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/heat-drought-stress/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/heat-drought-stress/" />
   </url>
+  <!-- Article: seaweed-extract (FA) -->
   <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#consultation</loc>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/seaweed-extract/</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/seaweed-extract/" />
   </url>
+
+  <!-- Article: seaweed-extract (EN) -->
   <url>
-    <loc>https://pishgamandez.github.io/pishgaman/#about</loc>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/seaweed-extract/</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/seaweed-extract/" />
+  </url>
+
+  <!-- Article: seaweed-extract (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/seaweed-extract/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/seaweed-extract/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/seaweed-extract/" />
+  </url>
+  <!-- Article: potassium-fertigation (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/potassium-fertigation/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/potassium-fertigation/" />
+  </url>
+
+  <!-- Article: potassium-fertigation (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/potassium-fertigation/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/potassium-fertigation/" />
+  </url>
+
+  <!-- Article: potassium-fertigation (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/potassium-fertigation/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/potassium-fertigation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/potassium-fertigation/" />
+  </url>
+  <!-- Article: liquid-sulfur (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/liquid-sulfur/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/liquid-sulfur/" />
+  </url>
+
+  <!-- Article: liquid-sulfur (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/liquid-sulfur/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/liquid-sulfur/" />
+  </url>
+
+  <!-- Article: liquid-sulfur (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/liquid-sulfur/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/liquid-sulfur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/liquid-sulfur/" />
+  </url>
+  <!-- Article: calcium-boron (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/calcium-boron/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/calcium-boron/" />
+  </url>
+
+  <!-- Article: calcium-boron (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/calcium-boron/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/calcium-boron/" />
+  </url>
+
+  <!-- Article: calcium-boron (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/calcium-boron/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/calcium-boron/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/calcium-boron/" />
+  </url>
+  <!-- Article: soil-salinity-management (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/soil-salinity-management/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/soil-salinity-management/" />
+  </url>
+
+  <!-- Article: soil-salinity-management (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/soil-salinity-management/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/soil-salinity-management/" />
+  </url>
+
+  <!-- Article: soil-salinity-management (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/soil-salinity-management/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/soil-salinity-management/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/soil-salinity-management/" />
+  </url>
+  <!-- Article: humic-fulvic-root-development (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/humic-fulvic-root-development/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/humic-fulvic-root-development/" />
+  </url>
+
+  <!-- Article: humic-fulvic-root-development (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/humic-fulvic-root-development/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/humic-fulvic-root-development/" />
+  </url>
+
+  <!-- Article: humic-fulvic-root-development (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/humic-fulvic-root-development/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/humic-fulvic-root-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/humic-fulvic-root-development/" />
+  </url>
+  <!-- Article: iron-eddha-chlorosis (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/iron-eddha-chlorosis/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/iron-eddha-chlorosis/" />
+  </url>
+
+  <!-- Article: iron-eddha-chlorosis (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/iron-eddha-chlorosis/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/iron-eddha-chlorosis/" />
+  </url>
+
+  <!-- Article: iron-eddha-chlorosis (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/iron-eddha-chlorosis/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/iron-eddha-chlorosis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/iron-eddha-chlorosis/" />
+  </url>
+  <!-- Article: zinc-boron-fruit-setting (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/zinc-boron-fruit-setting/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/zinc-boron-fruit-setting/" />
+  </url>
+
+  <!-- Article: zinc-boron-fruit-setting (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/zinc-boron-fruit-setting/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/zinc-boron-fruit-setting/" />
+  </url>
+
+  <!-- Article: zinc-boron-fruit-setting (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/zinc-boron-fruit-setting/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/zinc-boron-fruit-setting/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/zinc-boron-fruit-setting/" />
+  </url>
+  <!-- Article: spray-water-ph-conditioning (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/spray-water-ph-conditioning/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/spray-water-ph-conditioning/" />
+  </url>
+
+  <!-- Article: spray-water-ph-conditioning (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/spray-water-ph-conditioning/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/spray-water-ph-conditioning/" />
+  </url>
+
+  <!-- Article: spray-water-ph-conditioning (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/spray-water-ph-conditioning/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/spray-water-ph-conditioning/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/spray-water-ph-conditioning/" />
+  </url>
+  <!-- Article: salinity-remediation-pistachio-rafsanjan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/salinity-remediation-pistachio-rafsanjan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/salinity-remediation-pistachio-rafsanjan/" />
+  </url>
+
+  <!-- Article: salinity-remediation-pistachio-rafsanjan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/salinity-remediation-pistachio-rafsanjan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/salinity-remediation-pistachio-rafsanjan/" />
+  </url>
+
+  <!-- Article: salinity-remediation-pistachio-rafsanjan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/salinity-remediation-pistachio-rafsanjan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/salinity-remediation-pistachio-rafsanjan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/salinity-remediation-pistachio-rafsanjan/" />
+  </url>
+  <!-- Article: wheat-topdressing-fars (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/wheat-topdressing-fars/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/wheat-topdressing-fars/" />
+  </url>
+
+  <!-- Article: wheat-topdressing-fars (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/wheat-topdressing-fars/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/wheat-topdressing-fars/" />
+  </url>
+
+  <!-- Article: wheat-topdressing-fars (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/wheat-topdressing-fars/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/wheat-topdressing-fars/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/wheat-topdressing-fars/" />
+  </url>
+  <!-- Article: rice-fertilization-guilan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/rice-fertilization-guilan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/rice-fertilization-guilan/" />
+  </url>
+
+  <!-- Article: rice-fertilization-guilan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/rice-fertilization-guilan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/rice-fertilization-guilan/" />
+  </url>
+
+  <!-- Article: rice-fertilization-guilan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/rice-fertilization-guilan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/rice-fertilization-guilan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/rice-fertilization-guilan/" />
+  </url>
+  <!-- Article: citrus-winter-nutrition-mazandaran (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/citrus-winter-nutrition-mazandaran/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/citrus-winter-nutrition-mazandaran/" />
+  </url>
+
+  <!-- Article: citrus-winter-nutrition-mazandaran (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/citrus-winter-nutrition-mazandaran/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/citrus-winter-nutrition-mazandaran/" />
+  </url>
+
+  <!-- Article: citrus-winter-nutrition-mazandaran (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/citrus-winter-nutrition-mazandaran/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/citrus-winter-nutrition-mazandaran/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/citrus-winter-nutrition-mazandaran/" />
+  </url>
+  <!-- Article: apple-alternate-bearing-azerbaijan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/apple-alternate-bearing-azerbaijan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/apple-alternate-bearing-azerbaijan/" />
+  </url>
+
+  <!-- Article: apple-alternate-bearing-azerbaijan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/apple-alternate-bearing-azerbaijan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/apple-alternate-bearing-azerbaijan/" />
+  </url>
+
+  <!-- Article: apple-alternate-bearing-azerbaijan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/apple-alternate-bearing-azerbaijan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/apple-alternate-bearing-azerbaijan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/apple-alternate-bearing-azerbaijan/" />
+  </url>
+  <!-- Article: saffron-nutrition-khorasan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/saffron-nutrition-khorasan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/saffron-nutrition-khorasan/" />
+  </url>
+
+  <!-- Article: saffron-nutrition-khorasan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/saffron-nutrition-khorasan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/saffron-nutrition-khorasan/" />
+  </url>
+
+  <!-- Article: saffron-nutrition-khorasan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/saffron-nutrition-khorasan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/saffron-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/saffron-nutrition-khorasan/" />
+  </url>
+  <!-- Article: date-palm-chlorosis-khuzestan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/date-palm-chlorosis-khuzestan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/date-palm-chlorosis-khuzestan/" />
+  </url>
+
+  <!-- Article: date-palm-chlorosis-khuzestan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/date-palm-chlorosis-khuzestan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/date-palm-chlorosis-khuzestan/" />
+  </url>
+
+  <!-- Article: date-palm-chlorosis-khuzestan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/date-palm-chlorosis-khuzestan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/date-palm-chlorosis-khuzestan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/date-palm-chlorosis-khuzestan/" />
+  </url>
+  <!-- Article: sugar-beet-nutrition-khorasan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/sugar-beet-nutrition-khorasan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/sugar-beet-nutrition-khorasan/" />
+  </url>
+
+  <!-- Article: sugar-beet-nutrition-khorasan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/sugar-beet-nutrition-khorasan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/sugar-beet-nutrition-khorasan/" />
+  </url>
+
+  <!-- Article: sugar-beet-nutrition-khorasan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/sugar-beet-nutrition-khorasan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/sugar-beet-nutrition-khorasan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/sugar-beet-nutrition-khorasan/" />
+  </url>
+  <!-- Article: cotton-boll-retention-golestan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/cotton-boll-retention-golestan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/cotton-boll-retention-golestan/" />
+  </url>
+
+  <!-- Article: cotton-boll-retention-golestan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/cotton-boll-retention-golestan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/cotton-boll-retention-golestan/" />
+  </url>
+
+  <!-- Article: cotton-boll-retention-golestan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/cotton-boll-retention-golestan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/cotton-boll-retention-golestan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/cotton-boll-retention-golestan/" />
+  </url>
+  <!-- Article: vegetable-salinity-stress-isfahan (FA) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/articles/vegetable-salinity-stress-isfahan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/vegetable-salinity-stress-isfahan/" />
+  </url>
+
+  <!-- Article: vegetable-salinity-stress-isfahan (EN) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/en/articles/vegetable-salinity-stress-isfahan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/vegetable-salinity-stress-isfahan/" />
+  </url>
+
+  <!-- Article: vegetable-salinity-stress-isfahan (AR) -->
+  <url>
+    <loc>https://pishgamandez.github.io/pishgaman/ar/articles/vegetable-salinity-stress-isfahan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://pishgamandez.github.io/pishgaman/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pishgamandez.github.io/pishgaman/en/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pishgamandez.github.io/pishgaman/ar/articles/vegetable-salinity-stress-isfahan/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pishgamandez.github.io/pishgaman/articles/vegetable-salinity-stress-isfahan/" />
   </url>
 </urlset>

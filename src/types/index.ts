@@ -66,27 +66,54 @@ export interface ArticleContentSection {
   text: string;
 }
 
+export interface ArticleFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface ArticleDosageRow {
+  stage: string;
+  crop: string;
+  rate: string;
+  timing: string;
+}
+
 export interface ArticleContent {
   title: string;
   category: string;
   readTime: string;
   date: string;
+  lastModified?: string;
   author: string;
   summary: string;
   abstract: string;
+  metaDescription?: string;
+  targetKeyword?: string;
   contentSections: ArticleContentSection[];
+  dosageTable?: ArticleDosageRow[];
+  faqs?: ArticleFaqItem[];
   references: string[];
   relatedProducts: string[];
+  relatedArticles?: string[];
 }
 
 export interface Article {
   id: string;
   slug: string;
+  aliases?: string[];
   imageUrl: string;
   googleTrendKeyword?: {
     fa: string;
     en: string;
     ar: string;
+  };
+  region?: {
+    provinceFa: string;
+    cropFa: string;
+    provinceEn?: string;
+    cropEn?: string;
+    provinceAr?: string;
+    cropAr?: string;
   };
   fa: ArticleContent;
   en: ArticleContent;

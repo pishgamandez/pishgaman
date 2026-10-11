@@ -1,4 +1,5 @@
 import { Article } from '../types';
+import { regionalArticlesData } from './regionalArticles';
 
 import imgAmino from '../assets/images/amino_stress_crop_1791738546562.jpg';
 import imgSeaweed from '../assets/images/seaweed_bio_crop_1791738561930.jpg';
@@ -9,11 +10,12 @@ import imgLab from '../assets/images/agri_research_lab_1791480948724.jpg';
 import imgGoldenWheat from '../assets/images/golden_wheat_field_1791481535252.jpg';
 import imgWheatField from '../assets/images/hero_wheat_field_1791480930784.jpg';
 
-export const articlesData: Article[] = [
+export const baseArticlesData: Article[] = [
   // --- 1. Google Trend #1: Amino Acids & Biostimulants ---
   {
-    id: 'amino-acids-heat-stress',
-    slug: 'amino-acids-heat-stress',
+    id: 'heat-drought-stress',
+    slug: 'heat-drought-stress',
+    aliases: ['amino-acids-heat-stress'],
     imageUrl: imgAmino,
     googleTrendKeyword: {
       fa: 'آمینواسید کشاورزی، تنش گرمایی و خشکی تابستان',
@@ -123,8 +125,9 @@ export const articlesData: Article[] = [
 
   // --- 2. Google Trend #2: Seaweed Extract & Natural Phytohormones ---
   {
-    id: 'seaweed-extract-phytohormones',
-    slug: 'seaweed-extract-phytohormones',
+    id: 'seaweed-extract',
+    slug: 'seaweed-extract',
+    aliases: ['seaweed-extract-phytohormones'],
     imageUrl: imgSeaweed,
     googleTrendKeyword: {
       fa: 'عصاره جلبک دریایی، هورمون سیتوکینین و افزایش تناژ',
@@ -222,8 +225,9 @@ export const articlesData: Article[] = [
 
   // --- 3. Google Trend #3: Liquid Potassium & Fruit Sizing ---
   {
-    id: 'liquid-potassium-fruit-sizing',
-    slug: 'liquid-potassium-fruit-sizing',
+    id: 'potassium-fertigation',
+    slug: 'potassium-fertigation',
+    aliases: ['liquid-potassium-fruit-sizing'],
     imageUrl: imgPotassium,
     googleTrendKeyword: {
       fa: 'پتاس بالا، درشت شدن میوه، قند و بریکس، جلوگیری از ترکیدگی',
@@ -321,8 +325,9 @@ export const articlesData: Article[] = [
 
   // --- 4. Google Trend #4: Liquid Sulfur in Soil Conditioning & Disease Prevention ---
   {
-    id: 'liquid-sulfur-soil-ph',
-    slug: 'liquid-sulfur-soil-ph',
+    id: 'liquid-sulfur',
+    slug: 'liquid-sulfur',
+    aliases: ['liquid-sulfur-soil-ph'],
     imageUrl: imgSulfur,
     googleTrendKeyword: {
       fa: 'گوگرد مایع، کاهش pH خاک قلیایی، کنترل قارچ و سفیدک',
@@ -420,8 +425,9 @@ export const articlesData: Article[] = [
 
   // --- 5. Google Trend #5: Calcium-Boron & Blossom End Rot ---
   {
-    id: 'calcium-boron-blossom-end-rot',
-    slug: 'calcium-boron-blossom-end-rot',
+    id: 'calcium-boron',
+    slug: 'calcium-boron',
+    aliases: ['calcium-boron-blossom-end-rot'],
     imageUrl: imgCalciumBoron,
     googleTrendKeyword: {
       fa: 'پوسیدگی گلگاه گوجه فرنگی، کلسیم بور، سفتی پوست میوه',
@@ -1024,3 +1030,9 @@ export const articlesData: Article[] = [
     }
   }
 ];
+
+export const articlesData: Article[] = [
+  ...baseArticlesData,
+  ...regionalArticlesData
+];
+
