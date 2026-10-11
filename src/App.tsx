@@ -13,10 +13,13 @@ import { FloatingAssistant } from './components/FloatingAssistant';
 import { FloatingContactButtons } from './components/FloatingContactButtons';
 import { Footer } from './components/Footer';
 import { ArticlesPage } from './components/ArticlesPage';
-import { ShieldCheck, Award, Zap, Truck, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Award, Zap, Truck } from 'lucide-react';
 import { companyInfo } from './data/company';
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
 
-export default function App() {
+function MainApp() {
+  const { language, t, isRtl } = useLanguage();
+
   const [products, setProducts] = useState<Product[]>(() => {
     try {
       const saved = localStorage.getItem('pishgaman_custom_products');
@@ -78,7 +81,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-800 flex flex-col font-sans selection:bg-emerald-200 selection:text-emerald-950">
+    <div className={`min-h-screen bg-stone-50 text-stone-800 flex flex-col font-sans selection:bg-emerald-200 selection:text-emerald-950 ${isRtl ? 'dir-rtl' : 'dir-ltr'}`}>
       
       {/* 1. Header (Sticky) */}
       <Header
@@ -90,12 +93,12 @@ export default function App() {
       />
 
       {activeSection === 'articles' ? (
-        /* Dedicated Scientific Articles Tab View (As requested: not on home page) */
+        /* Dedicated Scientific & Trending Articles Tab View */
         <main className="flex-1">
           <ArticlesPage
             onBackToHome={() => handleNavigate('hero')}
             onSelectProductByName={(name) => {
-              const found = products.find(p => p.nameFa.includes(name) || name.includes(p.nameFa));
+              const found = products.find(p => p.nameFa.includes(name) || name.includes(p.nameFa) || p.nameEn.toLowerCase().includes(name.toLowerCase()));
               if (found) setSelectedProduct(found);
             }}
           />
@@ -111,17 +114,21 @@ export default function App() {
             />
           </section>
 
-          {/* Corporate Trust Strip (Bayer-style Quality Standard) */}
+          {/* Corporate Trust Strip */}
           <div className="bg-white border-y border-stone-200 py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-right">
+              <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 ${isRtl ? 'text-right' : 'text-left'}`}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">آنالیز کیفی معتبر</h4>
-                    <p className="text-[11px] text-stone-500">کنترل پیوسته عناصر و خلوص ۱۰۰٪</p>
+                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">
+                      {language === 'en' ? 'Verified Quality Analysis' : language === 'ar' ? 'تحليل جودة معتمد' : 'آنالیز کیفی معتبر'}
+                    </h4>
+                    <p className="text-[11px] text-stone-500">
+                      {language === 'en' ? 'Continuous assay testing & 100% purity' : language === 'ar' ? 'رقابة مستمرة ونقاوة ١٠٠٪' : 'کنترل پیوسته عناصر و خلوص ۱۰۰٪'}
+                    </p>
                   </div>
                 </div>
 
@@ -130,8 +137,12 @@ export default function App() {
                     <Zap className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">فرمولاسیون اختصاصی</h4>
-                    <p className="text-[11px] text-stone-500">سازگار با اقلیم و خاک‌های شور ایران</p>
+                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">
+                      {language === 'en' ? 'Custom Formulations' : language === 'ar' ? 'تركيبات خاصة' : 'فرمولاسیون اختصاصی'}
+                    </h4>
+                    <p className="text-[11px] text-stone-500">
+                      {language === 'en' ? 'Engineered for arid and saline soils' : language === 'ar' ? 'ملائمة لأراضي الشرق الأوسط' : 'سازگار با اقلیم و خاک‌های شور کشور'}
+                    </p>
                   </div>
                 </div>
 
@@ -140,8 +151,12 @@ export default function App() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">نظارت علمی مستقیم</h4>
-                    <p className="text-[11px] text-stone-500">تیم تخصصی به مدیریت {companyInfo.manager}</p>
+                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">
+                      {language === 'en' ? 'Direct Scientific Oversight' : language === 'ar' ? 'إشراف علمي مباشر' : 'نظارت علمی مستقیم'}
+                    </h4>
+                    <p className="text-[11px] text-stone-500">
+                      {language === 'en' ? `Under guidance of ${t.managerName}` : language === 'ar' ? `بإشراف ${t.managerName}` : `تیم تخصصی به مدیریت ${companyInfo.manager}`}
+                    </p>
                   </div>
                 </div>
 
@@ -150,8 +165,12 @@ export default function App() {
                     <Truck className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">ارسال به سراسر کشور</h4>
-                    <p className="text-[11px] text-stone-500">توزیع سریع در تمامی استان‌ها و نمایندگی‌ها</p>
+                    <h4 className="font-bold text-xs sm:text-sm text-stone-900">
+                      {language === 'en' ? 'Prompt Dispatch' : language === 'ar' ? 'شحن فوري' : 'ارسال به سراسر کشور'}
+                    </h4>
+                    <p className="text-[11px] text-stone-500">
+                      {language === 'en' ? 'Fast nationwide delivery to all regions' : language === 'ar' ? 'توصيل سريع لجميع المحافظات' : 'توزیع سریع در تمامی استان‌ها و نمایندگی‌ها'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -226,9 +245,17 @@ export default function App() {
         onOpenChange={setIsAssistantOpen}
       />
 
-      {/* Floating Contact Buttons (Phone & WhatsApp) - automatically hidden when chat is open to prevent UI overlap on mobile */}
+      {/* Floating Contact Buttons (Phone & WhatsApp) */}
       {!isAssistantOpen && <FloatingContactButtons />}
 
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <MainApp />
+    </LanguageProvider>
   );
 }

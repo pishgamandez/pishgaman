@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Product, ProductCategory } from '../types';
 import { ProductPackageIllustration } from './ProductPackageIllustration';
-import { ArrowLeft, Check, Sparkles, Filter, Phone, Eye } from 'lucide-react';
-import { companyInfo } from '../data/company';
+import { ArrowLeft, ArrowRight, Sparkles, Eye, Check } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface ProductTabsProps {
   products: Product[];
@@ -15,29 +15,30 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
   onSelectProduct,
   searchQuery
 }) => {
+  const { language, t, isRtl } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory>('all');
   const [selectedProductId, setSelectedProductId] = useState<string>('all');
 
   const categories: { id: ProductCategory; label: string; count: number }[] = [
-    { id: 'all', label: 'همه محصولات (۱۶)', count: products.length },
+    { id: 'all', label: `${t.catAll} (${products.length})`, count: products.length },
     {
       id: 'soil-conditioner',
-      label: 'ضد شوری و اصلاح خاک',
+      label: t.catSoilConditioner,
       count: products.filter(p => p.category === 'soil-conditioner').length
     },
     {
       id: 'humic-organic',
-      label: 'هیومیک و مواد آلی',
+      label: t.catHumicOrganic,
       count: products.filter(p => p.category === 'humic-organic').length
     },
     {
       id: 'stimulant',
-      label: 'محرک رشد و ضد تنش',
+      label: t.catStimulant,
       count: products.filter(p => p.category === 'stimulant').length
     },
     {
       id: 'nutrition-gel',
-      label: 'ژل‌های تغذیه و ریزمغذی',
+      label: t.catNutritionGel,
       count: products.filter(p => p.category === 'nutrition-gel').length
     }
   ];
@@ -57,9 +58,10 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
         const q = searchQuery.toLowerCase();
         const matchesFa = product.nameFa.toLowerCase().includes(q);
         const matchesEn = product.nameEn.toLowerCase().includes(q);
+        const matchesAr = product.nameAr ? product.nameAr.toLowerCase().includes(q) : false;
         const matchesDesc = product.description.toLowerCase().includes(q);
         const matchesTag = product.tagline.toLowerCase().includes(q);
-        return matchesFa || matchesEn || matchesDesc || matchesTag;
+        return matchesFa || matchesEn || matchesAr || matchesDesc || matchesTag;
       }
       return true;
     });
@@ -73,15 +75,23 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-            <span>سبد جامع ۱۶ محصولی پرواز نهاده</span>
+            <span>{t.products16}</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight">
-            کاتالوگ تخصصی محصولات پیشگامان فلات نیک
+            {language === 'en'
+              ? 'Pishgaman Falat Nik Specialized Product Catalog'
+              : language === 'ar'
+              ? 'كتالوج منتجات بيشغامان فلات نيك التخصصية'
+              : 'کاتالوگ تخصصی محصولات پیشگامان فلات نیک'}
           </h2>
 
           <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-light">
-            فرموله‌شده با آخرین تکنولوژی‌های زراعی جهت برطرف‌سازی کمبودهای فیزیولوژیک، شکستن سختی و شوری خاک و تضمین باروری مزارع و باغات.
+            {language === 'en'
+              ? 'Engineered with advanced agronomic technology to remediate physiological deficits, correct soil salinity, and elevate crop yields.'
+              : language === 'ar'
+              ? 'مُصنعة بأحدث التقنيات الزراعية لمعالجة النقص الفسيولوجي وكسر ملوحة التربة وتأمين إنتاجية البساتين والمحاصيل.'
+              : 'فرموله‌شده با آخرین تکنولوژی‌های زراعی جهت برطرف‌سازی کمبودهای فیزیولوژیک، شکستن سختی و شوری خاک و تضمین باروری مزارع و باغات.'}
           </p>
         </div>
 
@@ -112,7 +122,7 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
           ))}
         </div>
 
-        {/* 2. Horizontal 16-Product Quick Tabs (Requested in roadmap 1.2) */}
+        {/* 2. Horizontal 16-Product Quick Tabs */}
         <div className="bg-white rounded-2xl p-3 border border-stone-200/80 shadow-xs mb-10 overflow-x-auto no-scrollbar">
           <div className="flex items-center gap-2 min-w-max">
             <button
@@ -123,34 +133,38 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
                   : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
               }`}
             >
-              نمایش همه
+              {language === 'en' ? 'Show All' : language === 'ar' ? 'عرض الكل' : 'نمایش همه'}
             </button>
-            {products.map(p => (
-              <button
-                key={p.id}
-                onClick={() => {
-                  setSelectedProductId(p.id);
-                  if (selectedCategory !== 'all' && p.category !== selectedCategory) {
-                    setSelectedCategory('all');
-                  }
-                }}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 ${
-                  selectedProductId === p.id
-                    ? 'bg-emerald-700 text-white shadow-sm'
-                    : 'bg-stone-50 text-stone-700 hover:bg-emerald-50 hover:text-emerald-800 border border-stone-200/60'
-                }`}
-              >
-                <span className="font-bold">{p.nameFa}</span>
-                <span className="font-mono text-[10px] opacity-75 uppercase">{p.nameEn}</span>
-              </button>
-            ))}
+            {products.map(p => {
+              const displayName = language === 'en' ? p.nameEn : p.nameFa;
+              const subName = language === 'en' ? p.nameFa : p.nameEn;
+              return (
+                <button
+                  key={p.id}
+                  onClick={() => {
+                    setSelectedProductId(p.id);
+                    if (selectedCategory !== 'all' && p.category !== selectedCategory) {
+                      setSelectedCategory('all');
+                    }
+                  }}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 ${
+                    selectedProductId === p.id
+                      ? 'bg-emerald-700 text-white shadow-sm'
+                      : 'bg-stone-50 text-stone-700 hover:bg-emerald-50 hover:text-emerald-800 border border-stone-200/60'
+                  }`}
+                >
+                  <span className="font-bold">{displayName}</span>
+                  <span className="font-mono text-[10px] opacity-75 uppercase">{subName}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
         {/* 3. Products Grid */}
         {filteredProducts.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-3xl border border-stone-200 p-8">
-            <p className="text-stone-500 text-sm">هیچ محصولی با معیارهای جستجوی شما یافت نشد.</p>
+            <p className="text-stone-500 text-sm">{t.noProductsFound}</p>
             <button
               onClick={() => {
                 setSelectedCategory('all');
@@ -158,83 +172,85 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
               }}
               className="mt-4 px-4 py-2 bg-emerald-700 text-white text-xs font-bold rounded-lg cursor-pointer"
             >
-              نمایش مجدد همه محصولات
+              {t.allProducts}
             </button>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map(product => (
-              <div
-                key={product.id}
-                className="bg-white rounded-3xl border border-stone-200 hover:border-emerald-500/50 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group text-right"
-              >
-                {/* Visual Packaging Illustration */}
-                <div className="p-4 pb-0">
-                  <ProductPackageIllustration product={product} size="md" />
-                </div>
+            {filteredProducts.map(product => {
+              const displayName = language === 'en' ? product.nameEn : product.nameFa;
+              const subName = language === 'en' ? product.nameFa : product.nameEn;
 
-                {/* Card Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  {/* Category & Appearance Badge */}
-                  <div className="space-y-1">
-                    <div className="flex items-center justify-between text-[11px] text-stone-500">
-                      <span className="font-bold text-emerald-700">{product.categoryTitle}</span>
-                      <span className="font-mono bg-stone-100 px-2 py-0.5 rounded text-[10px] text-stone-600">
-                        {product.appearance}
-                      </span>
+              return (
+                <div
+                  key={product.id}
+                  className={`bg-white rounded-3xl border border-stone-200 hover:border-emerald-500/50 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group ${
+                    isRtl ? 'text-right' : 'text-left'
+                  }`}
+                >
+                  {/* Visual Packaging Illustration */}
+                  <div className="p-4 pb-0">
+                    <ProductPackageIllustration product={product} size="md" />
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    {/* Category & Appearance Badge */}
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between text-[11px] text-stone-500">
+                        <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                          {product.categoryTitle}
+                        </span>
+                        {product.appearance && (
+                          <span className="text-stone-400 truncate max-w-[120px]">{product.appearance}</span>
+                        )}
+                      </div>
+
+                      <div className="pt-2">
+                        <h3 className="text-xl font-black text-stone-900 group-hover:text-emerald-700 transition-colors">
+                          {displayName}
+                        </h3>
+                        <span className="text-[11px] font-mono tracking-wider text-stone-400 block uppercase">
+                          {subName}
+                        </span>
+                      </div>
                     </div>
 
-                    <h3 className="text-xl font-black text-stone-900 group-hover:text-emerald-700 transition-colors pt-1">
-                      {product.nameFa}
-                      <span className="text-xs font-mono text-stone-400 font-semibold mr-2 uppercase">
-                        {product.nameEn}
-                      </span>
-                    </h3>
-
+                    {/* Tagline & Key Benefit */}
                     <p className="text-xs text-stone-600 line-clamp-2 leading-relaxed">
                       {product.tagline}
                     </p>
-                  </div>
 
-                  {/* Bullet Benefits preview */}
-                  <div className="space-y-1.5 border-t border-stone-100 pt-3 text-[11px] text-stone-600">
-                    {product.benefits.slice(0, 2).map((benefit, idx) => (
-                      <div key={idx} className="flex items-start gap-1.5 leading-snug">
-                        <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="line-clamp-1">{benefit}</span>
+                    {/* Benefits Preview */}
+                    {product.benefits && product.benefits.length > 0 && (
+                      <div className="bg-stone-50 rounded-xl p-2.5 border border-stone-100 text-[11px] text-stone-700 space-y-1">
+                        <div className="flex items-start gap-1.5">
+                          <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                          <span className="line-clamp-2">{product.benefits[0]}</span>
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                    )}
 
-                  {/* Dosage overview chip */}
-                  <div className="bg-stone-50 rounded-xl p-2.5 text-[11px] text-stone-600 flex items-center justify-between">
-                    <span className="text-stone-500">نحوه مصرف نمونه:</span>
-                    <span className="font-bold text-stone-800">
-                      {product.dosageTable[0]?.rate || 'در جدول کامل'}
-                    </span>
-                  </div>
+                    {/* Action Button */}
+                    <div className="pt-2">
+                      <button
+                        onClick={() => onSelectProduct(product)}
+                        className="w-full py-2.5 px-3 bg-stone-100 hover:bg-emerald-700 hover:text-white text-stone-800 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group/btn"
+                      >
+                        <Eye className="w-4 h-4 text-stone-500 group-hover/btn:text-white transition-colors" />
+                        <span>{t.viewProductDetails}</span>
+                        {isRtl ? (
+                          <ArrowLeft className="w-3.5 h-3.5 group-hover/btn:-translate-x-1 transition-transform" />
+                        ) : (
+                          <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                        )}
+                      </button>
+                    </div>
 
-                  {/* Card Action Buttons */}
-                  <div className="pt-1 flex items-center gap-2">
-                    <button
-                      onClick={() => onSelectProduct(product)}
-                      className="flex-1 py-2.5 px-3 bg-stone-900 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs active:scale-95"
-                    >
-                      <Eye className="w-3.5 h-3.5" />
-                      <span>جدول مصرف و جزئیات</span>
-                    </button>
-
-                    <a
-                      href={companyInfo.callUrl}
-                      className="p-2.5 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 rounded-xl transition-colors cursor-pointer"
-                      title={`خرید و استعلام ${product.nameFa} (09128247415)`}
-                    >
-                      <Phone className="w-4 h-4" />
-                    </a>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 

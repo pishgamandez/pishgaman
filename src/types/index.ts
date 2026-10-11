@@ -1,8 +1,10 @@
+export type Language = 'fa' | 'en' | 'ar';
+
 export interface DosageRate {
-  crop: string; // محصول (e.g. درختان میوه، سبزی و صیفی)
-  method: string; // نحوه مصرف (e.g. همراه آب آبیاری، محلول‌پاشی)
-  timing?: string; // زمان مصرف (e.g. قبل از جوانه‌زنی)
-  rate: string; // مقدار مصرف (e.g. ۳-۵ کیلوگرم در هکتار)
+  crop: string; // محصول
+  method: string; // نحوه مصرف
+  timing?: string; // زمان مصرف
+  rate: string; // مقدار مصرف
 }
 
 export type ProductCategory = 
@@ -17,17 +19,34 @@ export interface Product {
   slug: string;
   nameFa: string;
   nameEn: string;
+  nameAr?: string;
   category: ProductCategory;
   categoryTitle: string;
+  categoryTitleEn?: string;
+  categoryTitleAr?: string;
   tagline: string;
+  taglineEn?: string;
+  taglineAr?: string;
   description: string;
+  descriptionEn?: string;
+  descriptionAr?: string;
   benefits: string[];
+  benefitsEn?: string[];
+  benefitsAr?: string[];
   dosageTable: DosageRate[];
+  dosageTableEn?: DosageRate[];
+  dosageTableAr?: DosageRate[];
   specialNotes?: string;
   imageUrl?: string;
-  appearance?: string; // e.g. پودری، مایع غلیظ، ژل
-  packaging?: string;  // e.g. بطری ۱ لیتری، گالن ۵ لیتری، سطل ۱۰ کیلویی
+  appearance?: string;
+  appearanceEn?: string;
+  appearanceAr?: string;
+  packaging?: string;
+  packagingEn?: string;
+  packagingAr?: string;
   badge?: string;
+  badgeEn?: string;
+  badgeAr?: string;
 }
 
 export interface ConsultationInquiry {
@@ -40,4 +59,36 @@ export interface ConsultationInquiry {
   problem: string;
   createdAt: string;
   status: 'new' | 'contacted' | 'resolved';
+}
+
+export interface ArticleContentSection {
+  heading: string;
+  text: string;
+}
+
+export interface ArticleContent {
+  title: string;
+  category: string;
+  readTime: string;
+  date: string;
+  author: string;
+  summary: string;
+  abstract: string;
+  contentSections: ArticleContentSection[];
+  references: string[];
+  relatedProducts: string[];
+}
+
+export interface Article {
+  id: string;
+  slug: string;
+  imageUrl: string;
+  googleTrendKeyword?: {
+    fa: string;
+    en: string;
+    ar: string;
+  };
+  fa: ArticleContent;
+  en: ArticleContent;
+  ar: ArticleContent;
 }

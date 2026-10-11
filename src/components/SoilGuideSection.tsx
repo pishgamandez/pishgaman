@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { soilGuideData } from '../data/soilGuide';
-import { Activity, Droplets, CheckCircle, ArrowLeft, BookOpen, AlertTriangle } from 'lucide-react';
-import { companyInfo } from '../data/company';
+import { Activity, Droplets, CheckCircle, BookOpen } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 import researchImg from '../assets/images/agri_research_lab_1791480948724.jpg';
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
 }
 
 export const SoilGuideSection: React.FC<Props> = ({ onOpenConsult }) => {
+  const { language, t, isRtl } = useLanguage();
   const [activeTab, setActiveTab] = useState<number>(0);
   const currentGuide = soilGuideData[activeTab];
 
@@ -20,15 +21,21 @@ export const SoilGuideSection: React.FC<Props> = ({ onOpenConsult }) => {
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-800 text-xs font-bold border border-teal-200">
             <BookOpen className="w-3.5 h-3.5 text-teal-600" />
-            <span>آموزش علمی و استاندارد زراعی (صفحات ۱۳ و ۱۴ مستند رسمی)</span>
+            <span>
+              {language === 'en'
+                ? 'Scientific Agronomy & Diagnostics'
+                : language === 'ar'
+                ? 'الإرشاد العلمي والمعايير الزراعية'
+                : 'آموزش علمی و استاندارد زراعی'}
+            </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight">
-            راهنمای تخصصی مدیریت اسیدیته (pH) و شوری (EC) خاک
+            {t.soilGuideTitle}
           </h2>
 
           <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-light">
-            بیش از ۸۰ درصد افت باروری در باغات و مزارع کشور، ناشی از قفل شدن عناصر در pH های قلیایی و تجمع املاح سدیمی (EC بالا) است. پیشگامان فلات نیک راهکارهای اصلاحی تضمینی ارائه می‌دهد.
+            {t.soilGuideDesc}
           </p>
         </div>
 
@@ -43,7 +50,7 @@ export const SoilGuideSection: React.FC<Props> = ({ onOpenConsult }) => {
             }`}
           >
             <Droplets className="w-4 h-4" />
-            <span>راهنمای اسیدیته و پتانسیل pH</span>
+            <span>{t.phGuideTitle}</span>
           </button>
 
           <button
@@ -55,35 +62,41 @@ export const SoilGuideSection: React.FC<Props> = ({ onOpenConsult }) => {
             }`}
           >
             <Activity className="w-4 h-4" />
-            <span>هدایت الکتریکی (EC) و ضد شوری</span>
+            <span>{t.ecGuideTitle}</span>
           </button>
         </div>
 
-          {/* Content Box */}
-          <div className="bg-stone-50 rounded-3xl border border-stone-200/90 p-6 sm:p-10 shadow-xs space-y-8 text-right">
-            
-            {/* Visual Photo Card for Soil Testing */}
-            <div className="relative rounded-2xl overflow-hidden h-48 sm:h-64 shadow-md border border-stone-200">
-              <img
-                src={researchImg}
-                alt="پژوهش علمی خاک و آزمایشگاه تغذیه گیاهی"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent flex items-end p-6">
-                <div className="text-white">
-                  <span className="text-xs text-emerald-400 font-bold block mb-1">کنترل علمی و آزمون دقیق خاک</span>
-                  <h4 className="text-lg sm:text-xl font-black">
-                    آنالیز فیزیولوژیک برهم‌کنش عناصر، شوری (EC) و اسیدیته (pH)
-                  </h4>
-                </div>
+        {/* Content Box */}
+        <div className={`bg-stone-50 rounded-3xl border border-stone-200/90 p-6 sm:p-10 shadow-xs space-y-8 ${isRtl ? 'text-right' : 'text-left'}`}>
+          
+          {/* Visual Photo Card for Soil Testing */}
+          <div className="relative rounded-2xl overflow-hidden h-48 sm:h-64 shadow-md border border-stone-200">
+            <img
+              src={researchImg}
+              alt="Soil and Lab Analysis"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent flex items-end p-6">
+              <div className="text-white">
+                <span className="text-xs text-emerald-400 font-bold block mb-1">
+                  {language === 'en' ? 'Laboratory Precision & Soil Testing' : language === 'ar' ? 'فحوصات التربة المخبرية الدقيقة' : 'کنترل علمی و آزمون دقیق خاک'}
+                </span>
+                <h4 className="text-lg sm:text-xl font-black">
+                  {language === 'en'
+                    ? 'Physiological Nutrient Dynamics, Salinity (EC) and Soil pH'
+                    : language === 'ar'
+                    ? 'التحليل الفسيولوجي لتداخل العناصر والملوحة (EC) والحموضة (pH)'
+                    : 'آنالیز فیزیولوژیک برهم‌کنش عناصر، شوری (EC) و اسیدیته (pH)'}
+                </h4>
               </div>
             </div>
+          </div>
 
-            <div className="space-y-3">
-              <span className="text-xs font-bold text-emerald-700 tracking-wide uppercase font-mono">
-                Scientific Agronomy Guide
-              </span>
+          <div className="space-y-3">
+            <span className="text-xs font-bold text-emerald-700 tracking-wide uppercase font-mono">
+              Scientific Agronomy Guide
+            </span>
             <h3 className="text-2xl sm:text-3xl font-black text-stone-900">
               {currentGuide.title}
             </h3>
@@ -112,10 +125,10 @@ export const SoilGuideSection: React.FC<Props> = ({ onOpenConsult }) => {
           {currentGuide.table && (
             <div className="space-y-3">
               <h4 className="text-sm font-black text-stone-900">
-                جدول تحلیلی و راهکارهای درمانی پیشگامان فلات نیک:
+                {t.recommendations}:
               </h4>
               <div className="overflow-x-auto rounded-2xl border border-stone-200 bg-white">
-                <table className="w-full text-right text-xs">
+                <table className={`w-full text-xs ${isRtl ? 'text-right' : 'text-left'}`}>
                   <thead className="bg-stone-100 text-stone-800 font-bold border-b border-stone-200">
                     <tr>
                       {currentGuide.table.headers.map((h, i) => (
@@ -151,16 +164,26 @@ export const SoilGuideSection: React.FC<Props> = ({ onOpenConsult }) => {
           {/* CTA Box inside guide */}
           <div className="bg-emerald-900 text-white rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h4 className="font-bold text-base">نیاز به آنالیز آزمون آب و خاک مزرعه خود دارید؟</h4>
+              <h4 className="font-bold text-base">
+                {language === 'en'
+                  ? 'Need Analysis for Your Farm Soil & Water Test?'
+                  : language === 'ar'
+                  ? 'هل تحتاج لتحليل نتائج فحص التربة والمياه لمزرعتك؟'
+                  : 'نیاز به آنالیز آزمون آب و خاک مزرعه خود دارید؟'}
+              </h4>
               <p className="text-xs text-emerald-200 mt-1">
-                برگه آزمایشگاه خود را برای ما ارسال کنید تا دکتر راستین رستمی نسخه دقیق کودی متناسب با خاک شما تجویز نماید.
+                {language === 'en'
+                  ? `Send your lab report so our scientific team and ${t.managerName} can prescribe a custom fertigation plan.`
+                  : language === 'ar'
+                  ? `أرسل تقرير الفحص المخبري ليقوم الفريق العلمي و ${t.managerName} بوضع برنامج تسميدي دقيق لمزرعتك.`
+                  : `برگه آزمایشگاه خود را برای ما ارسال کنید تا ${t.managerName} نسخه دقیق کودی متناسب با خاک شما تجویز نماید.`}
               </p>
             </div>
             <button
               onClick={onOpenConsult}
               className="px-5 py-3 bg-white text-emerald-900 hover:bg-emerald-50 rounded-xl font-bold text-xs whitespace-nowrap cursor-pointer shadow-md"
             >
-              ارسال اطلاعات خاک جهت بررسی
+              {language === 'en' ? 'Submit Soil Report for Review' : language === 'ar' ? 'إرسال بيانات التربة للفحص' : 'ارسال اطلاعات خاک جهت بررسی'}
             </button>
           </div>
 
