@@ -25,7 +25,7 @@ export const articlesData: Article[] = [
       category: 'محرک‌های رشد و ضد تنش',
       readTime: '۸ دقیقه',
       date: 'مهر ۱۴۰۴',
-      author: 'دکتر راستین رستمی - مدیر علمی شرکت پیشگامان پایدار فلات نیک',
+      author: 'شورای پژوهش‌های فیزیولوژی و ضدتنش گیاه پیشگامان',
       summary: 'بررسی نقش اسیدهای آمینه چپ‌گرد (L-α-Amino Acids) به ویژه پرولین و گلیسین بتائین در حفظ فشار تورژسانس سلولی، پاکسازی گونه‌های فعال اکسیژن (ROS) و فعال‌سازی مجدد سنتز پروتئین با مکمل دوپینگ (Doping).',
       abstract: 'با افزایش موج‌های گرمایی شدید در فصول گرم و کاهش منابع آب، تنش‌های غیرزیستی (Abiotic Stresses) عامل اصلی افت ۴۰ تا ۶۰ درصدی عملکرد مزارع و باغات پسته، گوجه‌فرنگی و صیفی‌جات هستند. در این مقاله به بررسی سینتیک اسمولیت‌های آلی و مکانیسم جذب برگی آمینواسیدهای هیدرولیز آنزیمی پرداخته شده است.',
       contentSections: [
@@ -58,7 +58,7 @@ export const articlesData: Article[] = [
       category: 'Biostimulants & Stress Relief',
       readTime: '8 min',
       date: 'October 2024',
-      author: 'Dr. Rastin Rostami - Chief Agronomy Scientist, Pishgaman Paydar Falat Nik',
+      author: 'Crop Physiology & Abiotic Stress Research Division, Pishgaman Paydar Falat Nik',
       summary: 'Exploring the enzymatic mechanism of left-handed L-α-amino acids, specifically proline and glutamic acid, in sustaining cellular turgor, scavenging reactive oxygen species (ROS), and reactivating protein synthesis through Doping biostimulant.',
       abstract: 'Abiotic heatwaves and drought spells represent the leading causes of 40-60% yield losses in commercial orchards and open-field vegetables. This paper evaluates the kinetic absorption of enzymatically hydrolyzed free amino acids and their osmotic regulating functions under extreme climatic stress.',
       contentSections: [
@@ -91,7 +91,7 @@ export const articlesData: Article[] = [
       category: 'محفزات النمو ومضادات الإجهاد',
       readTime: '٨ دقائق',
       date: 'أكتوبر ٢٠٢٤',
-      author: 'د. راستين رستمي - كبير المستشارين العلميين بشركة بيشغامان بايدار فلات نيك',
+      author: 'قسم فيزيولوجيا الإجهاد النباتي والبحوث الزراعية - شركة بيشغامان بايدار فلات نيك',
       summary: 'دراسة تأثير الأحماض الأمينية اليسارية (L-Amino Acids) وخاصة البرولين وحمض الجلوتاميك في الحفاظ على ضغط الامتلاء الخلوي وإزالة الشوارد الحرة وتنشيط النمو عبر مركب دوبينغ (Doping).',
       abstract: 'تعد موجات الحرارة المرتفعة والجفاف من أكثر التحديات تسبباً في خسارة ٤٠-٦٠٪ من المحصول في بساتين الفستق والخضروات المكشوفة. يتناول هذا البحث سلوك الأحماض الأمينية الحرة ومضادات الإجهاد الحيوية في حماية بروتينات الخلية النباتية.',
       contentSections: [
@@ -235,7 +235,7 @@ export const articlesData: Article[] = [
       category: 'ژل‌های تغذیه و عناصر ماکرو',
       readTime: '۹ دقیقه',
       date: 'شهریور ۱۴۰۴',
-      author: 'دکتر راستین رستمی - کارشناس ارشد فیزیولوژی گیاهی پیشگامان',
+      author: 'دپارتمان فیزیولوژی تغذیه و باردهی درختان پیشگامان',
       summary: 'تحلیل بیوشیمیایی نقش عنصر پتاسیم (K+) در بارگیری آوندی قندها (Phloem Loading)، افزایش شاخص بریکس (Brix)، ضخامت دیواره سلولی و عملکرد ژل تایگر K High در باغات پسته، مرکبات و مزارع هندوانه و گوجه‌فرنگی.',
       abstract: 'پتاسیم عنصری حیاتی در تنظیم باز و بسته شدن روزنه‌ها و فعال‌کننده بیش از ۶۰ سیستم آنزیمی سنتز نشاسته است. در مرحله پر شدن مغز پسته و درشت شدن میوه‌ها، کمبود پتاسیم باعث پوکی، سبکی دانه و ترکیدگی پوست ناشی از عدم تعادل اسمزی می‌گردد. در این مقاله اثر ژل غلیظ تایگر K High ارزیابی شده است.',
       contentSections: [
@@ -264,7 +264,7 @@ export const articlesData: Article[] = [
       category: 'Nutrition Gels & Macro Nutrients',
       readTime: '9 min',
       date: 'September 2024',
-      author: 'Dr. Rastin Rostami - Lead Agronomist, Pishgaman Paydar Falat Nik',
+      author: 'Fruit Tree Physiology & Potassium Fertigation Division, Pishgaman Paydar Falat Nik',
       summary: 'Biochemical investigation of potassium (K+) in phloem sucrose loading, brix elevation, cell wall elastic pressure, and the efficiency of Tiger K High Gel across pistachio, citrus, melon, and tomato crops.',
       abstract: 'Potassium is indispensable for turgor maintenance and activating over 60 enzymatic reactions involved in carbohydrate partitioning. In late vegetative and fruit bulking phases, sub-optimal K levels trigger premature ripening, hollow kernels, and catastrophic fruit cracking.',
       contentSections: [
@@ -293,7 +293,7 @@ export const articlesData: Article[] = [
       category: 'جل التغذية والعناصر الكبرى',
       readTime: '٩ دقائق',
       date: 'سبتمبر ٢٠٢٤',
-      author: 'د. راستين رستمي - خبير التغذية الزراعية بشركة بيشغامان',
+      author: 'قسم أبحاث تغذية المحاصيل والتسميد - شركة بيشغامان بايدار فلات نيك',
       summary: 'دراسة فسيولوجية لدور عنصر البوتاسيوم (K+) في تحفيز تدفق السكريات عبر اللحاء، رفع نسبة البريكس (Brix)، ومنع تشقق القشرة باستخدام سماد تايكر جل عالي البوتاسيوم.',
       abstract: 'يعتبر البوتاسيوم العنصر المسؤول الأول عن حجم وجودة الثمار وتنشيط أكثر من ٦٠ إنزيماً مسؤولاً عن تخليق النشا والسكريات. في مرحلة امتلاء حبات الفستق ونضج الثمار، يؤدي نقص البوتاسيوم إلى صغر الحجم وتشقق الثمار.',
       contentSections: [
@@ -643,7 +643,7 @@ export const articlesData: Article[] = [
       category: 'تغذیه و مواد آلی',
       readTime: '۶ دقیقه',
       date: 'مهر ۱۴۰۴',
-      author: 'دکتر راستین رستمی - مدیر علمی شرکت پیشگامان پایدار فلات نیک',
+      author: 'دپارتمان اصلاح بیوشیمیایی خاک و ترکیبات هیومیکی پیشگامان',
       summary: 'بررسی اثر مولکولی اسیدهای هیومیک و فولویک غنی‌شده با ریزمغذی‌ها در تحریک پمپ پروتونی ریشه (H+-ATPase) و آزادسازی فسفر و روی در خاک‌های آهکی.',
       abstract: 'مواد هیومیکی با وزن‌های مولکولی مختلف نقش هورمون‌مانند (Auxin-like activity) در القای تقسیم سلولی و تشکیل ریشه‌های جانبی ایفا می‌کنند. این مقاله اثرات هم‌افزایی مکمل پودری چلنجر و هیومی فارم مایع را در افزایش ظرفیت تبادل کاتیونی (CEC) خاک تشریح می‌کند.',
       contentSections: [
@@ -672,7 +672,7 @@ export const articlesData: Article[] = [
       category: 'Organic Nutrition & Humates',
       readTime: '6 min',
       date: 'October 2024',
-      author: 'Dr. Rastin Rostami - Lead Scientific Director, Pishgaman Paydar Falat Nik',
+      author: 'Soil Biochemistry & Humic Substances Research Division, Pishgaman Paydar Falat Nik',
       summary: 'Molecular investigation of high-purity humic and fulvic acid complexes in activating root plasma membrane H+-ATPase proton pumping and chelating immobilized soil phosphorus and zinc.',
       abstract: 'Humic substances demonstrate direct auxin-like signaling that triggers lateral root differentiation and root hair density. This paper analyzes the synergistic behavior of Challenger powder and Humifarm liquid in boosting cation exchange capacity (CEC) and nutrient uptake.',
       contentSections: [
@@ -701,7 +701,7 @@ export const articlesData: Article[] = [
       category: 'التغذية والمواد العضوية',
       readTime: '٦ دقائق',
       date: 'أكتوبر ٢٠٢٤',
-      author: 'د. راستين رستمي - المدير العلمي لشركة بيشغامان بايدار فلات نيك',
+      author: 'قسم أبحاث الهيومات وكيمياء التربة - شركة بيشغامان بايدار فلات نيك',
       summary: 'دراسة التأثير الجزيئي لأحماض الهيوميك والفولفيك الغنية بالعناصر الصغرى في تحفيز مضخات البروتون بالجذور (H+-ATPase) وتحرير الفوسفور والزنك في الأراضي الكلسية.',
       abstract: 'تلعب المواد الهيوميكية دوراً شبيهاً بالهورمونات النباتية (Auxin-like) في تحفيز الانقسام الخلوي وتكوين الجذور الجانبية. يوضح هذا المقال دور سماد چلنجر البودرة وهيومي فارم السائل في رفع السعة التبادلية الكاتيونية (CEC) للتربة.',
       contentSections: [

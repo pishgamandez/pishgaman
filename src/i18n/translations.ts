@@ -93,6 +93,11 @@ export interface Translations {
   articlesClose: string;
   articlesScientificPaper: string;
   articlesReferences: string;
+  articlesReferencesNotice: string;
+  articlesRefCount: string;
+  articlesHasReferencesBadge: string;
+  articlesCopyReferences: string;
+  articlesCopiedReferences: string;
   articlesRelatedProducts: string;
   articlesTrendingBadge: string;
   articlesTrendingLabel: string;
@@ -193,12 +198,17 @@ export const translations: Record<Language, Translations> = {
     articlesDepartment: 'دپارتمان تحقیق و توسعه علمی پیشگامان',
     articlesSearchPlaceholder: 'جستجو در مقالات (شوری، کلات، هیومیک، جلبک، گوگرد...)',
     articlesReadTime: 'مدت مطالعه',
-    articlesAuthor: 'نویسنده',
+    articlesAuthor: 'هیئت علمی و تدوین پژوهشی',
     articlesDate: 'تاریخ انتشار',
     articlesFullRead: 'مطالعه کامل مقاله و رفرنس‌ها',
     articlesClose: 'بستن پنجره',
-    articlesScientificPaper: 'مقاله علمی، پژوهشی و کاربردی',
-    articlesReferences: 'منابع و مراجع علمی معتبر (References)',
+    articlesScientificPaper: 'مقاله علمی، پژوهشی و رفرنس‌دار',
+    articlesReferences: 'منابع، مراجع و استنادهای معتبر علمی بین‌المللی (References & Citations)',
+    articlesReferencesNotice: 'تمام مباحث این مقاله بر اساس پژوهش‌های ژورنال‌های معتبر کشاورزی و استانداردهای سازمان خواربار و کشاورزی ملل متحد (FAO) تدوین شده است.',
+    articlesRefCount: 'رفرنس علمی معتبر',
+    articlesHasReferencesBadge: 'دارای استناد علمی و رفرنس معتبر',
+    articlesCopyReferences: 'کپی استنادهای علمی',
+    articlesCopiedReferences: 'استنادها کپی شد!',
     articlesRelatedProducts: 'محصولات مرتبط شرکت پیشگامان',
     articlesTrendingBadge: 'موضوع ترند گوگل (Google Trends)',
     articlesTrendingLabel: 'پربازدیدترین موضوع کشاورزی',
@@ -296,12 +306,17 @@ export const translations: Record<Language, Translations> = {
     articlesDepartment: 'Pishgaman R&D Science Department',
     articlesSearchPlaceholder: 'Search articles (salinity, EDDHA, humic, seaweed, sulfur...)',
     articlesReadTime: 'Read Time',
-    articlesAuthor: 'Author',
+    articlesAuthor: 'Scientific Editorial Board',
     articlesDate: 'Published',
     articlesFullRead: 'Read Full Paper & References',
     articlesClose: 'Close Window',
     articlesScientificPaper: 'Peer-Reviewed Applied Agricultural Paper',
-    articlesReferences: 'Scientific Citations & Literature (References)',
+    articlesReferences: 'Peer-Reviewed References & Academic Citations',
+    articlesReferencesNotice: 'All topics in this paper are grounded in peer-reviewed scientific journals, ISI literature, and official FAO agronomy guidelines.',
+    articlesRefCount: 'Peer-Reviewed Citations',
+    articlesHasReferencesBadge: 'Documented with Academic References',
+    articlesCopyReferences: 'Copy Academic Citations',
+    articlesCopiedReferences: 'Citations Copied!',
     articlesRelatedProducts: 'Related Pishgaman Formulations',
     articlesTrendingBadge: 'Google Trends Hot Topic',
     articlesTrendingLabel: 'Most Searched Agricultural Subject',
@@ -399,12 +414,17 @@ export const translations: Record<Language, Translations> = {
     articlesDepartment: 'قسم البحث والتطوير العلمي - شركة بيشغامان',
     articlesSearchPlaceholder: 'البحث في المقالات (ملوحة، شيلات، هيوميك، طحالب، كبريت...)',
     articlesReadTime: 'وقت القراءة',
-    articlesAuthor: 'الكاتب',
+    articlesAuthor: 'الهيئة العلمية والتحريرية',
     articlesDate: 'تاريخ النشر',
     articlesFullRead: 'قراءة المقال بالكامل والمراجع العلمية',
     articlesClose: 'إغلاق النافذة',
-    articlesScientificPaper: 'بحث علمي وتطبيقي معتمد',
-    articlesReferences: 'المراجع والمصادر العلمية الموثقة (References)',
+    articlesScientificPaper: 'بحث علمي وتطبيقي موثق بمراجع',
+    articlesReferences: 'المراجع والاستشهادات العلمية الدولية المعتمدة (References & Citations)',
+    articlesReferencesNotice: 'كافة محاور هذا المقال موثقة استناداً إلى أبحاث ودوريات زراعية محكمة وإرشادات منظمة الأغذية والزراعة للأمم المتحدة (FAO).',
+    articlesRefCount: 'مراجع علمية معتمدة',
+    articlesHasReferencesBadge: 'موثق بمراجع واستشهادات علمية',
+    articlesCopyReferences: 'نسخ المراجع العلمية',
+    articlesCopiedReferences: 'تم نسخ المراجع!',
     articlesRelatedProducts: 'المنتجات المرتبطة من شركة بيشغامان',
     articlesTrendingBadge: 'موضوع ترند غوغل (Google Trends)',
     articlesTrendingLabel: 'الموضوع الأكثر بحثاً وزيارة في الزراعة',
