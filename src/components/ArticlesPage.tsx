@@ -25,7 +25,7 @@ export const ArticlesPage: React.FC<Props> = ({ onBackToHome, onSelectArticle })
   const categories = useMemo(() => {
     const set = new Set<string>();
     articlesData.forEach(art => {
-      const content = art[language] || art.fa;
+      const content = (language === 'ur' ? art.ur || art.fa : art[language]) || art.fa;
       if (content?.category) {
         set.add(content.category);
       }
@@ -36,11 +36,11 @@ export const ArticlesPage: React.FC<Props> = ({ onBackToHome, onSelectArticle })
   const filteredArticles = useMemo(() => {
     return articlesData.filter(art => {
       if (filterRegionOnly && !art.region) return false;
-      const c = art[language] || art.fa;
+      const c = (language === 'ur' ? art.ur || art.fa : art[language]) || art.fa;
       if (selectedCategory !== 'all' && c.category !== selectedCategory) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
-        const trendTag = art.googleTrendKeyword ? art.googleTrendKeyword[language]?.toLowerCase() : '';
+        const trendTag = art.googleTrendKeyword ? (art.googleTrendKeyword as any)[language]?.toLowerCase() : '';
         const regionTag = art.region ? `${art.region.provinceFa} ${art.region.cropFa}`.toLowerCase() : '';
         return (
           c.title.toLowerCase().includes(q) ||
@@ -58,6 +58,7 @@ export const ArticlesPage: React.FC<Props> = ({ onBackToHome, onSelectArticle })
   const getArticleHref = (slug: string) => {
     if (language === 'en') return `${basePath}/en/articles/${slug}/`;
     if (language === 'ar') return `${basePath}/ar/articles/${slug}/`;
+    if (language === 'ur') return `${basePath}/ur/articles/${slug}/`;
     return `${basePath}/articles/${slug}/`;
   };
 
@@ -189,8 +190,8 @@ export const ArticlesPage: React.FC<Props> = ({ onBackToHome, onSelectArticle })
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 flex-1 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {filteredArticles.map((art) => {
-            const content = art[language] || art.fa;
-            const trendTag = art.googleTrendKeyword ? art.googleTrendKeyword[language] : null;
+            const content = (language === 'ur' ? art.ur || art.fa : art[language]) || art.fa;
+            const trendTag = art.googleTrendKeyword ? (art.googleTrendKeyword as any)[language] || art.googleTrendKeyword.fa : null;
             const articleHref = getArticleHref(art.slug);
 
             return (

@@ -48,6 +48,32 @@ export interface Translations {
   appearanceLabel: string;
   benefitsLabel: string;
 
+  // Product Detail Page
+  pdOverviewTitle: string;
+  pdAnalysisTitle: string;
+  pdBenefitsTitle: string;
+  pdDosageTitle: string;
+  pdTankMixTitle: string;
+  pdCautionsTitle: string;
+  pdFaqsTitle: string;
+  pdConsultCtaTitle: string;
+  pdCompanionTitle: string;
+  pdRelatedArticlesTitle: string;
+  pdTableCrop: string;
+  pdTableMethod: string;
+  pdTableRate: string;
+  pdTableTiming: string;
+  pdBadgePurity: string;
+  pdBadgeShipping: string;
+  pdBadgeBrand: string;
+  pdBadgeAuthentic: string;
+  pdWaOrderBtn: string;
+  pdPhoneOrderBtn: string;
+  pdShareBtn: string;
+  pdCopiedBtn: string;
+  pdBackToCatalog: string;
+  pdRelatedArticlesDesc: string;
+
   // Soil guide
   soilGuideTitle: string;
   soilGuideSubtitle: string;
@@ -125,7 +151,7 @@ export const translations: Record<Language, Translations> = {
     management: 'مدیریت',
     managerName: 'دکتر راستین رستمی',
     adminPanel: 'پنل مدیریت',
-    slogan: "ما شماره دو هستیم، پس با تمام توان بیشتر تلاش می‌کنیم...",
+    slogan: 'راه های کهنه به مقصد های نو نمیرسد ...',
 
     home: 'صفحه اصلی',
     products16: 'محصولات (۱۶ گانه)',
@@ -162,6 +188,31 @@ export const translations: Record<Language, Translations> = {
     packagingLabel: 'بسته‌بندی:',
     appearanceLabel: 'شکل ظاهری:',
     benefitsLabel: 'مزایا و ویژگی‌های کلیدی:',
+
+    pdOverviewTitle: 'معرفی تخصصی و کاربرد زراعی',
+    pdAnalysisTitle: 'ترکیبات، آنالیز تضمین‌شده و درصد عناصر',
+    pdBenefitsTitle: 'مزایا، کارکردها و اثرات تخصصی زراعی',
+    pdDosageTitle: 'جدول دوز و نحوه مصرف در محصولات مختلف',
+    pdTankMixTitle: 'محصولات سازگار و ترکیب‌های پیشنهادی (Tank-Mix)',
+    pdCautionsTitle: 'هشدارها، سازگاری و نکات ایمنی مصرف',
+    pdFaqsTitle: 'سوالات متداول کشاورزان و باغداران',
+    pdConsultCtaTitle: 'مشاوره تخصصی و استعلام قیمت آنلاین',
+    pdCompanionTitle: 'محصولات مکمل و مرتبط پیشنهادی',
+    pdRelatedArticlesTitle: 'مقالات تخصصی مرتبط',
+    pdTableCrop: 'نوع محصول / گیاه',
+    pdTableMethod: 'نحوه و روش مصرف',
+    pdTableRate: 'دوز و مقدار مصرف',
+    pdTableTiming: 'توضیحات و زمان مصرف',
+    pdBadgePurity: 'آنالیز تضمین‌شده و خلوص ۱۰۰٪',
+    pdBadgeShipping: 'ارسال مستقیم به سراسر کشور',
+    pdBadgeBrand: 'فرمولاسیون پرواز نهاده',
+    pdBadgeAuthentic: 'تضمین اصالت پرواز نهاده',
+    pdWaOrderBtn: 'استعلام قیمت و مشاوره در واتس‌اپ',
+    pdPhoneOrderBtn: 'سفارش تلفنی',
+    pdShareBtn: 'اشتراک‌گذاری',
+    pdCopiedBtn: 'کپی شد',
+    pdBackToCatalog: 'بازگشت به محصولات',
+    pdRelatedArticlesDesc: 'برای مطالعه عمیق‌تر مبانی علمی، تجربیات منطقه‌ای و جداول کاربردی در زمینه این محصول، مقالات زیر را مطالعه فرمایید:',
 
     soilGuideTitle: 'راهنمای جامع مدیریت اسیدیته (pH) و شوری (EC)',
     soilGuideSubtitle: 'تحلیل علمی جذب عناصر و رفتار ریشه در شرایط اقلیمی فلات مرکزی',
@@ -233,7 +284,7 @@ export const translations: Record<Language, Translations> = {
     management: 'Executive Management',
     managerName: 'Dr. Rastin Rostami',
     adminPanel: 'Admin Portal',
-    slogan: "We're number two, We try harder...",
+    slogan: 'Old paths never lead to new destinations...',
 
     home: 'Home',
     products16: 'Products (16 Items)',
@@ -270,6 +321,31 @@ export const translations: Record<Language, Translations> = {
     packagingLabel: 'Packaging:',
     appearanceLabel: 'Formulation State:',
     benefitsLabel: 'Key Agronomic Benefits:',
+
+    pdOverviewTitle: 'Agronomic Overview & Crop Applications',
+    pdAnalysisTitle: 'Guaranteed Analysis & Formulation Elements',
+    pdBenefitsTitle: 'Agronomic Benefits & Specialized Effects',
+    pdDosageTitle: 'Application Rates & Schedule Across Crops',
+    pdTankMixTitle: 'Compatible Tank-Mix Solutions',
+    pdCautionsTitle: 'Safety Precautions & Compatibility Cautions',
+    pdFaqsTitle: 'Frequently Asked Questions',
+    pdConsultCtaTitle: 'Free Consultation & Price Inquiry',
+    pdCompanionTitle: 'Recommended Companion Products',
+    pdRelatedArticlesTitle: 'Related Technical Articles',
+    pdTableCrop: 'Crop / Plant Stage',
+    pdTableMethod: 'Application Method',
+    pdTableRate: 'Dosage Rate',
+    pdTableTiming: 'Timing & Notes',
+    pdBadgePurity: '100% Guaranteed Purity & Analysis',
+    pdBadgeShipping: 'Nationwide Express Shipping',
+    pdBadgeBrand: 'Parvaz Nahadeh Formulation',
+    pdBadgeAuthentic: 'Parvaz Nahadeh Certified Authentic',
+    pdWaOrderBtn: 'WhatsApp Consultation & Order',
+    pdPhoneOrderBtn: 'Phone Order',
+    pdShareBtn: 'Share Link',
+    pdCopiedBtn: 'Copied!',
+    pdBackToCatalog: 'Back to Products',
+    pdRelatedArticlesDesc: 'Explore in-depth scientific research, regional field trials, and application guidelines for this product:',
 
     soilGuideTitle: 'Comprehensive Guide to Soil pH & Salinity (EC) Management',
     soilGuideSubtitle: 'Scientific analysis of nutrient mobility and root physiology in arid soils',
@@ -341,7 +417,7 @@ export const translations: Record<Language, Translations> = {
     management: 'الإدارة العامة',
     managerName: 'د. راستين رستمي',
     adminPanel: 'بوابة الإدارة',
-    slogan: "نحن في المركز الثاني، لذلك نبذل قصارى جهدنا ونعمل بجد أكبر...",
+    slogan: 'الطرق القديمة لا تؤدي إلى وجهات جديدة...',
 
     home: 'الرئيسية',
     products16: 'المنتجات (١٦ منتجاً)',
@@ -378,6 +454,31 @@ export const translations: Record<Language, Translations> = {
     packagingLabel: 'العبوة:',
     appearanceLabel: 'الشكل والمظهر:',
     benefitsLabel: 'المزايا والخصائص الرئيسية:',
+
+    pdOverviewTitle: 'نظرة تخصصية وتطبيقات زراعية',
+    pdAnalysisTitle: 'التحليل المضمون ونسب العناصر الكيميائية',
+    pdBenefitsTitle: 'المزايا والآثار التخصصية للمحصول',
+    pdDosageTitle: 'جدول معدلات وطرق الاستخدام لمختلف المحاصيل',
+    pdTankMixTitle: 'الخلطات المتوافقة والمقترحة (Tank-Mix)',
+    pdCautionsTitle: 'التحذيرات وإرشادات الأمان والتوافق',
+    pdFaqsTitle: 'الأسئلة الأكثر شيوعاً بين المزارعين',
+    pdConsultCtaTitle: 'استشارة فنية مجانية وطلب عرض سعر',
+    pdCompanionTitle: 'المنتجات التكميلية المقترحة',
+    pdRelatedArticlesTitle: 'المقالات التخصصية ذات الصلة',
+    pdTableCrop: 'المحصول / مرحلة النمو',
+    pdTableMethod: 'طريقة الاستخدام',
+    pdTableRate: 'معدل الجرعة',
+    pdTableTiming: 'التوقيت والملاحظات',
+    pdBadgePurity: 'تحليل مضمون ونقاوة ١٠٠٪',
+    pdBadgeShipping: 'شحن مباشر لجميع المناطق',
+    pdBadgeBrand: 'تركيبة برواز نهاده المعتمدة',
+    pdBadgeAuthentic: 'ضمان الأصالة من برواز نهاده',
+    pdWaOrderBtn: 'استعلام عن السعر ومشاورة واتساب',
+    pdPhoneOrderBtn: 'الطلب هاتفياً',
+    pdShareBtn: 'مشاركة',
+    pdCopiedBtn: 'تم النسخ!',
+    pdBackToCatalog: 'العودة إلى المنتجات',
+    pdRelatedArticlesDesc: 'للاطلاع على الأبحاث العلمية والتجارب الحقلية لهذا المنتج، يرجى قراءة المقالات التالية:',
 
     soilGuideTitle: 'الدليل الشامل لإدارة حموضة التربة (pH) والملوحة (EC)',
     soilGuideSubtitle: 'تحليل علمي لامتصاص العناصر وسلوك الجذور في الظروف الجافة والقلوية',
@@ -441,5 +542,137 @@ export const translations: Record<Language, Translations> = {
     directWhatsapp: 'تواصل عبر واتساب',
     directCall: 'اتصال مباشر',
     languageSelect: 'تغيير اللغة'
+  },
+  ur: {
+    officialBrand: 'سرکاری برانڈ',
+    brandName: 'پرواز نہادہ',
+    management: 'انتظامیہ',
+    managerName: 'ڈاکٹر راستین رستمی',
+    adminPanel: 'ایڈمن پینل',
+    slogan: 'پرانے راستے کبھی نئی منزلوں تک نہیں پہنچاتے...',
+
+    home: 'مرکزی صفحہ',
+    products16: 'مصنوعات (۱۶ خصوصی)',
+    scientificArticles: 'سائنسی و تحقیقی مضامین',
+    soilGuide: 'رہنمائے پی ایچ اور ای سی',
+    aboutUs: 'ہمارے بارے میں',
+    consultation: 'مفت زرعی مشاورت',
+    contact: 'رابطہ کریں',
+    allProducts: 'تمام مصنوعات',
+
+    heroBadge: 'خصوصی زرعی کھادوں اور ادویات کی تیاری و فراہمی',
+    heroHeadline1: 'پودوں کی غذائیت میں جدت،',
+    heroHeadline2: 'مٹی کی پیداواری صلاحیت میں پائیداری',
+    heroSubheadline: 'پیشگامان پائیدار فلات نیک کمپنی (سرکاری برانڈ پرواز نہادہ) زیر انتظام ڈاکٹر راستین رستمی؛ مٹی کی نمکیات اور کلر کے خاتمے، نامیاتی محرکات، ٹائیگر جیلز اور چیلیٹڈ فارمولیشنز کے ۱۶ اہم ترین زرعی پروڈکٹس فراہم کرتی ہے۔',
+    heroConsultBtn: 'زرعی ماہر سے مفت مشورہ حاصل کریں',
+    heroCatalogBtn: '۱۶ پروڈکٹس کا مکمل کیٹلاگ دیکھیں',
+    heroDirectCall: 'انتظامیہ سے براہ راست رابطہ (۰۹۱۲۸۲۴۷۴۱۵)',
+    heroStatProducts: 'خصوصی زرعی پروڈکٹس',
+    heroStatPurity: '۱۰۰٪ پانی میں حل پذیر اور خالص',
+    heroStatGrowers: 'مطمئن کسان اور باغبان',
+    heroStatFormulations: 'جدید سائنسی فارمولیشنز',
+
+    catAll: 'تمام مصنوعات',
+    catSoilConditioner: 'نمکیات توڑ اور اصلاحِ مٹی',
+    catHumicOrganic: 'ہیومک اور نامیاتی مادے',
+    catStimulant: 'گروتھ پروموٹر اور انسداد تناؤ',
+    catNutritionGel: 'نیوٹریشنل جیل اور مائیکرو/میکرو اجزاء',
+    categoryFilterLabel: 'کیٹیگری منتخب کریں',
+    searchProductPlaceholder: 'پروڈکٹ تلاش کریں (چلنجر، سالٹ اسٹاپ، ٹائیگر، سلفر...)...',
+    noProductsFound: 'کوئی پروڈکٹ نہیں ملا۔',
+    viewProductDetails: 'تفصیلات اور طریقہ استعمال دیکھیں',
+    requestConsultationForProduct: 'اس پروڈکٹ کے لیے مشورہ لیں',
+    viewDosageTable: 'استعمال کی مقدار اور طریقہ',
+    packagingLabel: 'پیکنگ',
+    appearanceLabel: 'ظاہری حالت',
+    benefitsLabel: 'اہم فوائد اور اثرات',
+
+    pdOverviewTitle: 'خصوصی زرعی تعارف اور استعمال',
+    pdAnalysisTitle: 'مصدقہ اینالیسس اور کیمیائی اجزاء',
+    pdBenefitsTitle: 'اہم فوائد اور زرعی اثرات',
+    pdDosageTitle: 'مختلف فصلوں میں استعمال کی مقدار اور شیڈول',
+    pdTankMixTitle: 'تجویز کردہ اور موزوں ٹینک مکس فارمولے',
+    pdCautionsTitle: 'حفاظتی تدابیر اور ضروری احتیاطیں',
+    pdFaqsTitle: 'کسانوں اور باغبانوں کے عمومی سوالات',
+    pdConsultCtaTitle: 'مفت مشاورت اور قیمت کی معلومات',
+    pdCompanionTitle: 'تجویز کردہ دیگر متعلقہ پروڈکٹس',
+    pdRelatedArticlesTitle: 'متعلقہ سائنسی مضامین',
+    pdTableCrop: 'فصل / پودے کا مرحلہ',
+    pdTableMethod: 'طریقہ استعمال',
+    pdTableRate: 'استعمال کی مقدار',
+    pdTableTiming: 'وقت اور ضروری ہدایات',
+    pdBadgePurity: 'مصدقہ اینالیسس اور ۱۰۰٪ خالص',
+    pdBadgeShipping: 'ملک بھر میں فوری ترسیل',
+    pdBadgeBrand: 'پرواز نہادہ فارمولیشن',
+    pdBadgeAuthentic: 'پرواز نہادہ کی اصل ہونے کی ضمانت',
+    pdWaOrderBtn: 'واٹس ایپ پر مشاورت اور آرڈر',
+    pdPhoneOrderBtn: 'فون پر آرڈر',
+    pdShareBtn: 'لنک شیئر کریں',
+    pdCopiedBtn: 'کاپی ہو گیا!',
+    pdBackToCatalog: 'پروڈکٹس کی فہرست پر واپسی',
+    pdRelatedArticlesDesc: 'اس پروڈکٹ کے سائنسی اصولوں اور فیلڈ ٹرائلز کے تفصیلی مطالعے کے لیے درج ذیل مضامین ملاحظہ فرمائیں:',
+
+    soilGuideTitle: 'زرعی مٹی کے پی ایچ (pH) اور ای سی (EC) کی سائنسی گائیڈ',
+    soilGuideSubtitle: 'مٹی کی جانچ، نمکیات و کلر کی اصلاح اور زیادہ پیداوار کے لیے تکنیکی تجاویز',
+    soilGuideDesc: 'مٹی کی کھاری پن (pH) اور برقی موصلیت (EC) غذائی اجزاء کے جذب ہونے میں بنیادی کردار ادا کرتے ہیں۔ ان ہدایات پر عمل کر کے اپنی زمین کی زرخیزی میں اضافہ کریں۔',
+    phGuideTitle: 'مٹی کا پی ایچ (اسیدی / کھاری پن)',
+    ecGuideTitle: 'مٹی کی ای سی (نمکیات اور شوری)',
+    recommendations: 'پیشگامان کی تجویز کردہ مصنوعات',
+
+    aboutTitle: 'پیشگامان پائیدار فلات نیک کمپنی کے بارے میں',
+    aboutSubtitle: 'سرکاری برانڈ پرواز نہادہ - کاشتکاروں کے لیے جدید سائنسی زراعت کا قابل اعتماد پارٹنر',
+    aboutVisionTitle: 'کمپنی کا وژن اور مقاصد',
+    aboutMissionTitle: 'ہمارا مشن',
+    aboutValuesTitle: 'بنیادی اقدار اور اصول',
+
+    consultTitle: 'پودوں کی غذائیت اور مٹی کی اصلاح کے لیے مفت زرعی مشاورت',
+    consultSubtitle: 'پیشگامان کے ماہرین کی زیر نگرانی اپنی فصلوں کے لیے بہترین کھاد اور حل کا انتخاب کریں',
+    consultDesc: 'فارم پر کی گئی معلومات کی بنیاد پر ہمارے ماہرین آپ کے لیے خصوصی زرعی نسخہ اور کھاد کا شیڈول تیار کریں گے۔',
+    farmerName: 'کسان یا باغبان کا نام',
+    phoneNumber: 'رابطہ نمبر (موبائل)',
+    cropType: 'فصل کی قسم (گندم، چاول، کپاس، باغات، سبزیاں...)',
+    cityOrProvince: 'شہر یا صوبہ',
+    orchardArea: 'رقبہ (ایکڑ یا ہیکٹر)',
+    problemDesc: 'مسئلے کی تفصیل (پتوں کا پیلا پن، زمین کا کلر، جڑوں کی کمزوری، کھاد کا شیڈول)',
+    submitConsultation: 'مفت مشورے کی درخواست بھیجیں',
+    submitting: 'معلومات بھیجی جا رہی ہیں...',
+    consultSuccessTitle: 'آپ کی درخواست کامیابی سے درج ہو گئی!',
+    consultSuccessDesc: 'پیشگامان کے زرعی ماہرین جلد ہی آپ سے رابطہ کریں گے۔',
+    consultDirectCall: 'انتظامیہ سے براہ راست فون پر بات کریں',
+
+    articlesTitle: 'زرعی تحقیق و سائنسی مضامین کا مرکز',
+    articlesSubtitle: 'سائنسی مقالات، بین الاقوامی حوالہ جات اور گوگل ٹرینڈز کے زرعی موضوعات',
+    articlesDesc: 'پودوں کی فزیالوجی، گرمی اور خشک سالی کے تناؤ کا سدباب، مٹی کی نمکیات کا علاج، اور ہیومک ایسڈ کے کردار پر جامع سائنسی مطالعہ۔',
+    articlesBackToHome: 'مرکزی صفحہ پر واپسی',
+    articlesDepartment: 'سائنسی تحقیق و ترقیاتی شعبہ - پیشگامان',
+    articlesSearchPlaceholder: 'مضامین میں تلاش کریں (نمکیات، ہیومک، چیلیٹ، الجی، سلفر...)...',
+    articlesReadTime: 'مطالعہ کا وقت',
+    articlesAuthor: 'سائنسی اور ایڈیٹوریل بورڈ',
+    articlesDate: 'اشاعت کی تاریخ',
+    articlesFullRead: 'مکمل مضمون اور سائنسی حوالہ جات پڑھیں',
+    articlesClose: 'بند کریں',
+    articlesScientificPaper: 'مصدقہ سائنسی و تحقیقی مقالہ',
+    articlesReferences: 'بین الاقوامی سائنسی حوالہ جات (References & Citations)',
+    articlesReferencesNotice: 'اس مضمون کے تمام مندرجات مستند بین الاقوامی زرعی جرائد اور اقوام متحدہ کے ادارے برائے زراعت (FAO) کے رہنما خطوط کے تحت تصدیق شدہ ہیں۔',
+    articlesRefCount: 'مصدقہ سائنسی حوالہ جات',
+    articlesHasReferencesBadge: 'بین الاقوامی سائنسی حوالہ جات کے ساتھ',
+    articlesCopyReferences: 'حوالہ جات کاپی کریں',
+    articlesCopiedReferences: 'حوالہ جات کاپی ہو گئے!',
+    articlesRelatedProducts: 'پیشگامان کی متعلقہ پروڈکٹس',
+    articlesTrendingBadge: 'گوگل ٹرینڈز (Google Trends)',
+    articlesTrendingLabel: 'زراعت میں سب سے زیادہ تلاش کیا جانے والا موضوع',
+    articlesAllCategories: 'تمام کیٹیگریز',
+
+    footerAbout: 'کمپنی اور برانڈ کا تعارف',
+    footerCatalog: '۱۶ اہم مصنوعات کا کیٹلاگ',
+    footerContact: 'براہ راست رابطہ اور آرڈر',
+    footerWorkingHours: 'دفتری اوقات: ہفتہ تا بدھ ۸:۰۰ سے ۱۷:۰۰ | جمعرات ۸:۰۰ سے ۱۳:۰۰',
+    footerAllRights: 'جملہ حقوق برائے پیشگامان پائیدار فلات نیک (پرواز نہادہ) محفوظ ہیں۔',
+    footerScrollToTop: 'اوپر جائیں',
+
+    consultAssistant: 'زرعی غذائیت کا سمارٹ اسسٹنٹ',
+    directWhatsapp: 'واٹس ایپ پر رابطہ',
+    directCall: 'براہ راست کال',
+    languageSelect: 'زبان منتخب کریں'
   }
 };

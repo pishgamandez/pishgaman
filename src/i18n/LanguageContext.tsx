@@ -16,7 +16,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [language, setLanguageState] = useState<Language>(() => {
     try {
       const saved = localStorage.getItem('pishgaman_language');
-      if (saved === 'fa' || saved === 'en' || saved === 'ar') {
+      if (saved === 'fa' || saved === 'en' || saved === 'ar' || saved === 'ur') {
         return saved;
       }
     } catch {

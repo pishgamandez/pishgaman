@@ -68,6 +68,17 @@ function generateSitemap(articles: any[]) {
     <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}/?lang=ar" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/" />
   </url>
+  <url>
+    <loc>${baseUrl}/?lang=ur</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="${baseUrl}/" />
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="ur" href="${baseUrl}/?lang=ur" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/" />
+  </url>
 
   <!-- 2. Articles Index Pages -->
   <url>
@@ -78,6 +89,7 @@ function generateSitemap(articles: any[]) {
     <xhtml:link rel="alternate" hreflang="fa" href="${baseUrl}/articles/" />
     <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/articles/" />
     <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}/ar/articles/" />
+    <xhtml:link rel="alternate" hreflang="ur" href="${baseUrl}/ur/articles/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/articles/" />
   </url>
   <url>
@@ -88,6 +100,7 @@ function generateSitemap(articles: any[]) {
     <xhtml:link rel="alternate" hreflang="fa" href="${baseUrl}/articles/" />
     <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/articles/" />
     <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}/ar/articles/" />
+    <xhtml:link rel="alternate" hreflang="ur" href="${baseUrl}/ur/articles/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/articles/" />
   </url>
   <url>
@@ -98,19 +111,32 @@ function generateSitemap(articles: any[]) {
     <xhtml:link rel="alternate" hreflang="fa" href="${baseUrl}/articles/" />
     <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/articles/" />
     <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}/ar/articles/" />
+    <xhtml:link rel="alternate" hreflang="ur" href="${baseUrl}/ur/articles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/articles/" />
+  </url>
+  <url>
+    <loc>${baseUrl}/ur/articles/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="${baseUrl}/articles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/articles/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="${baseUrl}/ar/articles/" />
+    <xhtml:link rel="alternate" hreflang="ur" href="${baseUrl}/ur/articles/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/articles/" />
   </url>
 `;
 
-  // Add all 20 individual articles in FA, EN, AR
+  // Add all 20 individual articles
   articles.forEach(art => {
     const lastMod = art.fa.lastModified || '2026-10-11';
     const faUrl = `${baseUrl}/articles/${art.slug}/`;
     const enUrl = `${baseUrl}/en/articles/${art.slug}/`;
     const arUrl = `${baseUrl}/ar/articles/${art.slug}/`;
+    const urUrl = `${baseUrl}/ur/articles/${art.slug}/`;
 
     xml += `
-  <!-- Article: ${art.slug} (FA) -->
+  <!-- Article: ${art.slug} -->
   <url>
     <loc>${faUrl}</loc>
     <lastmod>${lastMod}</lastmod>
@@ -119,30 +145,36 @@ function generateSitemap(articles: any[]) {
     <xhtml:link rel="alternate" hreflang="fa" href="${faUrl}" />
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
     <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
+    <xhtml:link rel="alternate" hreflang="ur" href="${urUrl}" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${faUrl}" />
-  </url>
+  </url>`;
+  });
 
-  <!-- Article: ${art.slug} (EN) -->
+  // Add all 16 strategic products in FA, EN, AR, UR
+  const productSlugs = [
+    'challenger', 'humifarm', 'jumper', 'full-charger',
+    'redfol', 'doping', 'siligard', 'stormy',
+    'fiction', 'top-star', 'tiger-k-high', 'tiger-p-high',
+    'sol-max', 'salt-stop', 'angela', 'ph-best'
+  ];
+
+  productSlugs.forEach(slug => {
+    const faUrl = `${baseUrl}/products/${slug}/`;
+    const enUrl = `${baseUrl}/en/products/${slug}/`;
+    const arUrl = `${baseUrl}/ar/products/${slug}/`;
+    const urUrl = `${baseUrl}/ur/products/${slug}/`;
+
+    xml += `
+  <!-- Product: ${slug} -->
   <url>
-    <loc>${enUrl}</loc>
-    <lastmod>${lastMod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>${faUrl}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="fa" href="${faUrl}" />
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
     <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${faUrl}" />
-  </url>
-
-  <!-- Article: ${art.slug} (AR) -->
-  <url>
-    <loc>${arUrl}</loc>
-    <lastmod>${lastMod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="fa" href="${faUrl}" />
-    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
-    <xhtml:link rel="alternate" hreflang="ar" href="${arUrl}" />
+    <xhtml:link rel="alternate" hreflang="ur" href="${urUrl}" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${faUrl}" />
   </url>`;
   });

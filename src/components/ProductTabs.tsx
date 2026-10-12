@@ -3,6 +3,7 @@ import { Product, ProductCategory } from '../types';
 import { ProductPackageIllustration } from './ProductPackageIllustration';
 import { ArrowLeft, ArrowRight, Sparkles, Eye, Check } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { getLocalizedProduct } from '../utils/productLocalization';
 
 interface ProductTabsProps {
   products: Product[];
@@ -74,6 +75,8 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
       ? `${basePath}/en/products/${slug}/`
       : language === 'ar'
       ? `${basePath}/ar/products/${slug}/`
+      : language === 'ur'
+      ? `${basePath}/ur/products/${slug}/`
       : `${basePath}/products/${slug}/`;
   };
 
@@ -143,11 +146,10 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
                   : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
               }`}
             >
-              {language === 'en' ? 'Show All' : language === 'ar' ? 'عرض الكل' : 'نمایش همه'}
+              {language === 'en' ? 'Show All' : language === 'ar' ? 'عرض الكل' : language === 'ur' ? 'تمام دکھائیں' : 'نمایش همه'}
             </button>
             {products.map(p => {
-              const displayName = language === 'en' ? p.nameEn : p.nameFa;
-              const subName = language === 'en' ? p.nameFa : p.nameEn;
+              const loc = getLocalizedProduct(p, language, t);
               return (
                 <button
                   key={p.id}
@@ -163,8 +165,8 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
                       : 'bg-stone-50 text-stone-700 hover:bg-emerald-50 hover:text-emerald-800 border border-stone-200/60'
                   }`}
                 >
-                  <span className="font-bold">{displayName}</span>
-                  <span className="font-mono text-[10px] opacity-75 uppercase">{subName}</span>
+                  <span className="font-bold">{loc.displayName}</span>
+                  <span className="font-mono text-[10px] opacity-75 uppercase">{loc.subName}</span>
                 </button>
               );
             })}
@@ -188,8 +190,7 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map(product => {
-              const displayName = language === 'en' ? product.nameEn : product.nameFa;
-              const subName = language === 'en' ? product.nameFa : product.nameEn;
+              const loc = getLocalizedProduct(product, language, t);
 
               return (
                 <div
@@ -209,34 +210,34 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
                     <div className="space-y-1">
                       <div className="flex items-center justify-between text-[11px] text-stone-500">
                         <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
-                          {product.categoryTitle}
+                          {loc.categoryTitle}
                         </span>
-                        {product.appearance && (
-                          <span className="text-stone-400 truncate max-w-[120px]">{product.appearance}</span>
+                        {loc.appearance && (
+                          <span className="text-stone-400 truncate max-w-[120px]">{loc.appearance}</span>
                         )}
                       </div>
 
                       <div className="pt-2">
                         <h3 className="text-xl font-black text-stone-900 group-hover:text-emerald-700 transition-colors">
-                          {displayName}
+                          {loc.displayName}
                         </h3>
                         <span className="text-[11px] font-mono tracking-wider text-stone-400 block uppercase">
-                          {subName}
+                          {loc.subName}
                         </span>
                       </div>
                     </div>
 
                     {/* Tagline & Key Benefit */}
                     <p className="text-xs text-stone-600 line-clamp-2 leading-relaxed">
-                      {product.tagline}
+                      {loc.tagline}
                     </p>
 
                     {/* Benefits Preview */}
-                    {product.benefits && product.benefits.length > 0 && (
+                    {loc.benefits && loc.benefits.length > 0 && (
                       <div className="bg-stone-50 rounded-xl p-2.5 border border-stone-100 text-[11px] text-stone-700 space-y-1">
                         <div className="flex items-start gap-1.5">
                           <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                          <span className="line-clamp-2">{product.benefits[0]}</span>
+                          <span className="line-clamp-2">{loc.benefits[0]}</span>
                         </div>
                       </div>
                     )}

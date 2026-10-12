@@ -16,7 +16,8 @@ interface HeaderProps {
 const languages: { code: Language; label: string; flag: string }[] = [
   { code: 'fa', label: 'فارسی', flag: '🇮🇷' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'ar', label: 'العربية', flag: '🇦🇪' }
+  { code: 'ar', label: 'العربية', flag: '🇦🇪' },
+  { code: 'ur', label: 'اردو (پاکستانی)', flag: '🇵🇰' }
 ];
 
 export const Header: React.FC<HeaderProps> = ({

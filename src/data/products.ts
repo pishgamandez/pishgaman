@@ -43,7 +43,7 @@ const rawProducts: Product[] = [
         "rate": "۳-۵ کیلوگرم در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/challenger.jpg"
+    "imageUrl": "/assets/images/products/challenger.jpg"
   },
   {
     "id": "humifarm",
@@ -95,7 +95,7 @@ const rawProducts: Product[] = [
         "rate": "۵-۱۰ لیتر در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/humifarm.jpg"
+    "imageUrl": "/assets/images/products/humifarm.jpg"
   },
   {
     "id": "jumper",
@@ -159,7 +159,7 @@ const rawProducts: Product[] = [
         "rate": "۱ تا ۲ لیتر در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/jumper.jpg"
+    "imageUrl": "/assets/images/products/jumper.jpg"
   },
   {
     "id": "full-charger",
@@ -201,7 +201,7 @@ const rawProducts: Product[] = [
         "rate": "۱.۵ تا ۲ لیتر در ۱۰۰۰ لیتر آب"
       }
     ],
-    "imageUrl": "./assets/images/products/full-charger.jpg"
+    "imageUrl": "/assets/images/products/full-charger.jpg"
   },
   {
     "id": "red-full",
@@ -239,7 +239,7 @@ const rawProducts: Product[] = [
         "rate": "۲۰۰ تا ۲۵۰ گرم در ۱۰۰۰ متر مربع"
       }
     ],
-    "imageUrl": "./assets/images/products/red-full.jpg"
+    "imageUrl": "/assets/images/products/red-full.jpg"
   },
   {
     "id": "doping",
@@ -279,7 +279,7 @@ const rawProducts: Product[] = [
         "rate": "۱-۲ لیتر در ۱۰۰۰ لیتر آب"
       }
     ],
-    "imageUrl": "./assets/images/products/doping.jpg"
+    "imageUrl": "/assets/images/products/doping.jpg"
   },
   {
     "id": "siligard",
@@ -331,7 +331,7 @@ const rawProducts: Product[] = [
         "rate": "۵-۱۰ لیتر در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/siligard.jpg"
+    "imageUrl": "/assets/images/products/siligard.jpg"
   },
   {
     "id": "stormy",
@@ -371,7 +371,7 @@ const rawProducts: Product[] = [
         "rate": "۴-۵ لیتر در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/stormy.jpg"
+    "imageUrl": "/assets/images/products/stormy.jpg"
   },
   {
     "id": "fiction",
@@ -417,7 +417,7 @@ const rawProducts: Product[] = [
         "rate": "۲ تا ۳ لیتر در ۱۰۰۰ لیتر آب"
       }
     ],
-    "imageUrl": "./assets/images/products/fiction.jpg"
+    "imageUrl": "/assets/images/products/fiction.jpg"
   },
   {
     "id": "top-star",
@@ -469,7 +469,7 @@ const rawProducts: Product[] = [
         "rate": "۲ تا ۳ لیتر در ۱۰۰۰ لیتر آب"
       }
     ],
-    "imageUrl": "./assets/images/products/top-star.jpg"
+    "imageUrl": "/assets/images/products/top-star.jpg"
   },
   {
     "id": "tiger-k",
@@ -552,7 +552,7 @@ const rawProducts: Product[] = [
         "rate": "۵ کیلوگرم در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/tiger-k.jpg"
+    "imageUrl": "/assets/images/products/tiger-k.jpg"
   },
   {
     "id": "tiger-p",
@@ -611,7 +611,7 @@ const rawProducts: Product[] = [
         "rate": "۲ تا ۱۰ کیلوگرم در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/tiger-p.jpg"
+    "imageUrl": "/assets/images/products/tiger-p.jpg"
   },
   {
     "id": "sulmax",
@@ -664,7 +664,7 @@ const rawProducts: Product[] = [
         "rate": "۵-۸ لیتر در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/sulmax.jpg"
+    "imageUrl": "/assets/images/products/sulmax.jpg"
   },
   {
     "id": "salt-stop",
@@ -716,7 +716,7 @@ const rawProducts: Product[] = [
         "rate": "۲-۳ لیتر در هکتار در هر آبیاری"
       }
     ],
-    "imageUrl": "./assets/images/products/salt-stop.jpg"
+    "imageUrl": "/assets/images/products/salt-stop.jpg"
   },
   {
     "id": "angela",
@@ -756,7 +756,7 @@ const rawProducts: Product[] = [
         "rate": "۱۵-۲۰ لیتر در هکتار"
       }
     ],
-    "imageUrl": "./assets/images/products/angela.jpg"
+    "imageUrl": "/assets/images/products/angela.jpg"
   },
   {
     "id": "ph-best",
@@ -796,7 +796,7 @@ const rawProducts: Product[] = [
         "rate": "۱ تا ۲ لیتر در ۱۰۰۰ متر مربع"
       }
     ],
-    "imageUrl": "./assets/images/products/ph-best.jpg"
+    "imageUrl": "/assets/images/products/ph-best.jpg"
   }
 ];
 

@@ -21,7 +21,7 @@ import { companyInfo } from './data/company';
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
 
 function MainApp() {
-  const { language, t, isRtl } = useLanguage();
+  const { language, setLanguage, t, isRtl } = useLanguage();
 
   const [products, setProducts] = useState<Product[]>(() => {
     try {
@@ -78,8 +78,16 @@ function MainApp() {
       if (typeof window === 'undefined') return;
       const path = window.location.pathname;
 
-      // 1. Check product detail match: e.g. /products/:slug, /pishgaman/products/:slug, /en/products/:slug
-      const matchProduct = path.match(/(?:^|\/)(?:en\/|ar\/)?products\/([a-zA-Z0-9_-]+)\/?$/);
+      if (path.includes('/en/')) {
+        setLanguage('en');
+      } else if (path.includes('/ar/')) {
+        setLanguage('ar');
+      } else if (path.includes('/ur/')) {
+        setLanguage('ur');
+      }
+
+      // 1. Check product detail match: e.g. /products/:slug, /en/products/:slug, /ur/products/:slug
+      const matchProduct = path.match(/(?:^|\/)(?:en\/|ar\/|ur\/)?products\/([a-zA-Z0-9_-]+)\/?$/);
       if (matchProduct && matchProduct[1]) {
         const slug = matchProduct[1];
         const found = products.find(p => p.slug === slug || p.aliases?.includes(slug) || p.id === slug);
@@ -92,8 +100,8 @@ function MainApp() {
         }
       }
 
-      // 2. Check article detail match: e.g. /articles/:slug or /pishgaman/articles/:slug
-      const matchDetail = path.match(/(?:^|\/)(?:en\/|ar\/)?articles\/([a-zA-Z0-9_-]+)\/?$/);
+      // 2. Check article detail match: e.g. /articles/:slug, /ur/articles/:slug
+      const matchDetail = path.match(/(?:^|\/)(?:en\/|ar\/|ur\/)?articles\/([a-zA-Z0-9_-]+)\/?$/);
       if (matchDetail && matchDetail[1]) {
         const slug = matchDetail[1];
         const found = articlesData.find(a => a.slug === slug || a.aliases?.includes(slug) || a.id === slug);
@@ -106,8 +114,8 @@ function MainApp() {
         }
       }
 
-      // 3. Check articles index: /articles/ or /pishgaman/articles/
-      if (/(?:^|\/)(?:en\/|ar\/)?articles\/?$/.test(path)) {
+      // 3. Check articles index: /articles/ or /ur/articles/
+      if (/(?:^|\/)(?:en\/|ar\/|ur\/)?articles\/?$/.test(path)) {
         setCurrentArticle(null);
         setCurrentProduct(null);
         setCurrentView('articles-index');
@@ -133,6 +141,8 @@ function MainApp() {
         ? `${basePath}/en/products/${found.slug}/`
         : language === 'ar'
         ? `${basePath}/ar/products/${found.slug}/`
+        : language === 'ur'
+        ? `${basePath}/ur/products/${found.slug}/`
         : `${basePath}/products/${found.slug}/`;
 
       try {
@@ -154,6 +164,8 @@ function MainApp() {
         ? `${basePath}/en/articles/${found.slug}/`
         : language === 'ar'
         ? `${basePath}/ar/articles/${found.slug}/`
+        : language === 'ur'
+        ? `${basePath}/ur/articles/${found.slug}/`
         : `${basePath}/articles/${found.slug}/`;
 
       try {
@@ -173,6 +185,8 @@ function MainApp() {
       ? `${basePath}/en/articles/`
       : language === 'ar'
       ? `${basePath}/ar/articles/`
+      : language === 'ur'
+      ? `${basePath}/ur/articles/`
       : `${basePath}/articles/`;
 
     try {

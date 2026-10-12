@@ -33,6 +33,8 @@ if (!fs.existsSync(productsImagesDir)) {
 
 app.use('/uploads', express.static(uploadsDir));
 app.use('/assets', express.static(path.resolve(__dirname, 'public', 'assets')));
+app.use('/pishgaman/uploads', express.static(uploadsDir));
+app.use('/pishgaman/assets', express.static(path.resolve(__dirname, 'public', 'assets')));
 
 // Ensure data persistence directory exists
 const dataDir = path.resolve(__dirname, 'data');

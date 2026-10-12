@@ -1,7 +1,7 @@
 import React from 'react';
 import { companyInfo } from '../data/company';
 import { initialProducts } from '../data/products';
-import { Phone, Mail, MapPin, ArrowUp, Lock, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, Lock, Globe, Instagram } from 'lucide-react';
 import { PishgamanLogo } from './PishgamanLogo';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Language } from '../types';
@@ -14,7 +14,8 @@ interface Props {
 const languages: { code: Language; label: string; flag: string }[] = [
   { code: 'fa', label: 'فارسی', flag: '🇮🇷' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'ar', label: 'العربية', flag: '🇦🇪' }
+  { code: 'ar', label: 'العربية', flag: '🇦🇪' },
+  { code: 'ur', label: 'اردو (پاکستانی)', flag: '🇵🇰' }
 ];
 
 export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
@@ -53,17 +54,17 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
             </div>
 
             {/* Language Selection in Footer */}
-            <div className="pt-3 flex items-center gap-2">
+            <div className="pt-3 flex flex-wrap items-center gap-2">
               <span className="text-[11px] text-stone-400 flex items-center gap-1">
                 <Globe className="w-3.5 h-3.5 text-emerald-400" />
                 <span>{t.languageSelect}:</span>
               </span>
-              <div className="flex items-center gap-1.5">
+              <div className="flex flex-wrap items-center gap-1.5">
                 {languages.map(l => (
                   <button
                     key={l.code}
                     onClick={() => setLanguage(l.code)}
-                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
+                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all cursor-pointer ${
                       language === l.code
                         ? 'bg-emerald-600 text-white'
                         : 'bg-stone-800 text-stone-400 hover:text-white'
@@ -73,6 +74,27 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
                   </button>
                 ))}
               </div>
+            </div>
+
+            {/* Instagram Official Page */}
+            <div className="pt-3">
+              <a
+                href={companyInfo.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-pink-600 via-rose-500 to-amber-500 hover:from-pink-700 hover:to-amber-600 text-white text-xs font-bold transition-all shadow-sm hover:shadow-md cursor-pointer group"
+              >
+                <Instagram className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+                <span>
+                  {language === 'en'
+                    ? 'Instagram: @pishgaman_org'
+                    : language === 'ar'
+                    ? 'صفحة إنستغرام: pishgaman_org@'
+                    : language === 'ur'
+                    ? 'انسٹاگرام پیج: pishgaman_org@'
+                    : 'صفحه اینستاگرام: pishgaman_org@'}
+                </span>
+              </a>
             </div>
           </div>
 
@@ -121,18 +143,50 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
 
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span className="font-mono text-[11px] text-stone-400">{companyInfo.email}</span>
+                <a
+                  href={`mailto:${companyInfo.email}`}
+                  className="font-mono text-xs text-emerald-300 hover:text-white transition-colors underline-offset-2 hover:underline"
+                >
+                  {companyInfo.email}
+                </a>
               </div>
 
-              <div className="flex items-start gap-2.5">
+              {/* Tehran Central Office Address */}
+              <div className="flex items-start gap-2.5 pt-1">
                 <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span className="text-stone-400">
-                  {language === 'en'
-                    ? 'Tehran, Pishgaman Paydar Falat Nik Central Office'
-                    : language === 'ar'
-                    ? 'طهران، المكتب المركزي لشركة بيشغامان بايدار فلات نيك'
-                    : companyInfo.address}
-                </span>
+                <div className="text-stone-300 text-xs">
+                  <span className="font-bold text-white block">
+                    {language === 'en' ? 'Central Office (Tehran):' : language === 'ar' ? 'المكتب المركزي (طهران):' : language === 'ur' ? 'مرکزی دفتر (تہران):' : 'دفتر مرکزی تهران:'}
+                  </span>
+                  <span className="text-stone-400">
+                    {language === 'en'
+                      ? 'Tehran, Pishgaman Paydar Falat Nik Central Office'
+                      : language === 'ar'
+                      ? 'طهران، المكتب المركزي لشركة بيشغامان بايدار فلات نيك'
+                      : language === 'ur'
+                      ? 'تہران، پیشگامان پائیدار فلات نیک کمپنی کا مرکزی دفتر'
+                      : companyInfo.addressTehran}
+                  </span>
+                </div>
+              </div>
+
+              {/* Khuzestan Dezful Address */}
+              <div className="flex items-start gap-2.5 pt-1">
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="text-stone-300 text-xs">
+                  <span className="font-bold text-white block">
+                    {language === 'en' ? 'Branch & Facility (Khuzestan - Dezful):' : language === 'ar' ? 'فرع خوزستان (دزفول):' : language === 'ur' ? 'شاخ اور فیکٹری (خوزستان - دزفول):' : 'شعبه و کارخانه خوزستان (دزفول):'}
+                  </span>
+                  <span className="text-stone-400">
+                    {language === 'en'
+                      ? 'Khuzestan, Dezful, Najjaran, Najjar 2, Pishgaman Company'
+                      : language === 'ar'
+                      ? 'خوزستان، دزفول، نجاران، نجار ۲، شركة بيشغامان'
+                      : language === 'ur'
+                      ? 'خوزستان، دزفول، نجاران، نجار ۲، کمپنی پیشگامان'
+                      : companyInfo.addressDezful}
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -149,8 +203,37 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
 
         </div>
 
+        {/* Quick Contact & Address Summary Strip */}
+        <div className="pt-4 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-3 text-xs text-stone-400 bg-stone-950/40 p-4 rounded-2xl border border-stone-800">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <span className="flex items-center gap-1.5 text-stone-300">
+              <Mail className="w-3.5 h-3.5 text-emerald-400" />
+              <span>ایمیل رسمی:</span>
+              <a href="mailto:pishgamanparvaznahade@gmail.com" className="font-mono text-emerald-400 hover:text-white underline font-bold">
+                pishgamanparvaznahade@gmail.com
+              </a>
+            </span>
+            <span className="hidden lg:inline text-stone-600">|</span>
+            <span className="flex items-center gap-1 text-stone-300">
+              <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+              <span>خوزستان، دزفول، نجاران، نجار ۲، شرکت پیشگامان</span>
+            </span>
+            <span className="hidden lg:inline text-stone-600">|</span>
+            <span className="text-stone-300">
+              دفتر مرکزی: تهران
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Phone className="w-3.5 h-3.5 text-emerald-400" />
+            <a href="tel:09128247415" dir="ltr" className="font-mono font-bold text-white hover:text-emerald-400">
+              09128247415
+            </a>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+        <div className="pt-4 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
           <div>
             © {new Date().getFullYear()} {t.footerAllRights}
           </div>

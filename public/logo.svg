@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" width="1000" height="1100" fill="none">
+  <!-- Clean White Backdrop -->
+  <rect width="500" height="550" fill="#FFFFFF"/>
+
+  <!-- Subtle Ambient Gray Dots (Watermark effect matching the original) -->
+  <g opacity="0.16" fill="#A0AEC0">
+    <circle cx="390" cy="70" r="16"/>
+    <circle cx="435" cy="115" r="12"/>
+    <circle cx="405" cy="160" r="9"/>
+    <circle cx="450" cy="195" r="14"/>
+    <circle cx="420" cy="245" r="11"/>
+    <circle cx="460" cy="285" r="8"/>
+    <circle cx="355" cy="95" r="10"/>
+    <circle cx="370" cy="175" r="7"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 1. ICON EMBLEM (Top)                       -->
+  <!-- ========================================== -->
+  <g id="emblem" transform="translate(250, 155)">
+    <!-- Outer Deep Navy Blue Sweeping Orbit Arc -->
+    <!-- Curves around from bottom-left up, thickest over 11-12 o clock, tapering on the right -->
+    <path d="M -122 36 
+             C -165 -18 -158 -88 -98 -142 
+             C -45 -188 52 -186 106 -140 
+             C 134 -115 150 -78 148 -35 
+             C 145 -60 130 -96 98 -124 
+             C 52 -162 -30 -160 -78 -122 
+             C -126 -84 -130 -28 -102 12 
+             C -94 24 -84 34 -72 40 
+             C -90 40 -108 38 -122 36 Z" 
+          fill="#1C3782"/>
+
+    <!-- Inner Vibrant Leaf-Green Arc -->
+    <!-- Concentric inside the navy arc, curving over the top of the foliage -->
+    <path d="M -94 20 
+             C -118 -14 -116 -66 -82 -104 
+             C -45 -145 25 -142 70 -104 
+             C 86 -90 96 -72 98 -54 
+             C 90 -72 75 -90 56 -104 
+             C 20 -128 -36 -128 -70 -94 
+             C -100 -62 -100 -18 -80 12 
+             C -74 20 -66 26 -56 28 
+             C -72 28 -84 25 -94 20 Z" 
+          fill="#68BD24"/>
+
+    <!-- Central Plant Foliage (3 Stylized Leaves) -->
+    <!-- Center Leaf (Tallest, upright) -->
+    <path d="M 0 -72 
+             C 26 -35 32 15 0 52 
+             C -32 15 -26 -35 0 -72 Z" 
+          fill="#60B820"/>
+
+    <!-- Left Leaf (Angled outwards to the left) -->
+    <path d="M -2 36 
+             C -42 34 -72 6 -62 -16 
+             C -40 -24 -16 2 -2 36 Z" 
+          fill="#55AC17"/>
+
+    <!-- Right Leaf (Angled outwards to the right) -->
+    <path d="M 2 36 
+             C 42 34 72 6 62 -16 
+             C 40 -24 16 2 2 36 Z" 
+          fill="#68BD24"/>
+
+    <!-- Center Navy Stem Vein -->
+    <path d="M 0 -50 L 0 52" stroke="#1C3782" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Dynamic Base Wave / Swoosh in Deep Navy Blue -->
+    <!-- Cups the leaves at the bottom and gracefully swooshes out to the right -->
+    <path d="M -105 30 
+             C -78 60 -35 66 5 58 
+             C 48 50 96 38 168 45 
+             C 112 55 58 70 2 72 
+             C -48 74 -90 60 -105 30 Z" 
+          fill="#1C3782"/>
+    <path d="M -82 44 
+             C -45 30 -6 32 18 46 
+             C 62 34 112 34 186 46 
+             C 122 58 72 58 28 55 
+             C -18 52 -55 54 -82 44 Z" 
+          fill="#1C3782"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 2. PISHGAMAN LATIN WORDMARK (Green)        -->
+  <!-- ========================================== -->
+  <g id="pishgaman-latin" transform="translate(250, 310)">
+    <!-- Letter P with Stylized Leaf Cutout inside the bowl -->
+    <g transform="translate(-188, -28)">
+      <!-- Main P shape -->
+      <path d="M 0 0 L 22 0 C 33 0 40 6 40 16 C 40 26 33 32 22 32 L 11 32 L 11 50 L 0 50 Z" fill="#68BD24"/>
+      <!-- Inner Cutout in shape of an angled leaf -->
+      <path d="M 11 8 L 20 8 C 27 8 30 11 30 16 C 30 21 27 24 20 24 L 11 24 Z" fill="#FFFFFF"/>
+      <!-- Small green leaf bud inside loop -->
+      <path d="M 15 17 C 18 12 25 12 24 16 C 24 19 18 20 15 17 Z" fill="#68BD24"/>
+    </g>
+
+    <!-- I S H G A M A N rendered with geometric bold typography -->
+    <text x="-135" y="16" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="46" letter-spacing="8" fill="#68BD24">
+      ISHGAMAN
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3. HORIZONTAL NAVY BLUE DIVIDER LINE       -->
+  <!-- ========================================== -->
+  <line x1="56" y1="344" x2="444" y2="344" stroke="#1C3782" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- ========================================== -->
+  <!-- 4. PERSIAN WORDMARK (پیشگامان) in Navy     -->
+  <!-- ========================================== -->
+  <g id="pishgaman-persian" transform="translate(250, 435)">
+    <!-- High-Fidelity Calligraphic Persian Text matching the official logo -->
+    <text x="0" y="0" text-anchor="middle" font-family="Vazirmatn, Tahoma, Arial, sans-serif" font-weight="900" font-size="74" fill="#1C3782" letter-spacing="2">
+      پیشگامان
+    </text>
+  </g>
+</svg>

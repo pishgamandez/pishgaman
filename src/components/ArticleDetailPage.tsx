@@ -35,7 +35,7 @@ export const ArticleDetailPage: React.FC<Props> = ({
   const [copiedRefs, setCopiedRefs] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
 
-  const content = article[language] || article.fa;
+  const content = (language === 'ur' ? article.ur || article.fa : article[language]) || article.fa;
   const isGhPages = typeof window !== 'undefined' && window.location.pathname.startsWith('/pishgaman');
   const basePath = isGhPages ? '/pishgaman' : '';
 
@@ -44,6 +44,8 @@ export const ArticleDetailPage: React.FC<Props> = ({
       ? `${basePath}/en/products/${slug}/`
       : language === 'ar'
       ? `${basePath}/ar/products/${slug}/`
+      : language === 'ur'
+      ? `${basePath}/ur/products/${slug}/`
       : `${basePath}/products/${slug}/`;
   };
 
@@ -193,7 +195,7 @@ export const ArticleDetailPage: React.FC<Props> = ({
       schemas.push({
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        'mainEntity': content.faqs.map(faq => ({
+        'mainEntity': content.faqs.map((faq: any) => ({
           '@type': 'Question',
           'name': faq.question,
           'acceptedAnswer': {
@@ -221,7 +223,7 @@ export const ArticleDetailPage: React.FC<Props> = ({
   // Copy references to clipboard
   const handleCopyReferences = () => {
     if (!content.references || content.references.length === 0) return;
-    const text = content.references.map((r, i) => `[${i + 1}] ${r}`).join('\n\n');
+    const text = content.references.map((r: string, i: number) => `[${i + 1}] ${r}`).join('\n\n');
     navigator.clipboard.writeText(text);
     setCopiedRefs(true);
     setTimeout(() => setCopiedRefs(false), 2500);
@@ -239,12 +241,12 @@ export const ArticleDetailPage: React.FC<Props> = ({
     .filter(a => a.id !== article.id)
     .filter(a => {
       if (content.relatedArticles && content.relatedArticles.includes(a.slug)) return true;
-      const c = a[language] || a.fa;
+      const c = (language === 'ur' ? a.ur || a.fa : a[language]) || a.fa;
       return c.category === content.category || (article.region && a.region);
     })
     .slice(0, 3);
 
-  const trendTag = article.googleTrendKeyword ? article.googleTrendKeyword[language] : null;
+  const trendTag = article.googleTrendKeyword ? (article.googleTrendKeyword as any)[language] || article.googleTrendKeyword.fa : null;
 
   return (
     <article className={`min-h-screen bg-stone-50 text-stone-800 flex flex-col font-sans ${isRtl ? 'text-right' : 'text-left'}`}>
@@ -659,7 +661,7 @@ export const ArticleDetailPage: React.FC<Props> = ({
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {relatedArticlesList.map(rel => {
-                const relContent = rel[language] || rel.fa;
+                const relContent = (language === 'ur' ? rel.ur || rel.fa : rel[language]) || rel.fa;
                 return (
                   <div
                     key={rel.id}

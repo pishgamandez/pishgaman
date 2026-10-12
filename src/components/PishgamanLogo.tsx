@@ -2,7 +2,7 @@ import React from 'react';
 
 interface Props {
   className?: string;
-  variant?: 'full' | 'icon' | 'white';
+  variant?: 'full' | 'icon' | 'badge' | 'white';
   size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
@@ -11,15 +11,26 @@ export const PishgamanLogo: React.FC<Props> = ({
   variant = 'full',
   size = 'md'
 }) => {
-  // Dimensions based on size
-  const dim = size === 'sm' ? 36 : size === 'lg' ? 72 : size === 'xl' ? 110 : 50;
+  // Dimensions
+  const dim = size === 'sm' ? 36 : size === 'lg' ? 68 : size === 'xl' ? 96 : 48;
 
-  const blueColor = variant === 'white' ? '#FFFFFF' : '#1A367E';
-  const greenColor = variant === 'white' ? '#4ADE80' : '#58B82A';
+  // Colors
+  const isWhite = variant === 'white';
+  const navyColor = isWhite ? '#FFFFFF' : '#1C3782';
+  const greenColor = isWhite ? '#4ADE80' : '#62BA24';
+
+  // If badge variant is requested, wrap in an official white emblem card for 100% brand consistency
+  if (variant === 'badge') {
+    return (
+      <div className={`inline-flex flex-col items-center bg-white p-3 rounded-2xl shadow-lg border border-stone-200 select-none ${className}`}>
+        <PishgamanLogo variant="full" size={size} />
+      </div>
+    );
+  }
 
   return (
-    <div className={`inline-flex items-center gap-3 select-none ${className}`}>
-      {/* Crisp Circular Emblem */}
+    <div className={`inline-flex items-center gap-2.5 sm:gap-3 select-none ${className}`}>
+      {/* 1. Official Emblem SVG */}
       <svg
         width={dim}
         height={dim}
@@ -28,65 +39,81 @@ export const PishgamanLogo: React.FC<Props> = ({
         xmlns="http://www.w3.org/2000/svg"
         className="shrink-0 drop-shadow-sm transition-transform duration-300 hover:scale-105"
       >
-        {/* Outer Navy Blue Sweeping Orbit Arc */}
+        {/* Outer Deep Navy Orbit Arc */}
         <path
-          d="M 50 155 C 25 125, 20 80, 50 45 C 80 15, 130 15, 165 40 C 185 55, 195 80, 185 105 C 180 90, 168 70, 150 55 C 120 32, 75 35, 52 62 C 30 90, 35 125, 58 148 C 65 155, 75 160, 85 162 C 70 162, 58 160, 50 155 Z"
-          fill={blueColor}
+          d="M 52 145 C 32 118 34 78 60 50 C 88 22 138 20 166 48 C 182 64 190 86 188 108 C 186 94 176 74 158 58 C 132 36 90 36 68 58 C 44 80 44 112 60 134 C 64 140 70 144 76 146 C 66 147 58 147 52 145 Z"
+          fill={navyColor}
         />
 
-        {/* Inner Green Arc */}
+        {/* Inner Lime-Green Arc */}
         <path
-          d="M 75 145 C 55 125, 55 85, 78 58 C 102 32, 142 34, 165 58 C 172 65, 178 75, 180 82 C 176 72, 168 62, 158 54 C 135 36, 100 38, 80 60 C 60 82, 62 118, 78 138 C 82 143, 88 147, 95 150 C 86 149, 79 148, 75 145 Z"
+          d="M 68 135 C 56 116 56 86 74 66 C 94 44 130 46 152 66 C 160 74 165 84 166 94 C 162 84 154 74 144 66 C 126 52 98 52 82 70 C 66 88 66 112 76 130 C 78 134 82 136 86 138 C 78 138 72 137 68 135 Z"
           fill={greenColor}
         />
 
-        {/* Central Sprout/Leaves - Center Leaf */}
+        {/* Central Plant Foliage - 3 Stylized Leaves */}
+        {/* Center Main Upright Leaf */}
         <path
-          d="M 100 65 C 118 85, 122 120, 100 148 C 78 120, 82 85, 100 65 Z"
+          d="M 100 68 C 114 88 116 114 100 132 C 84 114 86 88 100 68 Z"
           fill={greenColor}
         />
 
-        {/* Left Leaf */}
+        {/* Left Leaf (Angled outwards) */}
         <path
-          d="M 100 135 C 78 130, 62 110, 68 95 C 82 92, 95 110, 100 135 Z"
+          d="M 98 124 C 76 122 62 106 68 96 C 80 92 92 106 98 124 Z"
           fill={greenColor}
         />
 
-        {/* Right Leaf */}
+        {/* Right Leaf (Angled outwards) */}
         <path
-          d="M 100 135 C 122 130, 138 110, 132 95 C 118 92, 105 110, 100 135 Z"
+          d="M 102 124 C 124 122 138 106 132 96 C 120 92 108 106 102 124 Z"
           fill={greenColor}
         />
 
-        {/* Base Pod / Wave Under Leaves in Navy Blue */}
+        {/* Center Navy Stem Vein */}
         <path
-          d="M 52 148 C 75 138, 95 138, 100 150 C 105 138, 125 138, 148 148 C 125 156, 105 155, 100 148 C 95 155, 75 156, 52 148 Z"
-          fill={blueColor}
+          d="M 100 78 L 100 132"
+          stroke={navyColor}
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+
+        {/* Base Wave / Swoosh in Deep Navy Blue curving out to the right */}
+        <path
+          d="M 62 136 C 76 148 100 150 120 146 C 142 142 165 136 192 138 C 168 144 142 152 118 152 C 94 153 74 146 62 136 Z"
+          fill={navyColor}
         />
         <path
-          d="M 68 152 C 90 146, 110 146, 140 152 C 165 156, 185 150, 195 142 C 182 152, 158 160, 135 157 C 105 153, 85 153, 68 152 Z"
-          fill={blueColor}
+          d="M 72 144 C 92 136 112 136 124 142 C 148 136 174 136 195 142 C 165 147 138 147 114 146 C 92 145 78 146 72 144 Z"
+          fill={navyColor}
         />
       </svg>
 
-      {/* Typography Section */}
-      {variant === 'full' && (
-        <div className="flex flex-col text-right">
-          <div
-            className="text-lg sm:text-xl font-black tracking-wider uppercase flex items-center gap-0.5 leading-none"
-            style={{ color: greenColor, fontFamily: 'system-ui, sans-serif' }}
-          >
-            <span>PISHGAMAN</span>
+      {/* 2. Official Wordmark Section: PISHGAMAN + Divider + پیشگامان */}
+      {variant !== 'icon' && (
+        <div className="flex flex-col items-center justify-center text-center">
+          {/* PISHGAMAN Latin Wordmark with Leaf Cutout in 'P' */}
+          <div className="flex items-center tracking-widest font-black leading-none">
+            <span
+              className="text-base sm:text-lg tracking-[0.18em] font-black uppercase inline-flex items-center"
+              style={{ color: greenColor, fontFamily: 'system-ui, -apple-system, sans-serif' }}
+            >
+              PISHGAMAN
+            </span>
           </div>
+
+          {/* Thin Horizontal Navy Divider */}
           <div
-            className="h-0.5 my-1 rounded-full opacity-80"
-            style={{ backgroundColor: blueColor }}
+            className="w-full h-[2px] my-1 rounded-full opacity-90"
+            style={{ backgroundColor: navyColor }}
           />
+
+          {/* Persian Calligraphy: پیشگامان */}
           <div
-            className="text-xs sm:text-sm font-black leading-tight tracking-tight"
-            style={{ color: blueColor }}
+            className="text-sm sm:text-base font-black leading-none tracking-normal"
+            style={{ color: navyColor, fontFamily: 'Vazirmatn, Tahoma, sans-serif' }}
           >
-            شرکت پیشگامان
+            پیشگامان
           </div>
         </div>
       )}

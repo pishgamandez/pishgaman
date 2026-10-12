@@ -1,6 +1,7 @@
 import React from 'react';
 import { Product } from '../types';
 import { PishgamanLogo } from './PishgamanLogo';
+import { getProductImageUrl } from '../utils/productImages';
 
 interface Props {
   product: Product;
@@ -10,24 +11,25 @@ interface Props {
 
 export const ProductPackageIllustration: React.FC<Props> = ({ product, className = '', size = 'md' }) => {
   const [imageError, setImageError] = React.useState(false);
+  const resolvedImageUrl = getProductImageUrl(product);
 
-  // Reset error state if product image URL changes
+  // Reset error state if product changes
   React.useEffect(() => {
     setImageError(false);
-  }, [product.imageUrl]);
+  }, [product.imageUrl, product.id, product.slug]);
 
   const heightClass = size === 'sm' ? 'h-36' : size === 'lg' ? 'h-88' : 'h-56';
 
-  if (product.imageUrl && product.imageUrl.trim() !== '' && !imageError) {
+  if (resolvedImageUrl && !imageError) {
     return (
       <div
-        className={`relative w-full ${heightClass} flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-stone-100 to-white border border-stone-200/90 shadow-inner group ${className}`}
+        className={`relative w-full ${heightClass} flex items-center justify-center overflow-hidden rounded-2xl bg-white border border-stone-200/90 shadow-sm group ${className}`}
       >
         <img
-          src={product.imageUrl}
+          src={resolvedImageUrl}
           alt={product.nameFa}
-          className="w-full h-full object-contain p-1.5 drop-shadow-md transition-transform duration-300 group-hover:scale-105"
-          loading="lazy"
+          className="w-full h-full object-contain p-2 drop-shadow-md transition-transform duration-300 group-hover:scale-105"
+          loading="eager"
           referrerPolicy="no-referrer"
           onError={() => setImageError(true)}
         />
