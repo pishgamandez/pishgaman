@@ -67,6 +67,16 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
     });
   }, [products, selectedCategory, selectedProductId, searchQuery]);
 
+  const isGhPages = typeof window !== 'undefined' && window.location.pathname.startsWith('/pishgaman');
+  const basePath = isGhPages ? '/pishgaman' : '';
+  const getProductHref = (slug: string) => {
+    return language === 'en'
+      ? `${basePath}/en/products/${slug}/`
+      : language === 'ar'
+      ? `${basePath}/ar/products/${slug}/`
+      : `${basePath}/products/${slug}/`;
+  };
+
   return (
     <section id="products" className="py-20 bg-stone-50 border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -231,11 +241,15 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
                       </div>
                     )}
 
-                    {/* Action Button */}
+                    {/* Action Button: Navigates to Standalone Product Page */}
                     <div className="pt-2">
-                      <button
-                        onClick={() => onSelectProduct(product)}
-                        className="w-full py-2.5 px-3 bg-stone-100 hover:bg-emerald-700 hover:text-white text-stone-800 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group/btn"
+                      <a
+                        href={getProductHref(product.slug)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onSelectProduct(product);
+                        }}
+                        className="w-full py-2.5 px-3 bg-stone-100 hover:bg-emerald-700 hover:text-white text-stone-800 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group/btn no-underline text-inherit"
                       >
                         <Eye className="w-4 h-4 text-stone-500 group-hover/btn:text-white transition-colors" />
                         <span>{t.viewProductDetails}</span>
@@ -244,7 +258,7 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
                         ) : (
                           <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
                         )}
-                      </button>
+                      </a>
                     </div>
 
                   </div>

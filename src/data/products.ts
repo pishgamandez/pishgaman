@@ -1,6 +1,7 @@
+import { productsDetailMap } from "./productDetails";
 import { Product } from '../types';
 
-export const initialProducts: Product[] = [
+const rawProducts: Product[] = [
   {
     "id": "challenger",
     "slug": "challenger",
@@ -204,7 +205,8 @@ export const initialProducts: Product[] = [
   },
   {
     "id": "red-full",
-    "slug": "red-full",
+    "slug": "redfol",
+    "aliases": ["red-full", "redfol"],
     "nameFa": "ردفول",
     "nameEn": "RED FULL",
     "category": "nutrition-gel",
@@ -471,7 +473,8 @@ export const initialProducts: Product[] = [
   },
   {
     "id": "tiger-k",
-    "slug": "tiger-k",
+    "slug": "tiger-k-high",
+    "aliases": ["tiger-k", "tiger-k-high"],
     "nameFa": "تایگر K High",
     "nameEn": "TIGER HIGH K",
     "category": "nutrition-gel",
@@ -553,7 +556,8 @@ export const initialProducts: Product[] = [
   },
   {
     "id": "tiger-p",
-    "slug": "tiger-p",
+    "slug": "tiger-p-high",
+    "aliases": ["tiger-p", "tiger-p-high"],
     "nameFa": "تایگر P High",
     "nameEn": "TIGER HIGH P",
     "category": "nutrition-gel",
@@ -611,7 +615,8 @@ export const initialProducts: Product[] = [
   },
   {
     "id": "sulmax",
-    "slug": "sulmax",
+    "slug": "sol-max",
+    "aliases": ["sulmax", "sol-max"],
     "nameFa": "سول مکس",
     "nameEn": "SULMAX",
     "category": "soil-conditioner",
@@ -794,3 +799,8 @@ export const initialProducts: Product[] = [
     "imageUrl": "./assets/images/products/ph-best.jpg"
   }
 ];
+
+export const initialProducts: Product[] = rawProducts.map(p => ({
+  ...p,
+  detail: productsDetailMap[p.slug] || productsDetailMap[p.id]
+}));

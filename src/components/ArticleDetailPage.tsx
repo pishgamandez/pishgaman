@@ -16,6 +16,7 @@ interface Props {
   products: Product[];
   onBackToArticles: () => void;
   onNavigateToArticle: (slug: string) => void;
+  onNavigateToProduct?: (slug: string) => void;
   onSelectProductByName?: (name: string) => void;
   onOpenConsult?: () => void;
 }
@@ -26,6 +27,7 @@ export const ArticleDetailPage: React.FC<Props> = ({
   products,
   onBackToArticles,
   onNavigateToArticle,
+  onNavigateToProduct,
   onSelectProductByName,
   onOpenConsult
 }) => {
@@ -36,6 +38,54 @@ export const ArticleDetailPage: React.FC<Props> = ({
   const content = article[language] || article.fa;
   const isGhPages = typeof window !== 'undefined' && window.location.pathname.startsWith('/pishgaman');
   const basePath = isGhPages ? '/pishgaman' : '';
+
+  const getProductHref = (slug: string) => {
+    return language === 'en'
+      ? `${basePath}/en/products/${slug}/`
+      : language === 'ar'
+      ? `${basePath}/ar/products/${slug}/`
+      : `${basePath}/products/${slug}/`;
+  };
+
+  // Natural inline linking from article narrative to standalone product pages
+  const renderTextWithProductLinks = (text: string) => {
+    if (!text) return text;
+    const productNamesRegex = /(چلنجر|هیومی فارم|جامپر|فول شارژر|ردفول|دوپینگ|سیلیگارد|استورمی|فیکشن|تاپ استار|تایگر K High|تایگر P High|سول مکس|سالت استاپ|آنجلا|پی‌اچ بست|PH Best)/g;
+    const parts = text.split(productNamesRegex);
+    return parts.map((part, i) => {
+      const matched = products.find(p => 
+        p.nameFa === part || 
+        (part === 'سول مکس' && (p.slug === 'sol-max' || p.id === 'sulmax')) ||
+        (part === 'ردفول' && (p.slug === 'redfol' || p.id === 'red-full')) ||
+        (part === 'تایگر K High' && (p.slug === 'tiger-k-high' || p.id === 'tiger-k')) ||
+        (part === 'تایگر P High' && (p.slug === 'tiger-p-high' || p.id === 'tiger-p')) ||
+        (part === 'پی‌اچ بست' && (p.slug === 'ph-best' || p.id === 'ph-best')) ||
+        (part === 'PH Best' && (p.slug === 'ph-best' || p.id === 'ph-best'))
+      );
+
+      if (matched) {
+        return (
+          <a
+            key={i}
+            href={getProductHref(matched.slug)}
+            onClick={(e) => {
+              e.preventDefault();
+              if (onNavigateToProduct) {
+                onNavigateToProduct(matched.slug);
+              } else if (onSelectProductByName) {
+                onSelectProductByName(matched.nameFa);
+              }
+            }}
+            className="text-emerald-800 font-bold hover:underline decoration-emerald-600 underline-offset-4 cursor-pointer inline-flex items-center gap-0.5 mx-0.5"
+            title={`مشاهده صفحه محصول ${matched.nameFa}`}
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
 
   // Canonical full URL
   const canonicalPath = language === 'en' 
@@ -342,7 +392,7 @@ export const ArticleDetailPage: React.FC<Props> = ({
             <span>چکیده پژوهش و مبانی کاربردی کشاورزی</span>
           </h2>
           <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-light">
-            {content.abstract}
+            {renderTextWithProductLinks(content.abstract)}
           </p>
         </section>
 
@@ -354,7 +404,7 @@ export const ArticleDetailPage: React.FC<Props> = ({
                 {idx + 1}. {sec.heading}
               </h2>
               <div className="text-xs sm:text-sm text-stone-700 leading-relaxed font-light whitespace-pre-line space-y-3">
-                {sec.text}
+                {renderTextWithProductLinks(sec.text)}
               </div>
             </section>
           ))}
@@ -437,19 +487,48 @@ export const ArticleDetailPage: React.FC<Props> = ({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
               {content.relatedProducts.map((pName: string, pIdx: number) => {
-                const matchedProduct = products.find(p => p.nameFa.includes(pName) || pName.includes(p.nameFa));
+                const matchedProduct = products.find(p => 
+                  p.nameFa.includes(pName) || pName.includes(p.nameFa) ||
+                  (pName.includes('سول') && (p.slug === 'sol-max' || p.id === 'sulmax')) ||
+                  (pName.includes('سالت') && p.slug === 'salt-stop') ||
+                  (pName.includes('آهن') && (p.slug === 'redfol' || p.id === 'red-full')) ||
+                  (pName.includes('چلنجر') && p.slug === 'challenger') ||
+                  (pName.includes('تایگر K') && (p.slug === 'tiger-k-high' || p.id === 'tiger-k')) ||
+                  (pName.includes('تایگر P') && (p.slug === 'tiger-p-high' || p.id === 'tiger-p')) ||
+                  (pName.includes('سیلیگارد') && p.slug === 'siligard') ||
+                  (pName.includes('شارژر') && p.slug === 'full-charger') ||
+                  (pName.includes('جامپر') && p.slug === 'jumper') ||
+                  (pName.includes('دوپینگ') && p.slug === 'doping') ||
+                  (pName.includes('استورمی') && p.slug === 'stormy') ||
+                  (pName.includes('فیکشن') && p.slug === 'fiction') ||
+                  (pName.includes('تاپ استار') && p.slug === 'top-star') ||
+                  (pName.includes('آنجلا') && p.slug === 'angela') ||
+                  (pName.includes('هیومی') && p.slug === 'humifarm') ||
+                  (pName.includes('PH') && p.slug === 'ph-best')
+                );
+                const pSlug = matchedProduct ? matchedProduct.slug : 'challenger';
+                const pLabel = matchedProduct ? matchedProduct.nameFa : pName;
                 return (
-                  <button
+                  <a
                     key={pIdx}
-                    onClick={() => onSelectProductByName?.(pName)}
-                    className="p-3.5 bg-white border border-stone-300 hover:border-emerald-600 hover:text-emerald-800 rounded-2xl text-xs font-bold transition-all shadow-2xs cursor-pointer flex items-center justify-between group text-right"
+                    href={getProductHref(pSlug)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (matchedProduct && onNavigateToProduct) {
+                        onNavigateToProduct(matchedProduct.slug);
+                      } else if (onSelectProductByName) {
+                        onSelectProductByName(pName);
+                      }
+                    }}
+                    className="p-3.5 bg-white border border-stone-300 hover:border-emerald-600 hover:text-emerald-800 rounded-2xl text-xs font-bold transition-all shadow-2xs cursor-pointer flex items-center justify-between group text-right no-underline text-inherit"
+                    title={`مشاهده صفحه محصول ${pLabel}`}
                   >
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span className="font-bold">{pName}</span>
+                      <span className="font-bold">{pLabel}</span>
                     </div>
                     <ExternalLink className="w-3.5 h-3.5 text-stone-400 group-hover:text-emerald-600 shrink-0" />
-                  </button>
+                  </a>
                 );
               })}
             </div>

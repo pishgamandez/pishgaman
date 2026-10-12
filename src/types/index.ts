@@ -14,9 +14,50 @@ export type ProductCategory =
   | 'nutrition-gel'    // ژل‌های تغذیه و عناصر میکرو/ماکرو
   | 'all';
 
+export interface ProductFaq {
+  question: string;
+  answer: string;
+}
+
+export interface TankMixItem {
+  productName: string;
+  slug: string;
+  reason: string;
+}
+
+export interface ProductDetailData {
+  h1Title: string;
+  h1TitleEn?: string;
+  h1TitleAr?: string;
+  metaTitle: string;
+  metaTitleEn?: string;
+  metaTitleAr?: string;
+  metaDescription: string;
+  metaDescriptionEn?: string;
+  metaDescriptionAr?: string;
+  longIntro: string;
+  longIntroEn?: string;
+  longIntroAr?: string;
+  analysis: string[];
+  analysisEn?: string[];
+  analysisAr?: string[];
+  tankMixes: TankMixItem[];
+  tankMixesEn?: TankMixItem[];
+  tankMixesAr?: TankMixItem[];
+  cautions: string[];
+  cautionsEn?: string[];
+  cautionsAr?: string[];
+  faqs: ProductFaq[];
+  faqsEn?: ProductFaq[];
+  faqsAr?: ProductFaq[];
+  relatedArticleSlugs: string[];
+  relatedProductSlugs: string[];
+}
+
 export interface Product {
   id: string;
   slug: string;
+  aliases?: string[];
   nameFa: string;
   nameEn: string;
   nameAr?: string;
@@ -47,6 +88,7 @@ export interface Product {
   badge?: string;
   badgeEn?: string;
   badgeAr?: string;
+  detail?: ProductDetailData;
 }
 
 export interface ConsultationInquiry {

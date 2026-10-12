@@ -4,7 +4,6 @@ import { Product } from './types';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ProductTabs } from './components/ProductTabs';
-import { ProductDetailModal } from './components/ProductDetailModal';
 import { SoilGuideSection } from './components/SoilGuideSection';
 import { AboutSection } from './components/AboutSection';
 import { ConsultationForm } from './components/ConsultationForm';
@@ -14,6 +13,7 @@ import { FloatingContactButtons } from './components/FloatingContactButtons';
 import { Footer } from './components/Footer';
 import { ArticlesPage } from './components/ArticlesPage';
 import { ArticleDetailPage } from './components/ArticleDetailPage';
+import { ProductDetailPage } from './components/ProductDetailPage';
 import { articlesData } from './data/articles';
 import { Article } from './types';
 import { ShieldCheck, Award, Zap, Truck } from 'lucide-react';
@@ -65,8 +65,9 @@ function MainApp() {
   const [consultPrefilledProduct, setConsultPrefilledProduct] = useState<string>('');
 
   // Standalone URL and routing states
-  const [currentView, setCurrentView] = useState<'home' | 'articles-index' | 'article-detail'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'articles-index' | 'article-detail' | 'product-detail'>('home');
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
+  const [currentProduct, setCurrentProduct] = useState<Product | null>(null);
 
   const isGhPages = typeof window !== 'undefined' && window.location.pathname.startsWith('/pishgaman');
   const basePath = isGhPages ? '/pishgaman' : '';
@@ -77,36 +78,74 @@ function MainApp() {
       if (typeof window === 'undefined') return;
       const path = window.location.pathname;
 
-      // 1. Check article detail match: e.g. /articles/:slug or /pishgaman/articles/:slug
+      // 1. Check product detail match: e.g. /products/:slug, /pishgaman/products/:slug, /en/products/:slug
+      const matchProduct = path.match(/(?:^|\/)(?:en\/|ar\/)?products\/([a-zA-Z0-9_-]+)\/?$/);
+      if (matchProduct && matchProduct[1]) {
+        const slug = matchProduct[1];
+        const found = products.find(p => p.slug === slug || p.aliases?.includes(slug) || p.id === slug);
+        if (found) {
+          setCurrentProduct(found);
+          setCurrentArticle(null);
+          setCurrentView('product-detail');
+          setActiveSection('products');
+          return;
+        }
+      }
+
+      // 2. Check article detail match: e.g. /articles/:slug or /pishgaman/articles/:slug
       const matchDetail = path.match(/(?:^|\/)(?:en\/|ar\/)?articles\/([a-zA-Z0-9_-]+)\/?$/);
       if (matchDetail && matchDetail[1]) {
         const slug = matchDetail[1];
         const found = articlesData.find(a => a.slug === slug || a.aliases?.includes(slug) || a.id === slug);
         if (found) {
           setCurrentArticle(found);
+          setCurrentProduct(null);
           setCurrentView('article-detail');
           setActiveSection('articles');
           return;
         }
       }
 
-      // 2. Check articles index: /articles/ or /pishgaman/articles/
+      // 3. Check articles index: /articles/ or /pishgaman/articles/
       if (/(?:^|\/)(?:en\/|ar\/)?articles\/?$/.test(path)) {
         setCurrentArticle(null);
+        setCurrentProduct(null);
         setCurrentView('articles-index');
         setActiveSection('articles');
         return;
       }
 
-      // 3. Fallback to homepage
+      // 4. Fallback to homepage
       setCurrentArticle(null);
+      setCurrentProduct(null);
       setCurrentView('home');
     };
 
     syncRouteFromPath();
     window.addEventListener('popstate', syncRouteFromPath);
     return () => window.removeEventListener('popstate', syncRouteFromPath);
-  }, []);
+  }, [products]);
+
+  const handleNavigateToProduct = (slug: string) => {
+    const found = products.find(p => p.slug === slug || p.aliases?.includes(slug) || p.id === slug);
+    if (found) {
+      const url = language === 'en'
+        ? `${basePath}/en/products/${found.slug}/`
+        : language === 'ar'
+        ? `${basePath}/ar/products/${found.slug}/`
+        : `${basePath}/products/${found.slug}/`;
+
+      try {
+        window.history.pushState(null, '', url);
+      } catch {}
+
+      setCurrentProduct(found);
+      setCurrentArticle(null);
+      setCurrentView('product-detail');
+      setActiveSection('products');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const handleNavigateToArticle = (slug: string) => {
     const found = articlesData.find(a => a.slug === slug || a.aliases?.includes(slug) || a.id === slug);
@@ -122,6 +161,7 @@ function MainApp() {
       } catch {}
 
       setCurrentArticle(found);
+      setCurrentProduct(null);
       setCurrentView('article-detail');
       setActiveSection('articles');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -140,6 +180,7 @@ function MainApp() {
     } catch {}
 
     setCurrentArticle(null);
+    setCurrentProduct(null);
     setCurrentView('articles-index');
     setActiveSection('articles');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -152,6 +193,7 @@ function MainApp() {
     } catch {}
 
     setCurrentArticle(null);
+    setCurrentProduct(null);
     setCurrentView('home');
     setActiveSection(sectionId);
 
@@ -190,7 +232,20 @@ function MainApp() {
         setSearchQuery={setSearchQuery}
       />
 
-      {currentView === 'article-detail' && currentArticle ? (
+      {currentView === 'product-detail' && currentProduct ? (
+        /* Standalone Dedicated Product Page (Zero Modals) */
+        <main className="flex-1">
+          <ProductDetailPage
+            product={currentProduct}
+            allProducts={products}
+            allArticles={articlesData}
+            onBackToHome={() => handleNavigateToHome('products')}
+            onNavigateToProduct={handleNavigateToProduct}
+            onNavigateToArticle={handleNavigateToArticle}
+            onOpenConsult={() => handleNavigateToHome('consult')}
+          />
+        </main>
+      ) : currentView === 'article-detail' && currentArticle ? (
         /* Standalone Dedicated Article Page (No Modal) */
         <main className="flex-1">
           <ArticleDetailPage
@@ -199,9 +254,10 @@ function MainApp() {
             products={products}
             onBackToArticles={handleNavigateToArticlesIndex}
             onNavigateToArticle={handleNavigateToArticle}
+            onNavigateToProduct={handleNavigateToProduct}
             onSelectProductByName={(name) => {
               const found = products.find(p => p.nameFa.includes(name) || name.includes(p.nameFa) || p.nameEn.toLowerCase().includes(name.toLowerCase()));
-              if (found) setSelectedProduct(found);
+              if (found) handleNavigateToProduct(found.slug);
             }}
             onOpenConsult={() => handleNavigateToHome('consult')}
           />
@@ -213,7 +269,7 @@ function MainApp() {
             onBackToHome={() => handleNavigateToHome('hero')}
             onSelectProductByName={(name) => {
               const found = products.find(p => p.nameFa.includes(name) || name.includes(p.nameFa) || p.nameEn.toLowerCase().includes(name.toLowerCase()));
-              if (found) setSelectedProduct(found);
+              if (found) handleNavigateToProduct(found.slug);
             }}
             onSelectArticle={(art) => handleNavigateToArticle(art.slug)}
           />
@@ -295,7 +351,7 @@ function MainApp() {
           {/* 3. 16 Products Tabs & Catalog */}
           <ProductTabs
             products={products}
-            onSelectProduct={(p) => setSelectedProduct(p)}
+            onSelectProduct={(p) => handleNavigateToProduct(p.slug)}
             searchQuery={searchQuery}
           />
 
@@ -319,13 +375,6 @@ function MainApp() {
       <Footer
         onNavigate={handleNavigate}
         onOpenAdmin={() => setAdminOpen(true)}
-      />
-
-      {/* Product Detail Modal */}
-      <ProductDetailModal
-        product={selectedProduct}
-        onClose={() => setSelectedProduct(null)}
-        onOpenConsult={handleOpenConsultForProduct}
       />
 
       {/* Admin Panel Modal */}
