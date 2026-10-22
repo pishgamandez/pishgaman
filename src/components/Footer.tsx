@@ -127,17 +127,37 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
             </h4>
 
             <div className="space-y-3 text-xs text-stone-300">
-              <div className="flex items-center gap-3 bg-stone-800/80 p-3 rounded-xl border border-stone-700/80">
-                <Phone className="w-5 h-5 text-emerald-400 shrink-0" />
-                <div>
-                  <span className="text-[10px] text-stone-400 block">{t.heroDirectCall.split('(')[0]}:</span>
-                  <a
-                    href={companyInfo.callUrl}
-                    dir="ltr"
-                    className="font-mono text-base font-black text-white hover:text-emerald-300 tracking-wider inline-block text-left"
-                  >
-                    {companyInfo.phoneFormatted}
-                  </a>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 bg-stone-800/80 p-3 rounded-xl border border-stone-700/80">
+                <div className="flex items-center gap-2.5">
+                  <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div>
+                    <span className="text-[10px] text-stone-400 block">
+                      {language === 'en' ? 'Tehran Office:' : language === 'ar' ? 'هاتف طهران:' : language === 'ur' ? 'تہران دفتر:' : 'دفتر تهران:'}
+                    </span>
+                    <a
+                      href="tel:02144281549"
+                      dir="ltr"
+                      className="font-mono text-sm font-black text-white hover:text-emerald-300 tracking-wider inline-block text-left"
+                    >
+                      021-44281549
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2.5">
+                  <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div>
+                    <span className="text-[10px] text-stone-400 block">
+                      {language === 'en' ? 'Mobile / WhatsApp:' : language === 'ar' ? 'الجوال / واتساب:' : language === 'ur' ? 'موبائل / واٹس ایپ:' : 'همراه / واتس‌اپ:'}
+                    </span>
+                    <a
+                      href={companyInfo.callUrl}
+                      dir="ltr"
+                      className="font-mono text-sm font-black text-white hover:text-emerald-300 tracking-wider inline-block text-left"
+                    >
+                      {companyInfo.phoneFormatted}
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -156,15 +176,15 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
                 <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div className="text-stone-300 text-xs">
                   <span className="font-bold text-white block">
-                    {language === 'en' ? 'Central Office (Tehran):' : language === 'ar' ? 'المكتب المركزي (طهران):' : language === 'ur' ? 'مرکزی دفتر (تہران):' : 'دفتر مرکزی تهران:'}
+                    {language === 'en' ? 'Central Office (Tehran):' : language === 'ar' ? 'المكتب المركزي (طهران):' : language === 'ur' ? 'مرکزی دفتر (تہران):' : 'دفتر تهران:'}
                   </span>
-                  <span className="text-stone-400">
+                  <span className="text-stone-400 leading-relaxed block pt-0.5">
                     {language === 'en'
-                      ? 'Tehran, Pishgaman Paydar Falat Nik Central Office'
+                      ? companyInfo.addressTehranEn
                       : language === 'ar'
-                      ? 'طهران، المكتب المركزي لشركة بيشغامان بايدار فلات نيك'
+                      ? companyInfo.addressTehranAr
                       : language === 'ur'
-                      ? 'تہران، پیشگامان پائیدار فلات نیک کمپنی کا مرکزی دفتر'
+                      ? companyInfo.addressTehranUr
                       : companyInfo.addressTehran}
                   </span>
                 </div>
@@ -177,7 +197,7 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
                   <span className="font-bold text-white block">
                     {language === 'en' ? 'Branch & Facility (Khuzestan - Dezful):' : language === 'ar' ? 'فرع خوزستان (دزفول):' : language === 'ur' ? 'شاخ اور فیکٹری (خوزستان - دزفول):' : 'شعبه و کارخانه خوزستان (دزفول):'}
                   </span>
-                  <span className="text-stone-400">
+                  <span className="text-stone-400 leading-relaxed block pt-0.5">
                     {language === 'en'
                       ? 'Khuzestan, Dezful, Najjaran, Najjar 2, Pishgaman Company'
                       : language === 'ar'
@@ -216,19 +236,29 @@ export const Footer: React.FC<Props> = ({ onNavigate, onOpenAdmin }) => {
             <span className="hidden lg:inline text-stone-600">|</span>
             <span className="flex items-center gap-1 text-stone-300">
               <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-              <span>خوزستان، دزفول، نجاران، نجار ۲، شرکت پیشگامان</span>
+              <span>تهران، فلکه اول صادقیه، خیابان پاییزان، پلاک ۵۸</span>
             </span>
             <span className="hidden lg:inline text-stone-600">|</span>
-            <span className="text-stone-300">
-              دفتر مرکزی: تهران
+            <span className="flex items-center gap-1 text-stone-300">
+              <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+              <span>خوزستان، دزفول، نجاران، نجار ۲</span>
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
-            <Phone className="w-3.5 h-3.5 text-emerald-400" />
-            <a href="tel:09128247415" dir="ltr" className="font-mono font-bold text-white hover:text-emerald-400">
-              09128247415
-            </a>
+          <div className="flex items-center gap-3">
+            <span className="flex items-center gap-1">
+              <Phone className="w-3.5 h-3.5 text-emerald-400" />
+              <a href="tel:02144281549" dir="ltr" className="font-mono font-bold text-white hover:text-emerald-400">
+                021-44281549
+              </a>
+            </span>
+            <span className="text-stone-600">|</span>
+            <span className="flex items-center gap-1">
+              <Phone className="w-3.5 h-3.5 text-emerald-400" />
+              <a href="tel:09128247415" dir="ltr" className="font-mono font-bold text-white hover:text-emerald-400">
+                09128247415
+              </a>
+            </span>
           </div>
         </div>
 

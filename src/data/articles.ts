@@ -10,7 +10,639 @@ import imgLab from '../assets/images/agri_research_lab_1791480948724.jpg';
 import imgGoldenWheat from '../assets/images/golden_wheat_field_1791481535252.jpg';
 import imgWheatField from '../assets/images/hero_wheat_field_1791480930784.jpg';
 
+import imgSalinity from '../assets/images/salinity_soil_desalination_1792682625965.jpg';
+import imgIron from '../assets/images/iron_chelate_orchard_1792682638781.jpg';
+import imgHumic from '../assets/images/humic_acid_root_system_1792682651080.jpg';
+import imgSeaweedBio from '../assets/images/seaweed_biostimulant_crop_1792682663383.jpg';
+import imgSulfurSilicon from '../assets/images/liquid_sulfur_silicon_defense_1792682677738.jpg';
+
 export const baseArticlesData: Article[] = [
+  // --- New Scientific Article 1: Soil Desalination & Salinity Remediation ---
+  {
+    id: 'desalination-calcium-salinity-soil',
+    slug: 'desalination-calcium-salinity-soil',
+    aliases: ['plant-solution-salinity-remediation', 'soil-desalination-calcium'],
+    imageUrl: imgSalinity,
+    googleTrendKeyword: {
+      fa: 'اصلاح خاک شور و سدیمی، کلسیم مایع و پلانت سلوشن',
+      en: 'Soil Desalination & Calcium Remediation for Saline-Sodic Soils',
+      ar: 'معالجة ملوحة التربة والصوديوم باستخدام الكالسيوم السائل',
+      ur: 'نمکین مٹی کی اصلاح اور مائع کیلشیم کا استعمال'
+    },
+    fa: {
+      title: 'مکانیسم‌های نوین اصلاح خاک‌های شور و سدیمی با کلسیم مایع و ترکیب پلانت سلوشن',
+      category: 'اصلاح خاک و کنترل شوری',
+      readTime: '۱۰ دقیقه',
+      date: 'آبان ۱۴۰۴',
+      lastModified: '۱۴۰۴/۰۸/۰۱',
+      author: 'دکتر محمدحسین نژاد - متخصص خاک‌شناسی و تغذیه گیاه پیشگامان',
+      summary: 'بررسی راهکارهای شیمیایی و بیولوژیک جایگزینی یون‌های سدیم (Na+) با کلسیم فعال (Ca2+)، شستشوی نمک‌های زیان‌بار و احیای ساختار خاک‌های فشرده با پلانت سلوشن.',
+      abstract: 'افزایش EC خاک و تجمع سدیم تبادلی (ESP > 15%) منجر به تخریب ساختمان خاک، انسداد منافذ موئینه و سمیت ریشه در باغات پسته، مرکبات و صیفی‌جات می‌شود. این مقاله علمی نقش کلسیم سولفاته و پلانت سلوشن را در شکستن پیوندهای سدیمی و آزادکنندگی عناصر تثبیت‌شده تبین می‌کند.',
+      metaDescription: 'مقاله علمی جامع درباره روش‌های مدرن اصلاح خاک‌های شور، کاهش EC و ESP با استفاده از کلسیم مایع و پلانت سلوشن پیشگامان.',
+      targetKeyword: 'اصلاح خاک شور کلسیم مایع پلانت سلوشن',
+      contentSections: [
+        {
+          heading: 'چالش خاک‌های شور و سدیمی در اقلیم خشک',
+          text: 'در اقلیم‌های خشک و نیمه‌خشک، آبیاری با آب‌های سنگین و شوری بالادست باعث تجمع یون‌های سدیم و کلر در حوزه ریشه می‌شود. یون سدیم با متلاشی کردن خاکدانه (Dispersion) سبب فشرده شدن خاک و خفگی ریشه می‌گردد.'
+        },
+        {
+          heading: 'مکانیسم جایگزینی کلسیم به جای سدیم (SAR Reduction)',
+          text: 'افزایش غلظت کلسیم قابل جذب در فاز مایع خاک، بر اساس قانون عمل جرم، یون‌های Na+ را از سطح خاکدانه‌ها جدا کرده و آماده شستشو به اعماق پایین‌تر می‌کند. پلانت سلوشن با دارا بودن کلسیم فعال و عوامل نفوذدهنده، این فرایند را تا ۳ برابر سریع‌تر می‌کند.'
+        },
+        {
+          heading: 'کاهش EC و افزایش نفوذپذیری آب',
+          text: 'با جایگزینی سدیم توسط کلسیم، تخلخل خاک بازسازی شده و هدایت الکتریکی (EC) عصاره اشباع خاک به شکل قابل توجهی کاهش می‌یابد. این امر جذب آب و عناصر مغذی مانند پتاسیم و فسفر را هموار می‌سازد.'
+        },
+        {
+          heading: 'توصیه فنی و دوز مصرفی',
+          text: 'مصرف ۱۰ تا ۲۰ لیتر در هکتار پلانت سلوشن همراه با آب آبیاری در ابتدای فصل یا پس از برداشت، ساختار خاک را اصلاح کرده و از ایجاد لایه سخت (Hardpan) جلوگیری می‌کند.'
+        }
+      ],
+      dosageTable: [
+        { stage: 'قبل از کشت / ابتدای فصل', crop: 'باغات پسته و مرکبات', rate: '۱۵-۲۰ لیتر در هکتار', timing: 'همراه آب آبیاری سنگین' },
+        { stage: 'رشد فعال', crop: 'صیفی‌جات و گلخانه‌ها', rate: '۱۰-۱۵ لیتر در هکتار', timing: 'هر ماه یک‌بار در صورت شوری آب' }
+      ],
+      faqs: [
+        { question: 'آیا پلانت سلوشن جایگزین گچ کشاورزی است؟', answer: 'پلانت سلوشن به دلیل انحلال‌پذیری ۱۰۰٪ و سرعت اثرگذاری فوری، بازدهی بسیار بالاتری نسبت به گچ سنتی دارد و نیاز به حجم‌های چند تنی را برطرف می‌سازد.' },
+        { question: 'چه زمانی بهترین وقت مصرف برای کاهش EC خاک است؟', answer: 'بهترین زمان آب‌شویی زمستانه یا نخستین آبیاری سنگین بهاره همراه با پلانت سلوشن است.' }
+      ],
+      references: [
+        'Ayers, R. S., & Westcot, D. W. (1985). "Water quality for agriculture". FAO Irrigation and Drainage Paper, 29 Rev. 1, FAO, Rome.',
+        'Qadir, M., & Schubert, S. (2002). "Degradation or recovery: Agricultural goals for saline-sodic soils". Land Degradation & Development, 13(4), 269-284.',
+        'Sposito, G. (2008). "The Chemistry of Soils". Oxford University Press.'
+      ],
+      relatedProducts: ['پلانت سلوشن (Plant Solution)', 'کلسیم بور (Cal-Bor)', 'گوگرد مایع (Liquid Sulfur)']
+    },
+    en: {
+      title: 'Advanced Mechanisms of Saline-Sodic Soil Remediation via Liquid Calcium & Plant Solution',
+      category: 'Soil Remediation & Salinity Control',
+      readTime: '10 min',
+      date: 'November 2024',
+      lastModified: '2024-11-01',
+      author: 'Dr. M. H. Nezhad - Lead Soil Scientist, Pishgaman Research Division',
+      summary: 'Exploring chemical and biological pathways for displacing exchangeable sodium ions (Na+) with soluble calcium (Ca2+), leaching harmful salts, and restoring soil structure.',
+      abstract: 'Elevated soil EC and Exchangeable Sodium Percentage (ESP > 15%) induce severe soil dispersion, aggregate breakdown, and root hypoxia in commercial pistachio, citrus, and horticulture crops. This scientific paper evaluates the displacement kinetics of soluble calcium formulations and Plant Solution.',
+      metaDescription: 'Scientific study on saline soil reclamation, lowering EC/ESP, and restoring soil structure using Pishgaman Plant Solution.',
+      targetKeyword: 'soil salinity remediation liquid calcium plant solution',
+      contentSections: [
+        {
+          heading: 'The Saline-Sodic Soil Challenge in Arid Climates',
+          text: 'Arid climate conditions combined with brackish irrigation water cause extreme accumulation of sodium and chloride ions in the rhizosphere. High exchangeable sodium breaks down soil aggregates (dispersion), sealing macropores and starving roots of oxygen.'
+        },
+        {
+          heading: 'Calcium Replacement Kinetic Mechanism (SAR Reduction)',
+          text: 'Elevating bioavailable calcium in the soil solution drives sodium ion displacement from soil cation exchange sites via mass action. Pishgaman Plant Solution accelerates this exchange process while preserving soil structure.'
+        },
+        {
+          heading: 'EC Reduction and Hydraulic Conductivity Restoration',
+          text: 'Displacing sodium with calcium restores soil porosity, increasing hydraulic conductivity and allowing effective salt leaching below the root zone, which re-establishes optimal nutrient uptake pathways.'
+        },
+        {
+          heading: 'Agronomic Field Guidelines',
+          text: 'Irrigation fertigation at 10 to 20 Liters per hectare during early spring or post-harvest flushing effectively reclaims sodic layers and prevents hardpan compaction.'
+        }
+      ],
+      dosageTable: [
+        { stage: 'Pre-planting / Early Season', crop: 'Pistachio & Citrus Orchards', rate: '15-20 L/ha', timing: 'Applied with deep flushing irrigation' },
+        { stage: 'Active Vegetative Growth', crop: 'Open-field Vegetables & Greenhouses', rate: '10-15 L/ha', timing: 'Monthly application under saline water' }
+      ],
+      faqs: [
+        { question: 'Does Plant Solution replace traditional gypsum?', answer: 'Yes, owing to 100% solubility and immediate ionic activity, Plant Solution delivers superior calcium displacement efficiency without requiring massive tonnage of gypsum.' }
+      ],
+      references: [
+        'Ayers, R. S., & Westcot, D. W. (1985). "Water quality for agriculture". FAO Irrigation and Drainage Paper, 29 Rev. 1, FAO, Rome.',
+        'Qadir, M., & Schubert, S. (2002). "Degradation or recovery: Agricultural goals for saline-sodic soils". Land Degradation & Development, 13(4), 269-284.'
+      ],
+      relatedProducts: ['Plant Solution', 'Cal-Bor', 'Liquid Sulfur']
+    },
+    ar: {
+      title: 'الآليات الحديثة لإصلاح التربة المالحة والصودية باستخدام الكالسيوم السائل ومركب بلانت سلوشن',
+      category: 'معالجة التربة والتحكم بالملوحة',
+      readTime: '١٠ دقائق',
+      date: 'نوفمبر ٢٠٢٤',
+      lastModified: '٢٠٢٤/١١/٠١',
+      author: 'د. محمد حسين نژاد - خبير علوم التربة وتغذية النبات',
+      summary: 'دراسة الحلول الكيميائية لاستبدال أيونات الصوديوم الضارة بالكالسيوم النشط وغسل الأملاح وتحسين تهوية التربة.',
+      abstract: 'ارتفاع الملوحة (EC) ونسبة الصوديوم المتبادل يؤدي إلى انغلاق مسام التربة واختناق الجذور. يستعرض هذا البحث دور الكالسيوم السائل ومركب بلانت سلوشن في معالجة الملوحة.',
+      metaDescription: 'دراسة علمية حول معالجة ملوحة التربة وتقليل EC باستخدام بلانت سلوشن والكالسيوم السائل من بيشغامان.',
+      targetKeyword: 'معالجة ملوحة التربة الكالسيوم السائل بلانت سلوشن',
+      contentSections: [
+        {
+          heading: 'تحديات التربة المالحة الصودية',
+          text: 'تراكم الصوديوم في منطقة الجذور يؤدي إلى تفكك حبيبات التربة وفقدان المسامية، مما يعيق امتصاص الماء والعناصر المغذية.'
+        },
+        {
+          heading: 'ميكانيكية استبدال الصوديوم بالكالسيوم',
+          text: 'يعمل الكالسيوم الذائب على إزاحة أيونات الصوديوم عن معقد الامتصاص في التربة، مما يسهل غسلها بعيداً عن الجذور.'
+        }
+      ],
+      references: [
+        'Ayers, R. S., & Westcot, D. W. (1985). "Water quality for agriculture". FAO Irrigation and Drainage Paper, 29.'
+      ],
+      relatedProducts: ['بلانت سلوشن (Plant Solution)', 'كلسيم بور (Cal-Bor)']
+    },
+    ur: {
+      title: 'مائع کیلشیم اور پلانٹ سلوشن سے نمکین اور سوڈک مٹی کی سائنسی اصلاح',
+      category: 'مٹی کی اصلاح اور نمکیات کا کنٹرول',
+      readTime: '۱۰ منٹ',
+      date: 'نومبر ۲۰۲۴',
+      author: 'ڈاکٹر محمد حسین نژاد - ماہر علوم مٹی',
+      summary: 'مٹی میں سوڈیم کو کیلشیم سے بدلنے، نمکیات کی دھلائی اور مٹی کی ساخت کو بہتر بنانے کا سائنسی جائزہ۔',
+      abstract: 'مٹی میں ای سی (EC) اور سوڈیم کی زیادہ مقدار جڑوں کی سانس لینے اور غذائی اجزاء کے جذب میں رکاوٹ بنتی ہے۔',
+      contentSections: [
+        {
+          heading: 'نمکین مٹی کے مسائل',
+          text: 'سوڈیم کی زیادہ مقدار سے مٹی سخت ہو جاتی ہے اور پانی کی رسائی بند ہو جاتی ہے۔'
+        }
+      ],
+      references: [
+        'Ayers, R. S., & Westcot, D. W. (1985). "Water quality for agriculture". FAO.'
+      ],
+      relatedProducts: ['پلانت سلوشن (Plant Solution)']
+    }
+  },
+
+  // --- New Scientific Article 2: Iron Chelate Chlorosis Comparison ---
+  {
+    id: 'chelating-agents-iron-chlorosis',
+    slug: 'chelating-agents-iron-chlorosis',
+    aliases: ['iron-chelate-eddha-hbed', 'iron-deficiency-orchards'],
+    imageUrl: imgIron,
+    googleTrendKeyword: {
+      fa: 'کلات آهن EDDHA، درمان زردی برگ پسته و باغات',
+      en: 'Fe-EDDHA vs Fe-HBED Iron Chelates for Calcareous Soils',
+      ar: 'حديد مخلبي EDDHA لعلاج اصفرار أوراق الأشجار المثمرة',
+      ur: 'آئرن چیلیٹ اور پودوں میں لوہے کی کمی کا علاج'
+    },
+    fa: {
+      title: 'ارزیابی مقایسه‌ای پایداری کلات‌های آهن EDDHA و HBED در خاک‌های آهکی و قلیایی',
+      category: 'عناصر میکرو و کلات‌ها',
+      readTime: '۹ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '۱۴۰۴/۰۷/۲۵',
+      author: 'گروه تحقیق و توسعه شیمی کشاورزی پیشگامان',
+      summary: 'بررسی بیوشیمیایی پایداری ایزومرهای اورتو-اورتو کلات آهن در pHهای بالای ۷.۵ و مکانیسم‌های رفع کلروز و زردی برگ پسته، مرکبات و سیب.',
+      abstract: 'کمبود آهن یکی از شایع‌ترین اختلالات تغذیه‌ای در خاک‌های آهکی ایران (pH > 7.8) است. در این پژوهش، کارایی کلات‌های آهن پیشگامان با درصد بالای ایزومر orth-orthو نقش آن در افزایش سنتز کلروفیل و فعال‌سازی آنزیم کاتالاز بررسی شده است.',
+      metaDescription: 'مقاله اختصاصی درباره مقایسه کلات آهن EDDHA و رفع زردی برگ درختان پسته، مرکبات و انگور در خاک‌های آهکی.',
+      targetKeyword: 'کلات آهن EDDHA درمان زردی برگ پسته خاک آهکی',
+      contentSections: [
+        {
+          heading: 'علل تثبیت آهن در خاک‌های آهکی',
+          text: 'در pHهای قلیایی، یون‌های آهن آزاد به سرعت به شکل هیدروکسیدهای نامحلول Fe(OH)3 رسوب کرده و از دسترس ریشه خارج می‌شوند. وجود کربنات کلسیم بالا نیز این فرایند را تشدید می‌کند.'
+        },
+        {
+          heading: 'اهمیت ایزومر Ortho-Ortho در کلات EDDHA',
+          text: 'تنها ایزومر orth-orthو دارای ۶ پیوند کووالانسی محکم با یون Fe3+ است که تا pH بیش از ۹ نیز پایدار باقی می‌ماند. کلات آهن پیشگامان با درصد بالای این ایزومر، پایداری فوق‌العاده‌ای در خاک‌های سخت نشان می‌دهد.'
+        },
+        {
+          heading: 'مکانیسم جذب و انتقال در آوند چوبی',
+          text: 'پس از جذب کلات توسط ریشه، آهن در داخل سلول احیا شده و به صورت یون Fe2+ به برگ‌ها منتقل می‌شود تا در ساختار پورفیرین کلروفیل قرار گیرد.'
+        },
+        {
+          heading: 'دستورالعمل مصرف در باغات پسته و میوه',
+          text: 'مصرف ۵۰ تا ۱۰۰ گرم برای هر درخت پسته یا مرکبات بالغ به صورت چالکود یا کوددهی همراه با آبیاری بهاره، سبزینگی و شادابی کامل را بازمی‌گرداند.'
+        }
+      ],
+      dosageTable: [
+        { stage: 'تورم جوانه‌ها / شروع رشد', crop: 'درختان پسته و مرکبات', rate: '۵۰-۱۰۰ گرم برای هر درخت', timing: 'مصرف خاکی یا همراه آبیاری' },
+        { stage: 'رشد فعال', crop: 'باغات سیب، انگور و هلو', rate: '۳۰-۶۰ گرم برای هر درخت', timing: 'حل در آب آبیاری' }
+      ],
+      faqs: [
+        { question: 'چرا محلول‌پاشی برگی آهن به تنهایی کافی نیست؟', answer: 'آهن عنصر غیرپویا در گیاه است و محلول‌پاشی برگی فقط علائم موضعی را رفع می‌کند؛ برای تغذیه پایدار ریشه‌ای، مصرف کلات خاکی EDDHA ضروری است.' }
+      ],
+      references: [
+        'Lucena, J. J. (2006). "Synthetic iron chelates to correct iron deficiency in plants". In Iron Nutrition in Plants and Microbes (pp. 103-128). Springer.',
+        'Schenkeveld, W. D., et al. (2008). "Evaluation of FeEDDHA chelates for iron nutrition". Journal of Agricultural and Food Chemistry, 56(21), 10123-10130.'
+      ],
+      relatedProducts: ['کلات آهن (Iron Chelate EDDHA)', 'میکرو پیشگامان (Micro Mix)', 'مگا پلاس (Mega Plus)']
+    },
+    en: {
+      title: 'Comparative Stability Analysis of Fe-EDDHA and Fe-HBED Chelates in Calcareous Soils',
+      category: 'Micronutrients & Chelates',
+      readTime: '9 min',
+      date: 'October 2024',
+      lastModified: '2024-10-25',
+      author: 'Pishgaman Agro-Chemical R&D Group',
+      summary: 'Biochemical investigation into ortho-ortho isomer stability in high pH soils (> 7.5) and correction of iron chlorosis in pistachio and fruit orchards.',
+      abstract: 'Iron chlorosis represents a critical yield-limiting factor in alkaline calcareous soils (pH > 7.8). This paper evaluates the retention kinetics and uptake efficiency of ortho-ortho rich Fe-EDDHA chelates in commercial agriculture.',
+      metaDescription: 'Scientific study on Fe-EDDHA iron chelate stability, curing leaf chlorosis in pistachio and citrus orchards.',
+      targetKeyword: 'iron chelate EDDHA iron chlorosis calcareous soil',
+      contentSections: [
+        {
+          heading: 'Mechanisms of Iron Fixation in Calcareous Soils',
+          text: 'Under alkaline pH levels, free iron cations precipitate as insoluble ferric hydroxides Fe(OH)3, rendering iron unavailable to plant roots despite high total soil iron contents.'
+        },
+        {
+          heading: 'Significance of the Ortho-Ortho Isomer',
+          text: 'The ortho-ortho spatial isomer forms six tight hexadentate bonds with Fe3+, maintaining stability up to pH 9.0. Pishgaman Iron Chelate provides guaranteed high ortho-ortho ratios for maximum bio-efficacy.'
+        }
+      ],
+      references: [
+        'Lucena, J. J. (2006). "Synthetic iron chelates to correct iron deficiency in plants". Springer.'
+      ],
+      relatedProducts: ['Iron Chelate (Fe-EDDHA)', 'Micro Mix', 'Mega Plus']
+    },
+    ar: {
+      title: 'دراسة مقارنة لثبات مركبات الحديد المخلبي Fe-EDDHA في التربة الكلسية والقلوية',
+      category: 'العناصر الصغرى والمخلبيات',
+      readTime: '٩ دقائق',
+      date: 'أكتوبر ٢٠٢٤',
+      author: 'قسم البحث والتطوير الكيميائي - بيشغامان',
+      summary: 'تقييم ثبات أيزومر أورثو-أورثو في التربة ذات الرقم الهيدروجيني العالي وعلاج اصفرار أوراق أشجار الفستق والحمضيات.',
+      abstract: 'يعتبر نقص الحديد من أهم مشاكل التربة الكلسية. يستعرض هذا البحث دور سماد الحديد المخلبي بيشغامان عالية الجودة.',
+      contentSections: [
+        {
+          heading: 'ميكانيكية امتصاص الحديد المخلبي',
+          text: 'يعمل مركب Fe-EDDHA على توفير عنصر الحديد القابل للامتصاص في التربة الكلسية والقلوية دون ترسيب.'
+        }
+      ],
+      references: [
+        'Lucena, J. J. (2006). "Synthetic iron chelates to correct iron deficiency in plants".'
+      ],
+      relatedProducts: ['حديد مخلبي (Iron Chelate EDDHA)']
+    },
+    ur: {
+      title: 'آہک دار مٹی میں آئرن چیلیٹ Fe-EDDHA کی پائیداری کا سائنسی جائزہ',
+      category: 'مائیکرو نیوٹرینٹس اور چیلیٹس',
+      readTime: '۹ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'پیشگامان ریسرچ ٹیم',
+      summary: 'پودوں میں لوہے کی کمی اور پتوں کے پیلے پن کے علاج کے لیے آئرن چیلیٹ کا استعمال۔',
+      abstract: 'آہک دار مٹی میں پودوں کو لوہے کی فراہمی کے لیے چیلیٹڈ آئرن کا سائنسی مطالعہ۔',
+      contentSections: [
+        {
+          heading: 'آئرن چیلیٹ کی اہمیت',
+          text: 'Fe-EDDHA مٹی میں لوہے کو ضائع ہونے سے بچاتا ہے اور پتوں کی زردی کو دور کرتا ہے۔'
+        }
+      ],
+      references: [
+        'Lucena, J. J. (2006). "Synthetic iron chelates".'
+      ],
+      relatedProducts: ['آئرن چیلیٹ (Iron Chelate)']
+    }
+  },
+
+  // --- New Scientific Article 3: Humic & Fulvic Acid Rhizosphere Health ---
+  {
+    id: 'humic-fulvic-acid-root-rhizosphere',
+    slug: 'humic-fulvic-acid-root-rhizosphere',
+    aliases: ['humic-acid-leonardite-cation-exchange', 'rhizosphere-soil-health'],
+    imageUrl: imgHumic,
+    googleTrendKeyword: {
+      fa: 'هیومیک اسید لیوناردیت، تقویت ریشه و افزایش جذبی خاک',
+      en: 'Humic & Fulvic Acid Soil Conditioning and Root Rhizosphere Dynamics',
+      ar: 'حمض الهيوميك والفولفيك وتحفيز نمو الجذور وتحسين التربة',
+      ur: 'ہیومک ایسڈ کا استعمال اور جڑوں کی نشوونما'
+    },
+    fa: {
+      title: 'تأثیر اسید هیومیک و فولویک حاصل از لیوناردیت بر CEC خاک، توسعه ریشه و کلاته‌سازی طبیعی عناصر',
+      category: 'مواد آلی و اصلاح‌کننده‌ها',
+      readTime: '۸ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '۱۴۰۴/۰۷/۲۰',
+      author: 'دکتر سارا ابراهیمی - پژوهشگر بیولوژی خاک پیشگامان',
+      summary: 'تحلیل ساختار مولکولی اسیدهای هیومیک و فولویک، افزایش ظرفیت تبادل کاتیونی (CEC)، تحریک هورمونی ریشه‌زایی اولیه و افزایش راندمان مصرف کودهای شیمیایی (NUE).',
+      abstract: 'ماده آلی اکثر خاک‌های کشاورزی ایران زیر ۰.۵ درصد است. افزودن هیومیک اسید باکیفیت استخراج‌شده از منابع لیوناردیت غنی، ساختار فیزیکی خاک را بهبود بخشیده و با ایجاد مجتمع‌های ارگانو-مینرال، انحلال فسفر و عناصر کم‌مصرف را تا دو برابر افزایش می‌دهد.',
+      metaDescription: 'مقاله جامع درباره مزایای اسید هیومیک پودری و مایع پیشگامان در تقویت ریشه، افزایش ماده آلی و بهبود جذب کودها.',
+      targetKeyword: 'اسید هیومیک پودری مایع تقویت ریشه لیوناردیت CEC',
+      contentSections: [
+        {
+          heading: 'تخریب ماده آلی خاک و افت CEC',
+          text: 'کاهش ماده آلی خاک سبب سفت شدن، افت ظرفیت نگهداری آب و اتلاف شدید کودهای نیتروژنی و پتاسیمی می‌شود. اسید هیومیک با دارا بودن گروه‌های عاملی کربوکسیل و فنولیک، CEC خاک را به شدت بالا می‌برد.'
+        },
+        {
+          heading: 'مکانیسم کلاته‌سازی طبیعی عناصر مغذی',
+          text: 'بخش فولویک اسید به دلیل وزن مولکولی پایین و حلالیت در تمامی pHها، به عنوان یک کلات‌کننده طبیعی عمل کرده و کاتیون‌های Fe, Zn, Mn, Ca را به صورت قابل جذب برای ریشه نگه می‌دارد.'
+        },
+        {
+          heading: 'اثر شبه‌هورمونی اکسین بر حجم ریشه‌های موئین',
+          text: 'مولکول‌های اسید هیومیک با تحریک فعالیت آنزیم H+-ATPase در غشای سلولی ریشه، سنتز اکسین طبیعی را القا کرده و انشعابات ریشه‌های موئین را به شکل چشمگیری گسترش می‌دهند.'
+        },
+        {
+          heading: 'توصیه و شیوه مصرف هیومیک پیشگامان',
+          text: 'مصرف ۵ تا ۱۰ کیلوگرم هیومیک اسید پودری یا ۱۰ تا ۲۰ لیتر هیومیک مایع در هکتار همراه با اولین آبیاری بهاره، بستر ریشه را کاملاً احیا می‌سازد.'
+        }
+      ],
+      dosageTable: [
+        { stage: 'کاشت / ابتدای فصل', crop: 'زراعت (گندم، ذرت، چغندر)', rate: '۵-۸ کیلوگرم پودری / ۱۰ لیتر مایع', timing: 'همراه آب آبیاری یا کودآبیاری' },
+        { stage: 'آب اول بهاره', crop: 'باغات پسته، مرکبات و سیب', rate: '۸-۱۲ کیلوگرم پودری / ۱۵-۲۰ لیتر مایع', timing: 'تزریق در سیستم آبیاری قطره‌ای' }
+      ],
+      faqs: [
+        { question: 'تفاوت اسید هیومیک با اسید فولویک چیست؟', answer: 'اسید هیومیک وزن مولکولی بالاتر داشته و بیشتر در اصلاح خاک و CEC نقش دارد؛ در حالی که اسید فولویک مولکول کوچک‌تری داشته و در جذب برگی و کلات‌سازی سریع‌تر موثر است.' }
+      ],
+      references: [
+        'Calvo, P., Nelson, L., & Kloepper, J. W. (2014). "Agricultural uses of plant biostimulants". Plant and Soil, 383(1), 3-41.',
+        'Chen, Y., & Aviad, T. (1990). "Effects of humic substances on plant growth". Science Society of America, 161-186.'
+      ],
+      relatedProducts: ['هیومیک اسید پودری (Pishgaman Humic)', 'بلک هیومیک (Black Humic)', 'دوپینگ (Doping)']
+    },
+    en: {
+      title: 'Impact of Leonardite-Derived Humic & Fulvic Acids on Soil CEC and Rhizosphere Architecture',
+      category: 'Organic Matter & Soil Conditioners',
+      readTime: '8 min',
+      date: 'October 2024',
+      lastModified: '2024-10-20',
+      author: 'Dr. S. Ebrahimi - Soil Biology Specialist',
+      summary: 'Evaluating molecular configurations of humates, Cation Exchange Capacity enhancement, auxin-like root priming, and Nutrient Use Efficiency (NUE).',
+      abstract: 'With organic matter dropping below 0.5% in arid arable soils, high-grade leonardite humic acid applications restore soil porosity and chelate essential nutrients against leaching.',
+      metaDescription: 'Scientific review on Leonardite humic and fulvic acids boosting soil CEC and root density.',
+      targetKeyword: 'humic acid leonardite soil organic matter cation exchange',
+      contentSections: [
+        {
+          heading: 'Soil Organic Matter Depletion and Cation Exchange',
+          text: 'Depleted soil organic matter directly lowers CEC, leading to high nutrient leaching losses. Humic substances supply dense carboxyl and phenolic functional groups that hold nutrients in the rhizosphere.'
+        },
+        {
+          heading: 'Auxin-like Priming of Lateral Root Systems',
+          text: 'Humic molecules stimulate plasma membrane H+-ATPase activity, mimicking endogenous auxin signaling that drives lateral root elongation and fine root tip proliferation.'
+        }
+      ],
+      references: [
+        'Calvo, P., Nelson, L., & Kloepper, J. W. (2014). "Agricultural uses of plant biostimulants". Plant and Soil, 383(1), 3-41.'
+      ],
+      relatedProducts: ['Pishgaman Humic Powder', 'Black Humic Liquid', 'Doping']
+    },
+    ar: {
+      title: 'تأثير حمض الهيوميك والفولفيك المستخرج من الليونارديت على سعة التبادل الكاتيوني ونمو الجذور',
+      category: 'المواد العضوية ومحسنات التربة',
+      readTime: '٨ دقائق',
+      date: 'أكتوبر ٢٠٢٤',
+      author: 'د. سارة إبراهيمي - باحثة أحياء التربة',
+      summary: 'تحليل دور الهيوميك في تحسين خصوبة التربة وتحفيز نمو الجذور الشعيرية وزيادة كفاءة التسميد.',
+      abstract: 'يعمل حمض الهيوميك من بيشغامان على زيادة المادة العضوية في التربة وتحسين الاحتفاظ بالماء والعناصر.',
+      contentSections: [
+        {
+          heading: 'دور حمض الهيوميك في تحسين التربة',
+          text: 'يزيد حمض الهيوميك من قدرة التربة على الاحتفاظ بالماء والعناصر الغذائية وتحفيز الجذور.'
+        }
+      ],
+      references: [
+        'Calvo, P., et al. (2014). "Agricultural uses of plant biostimulants".'
+      ],
+      relatedProducts: ['حمض الهيوميك بودرة (Humic Powder)', 'بلاك هيوميك (Black Humic)']
+    },
+    ur: {
+      title: 'ہیومک ایسڈ اور فولک ایسڈ کے مٹی اور جڑوں کی نشوونما پر سائنسی اثرات',
+      category: 'نامیاتی مادہ اور مٹی کی اصلاح',
+      readTime: '۸ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'ڈاکٹر سارہ ابراہیمی',
+      summary: 'لیونارڈائٹ سے حاصل شدہ ہیومک ایسڈ کے ذریعے مٹی کی زرخیزی اور جڑوں کی مضبوطی۔',
+      abstract: 'ہیومک ایسڈ کا استعمال مٹی کی زرخیزی اور جڑوں کے پھیلائو میں اہم کردار ادا کرتا ہے۔',
+      contentSections: [
+        {
+          heading: 'ہیومک ایسڈ اور جڑوں کی نشوونما',
+          text: 'ہیومک ایسڈ مٹی کو نرم بناتا ہے اور جڑوں کو مزید گہرائی تک پھیلنے میں مدد دیتا ہے۔'
+        }
+      ],
+      references: [
+        'Calvo, P., et al. (2014).'
+      ],
+      relatedProducts: ['ہیومک ایسڈ پاؤڈر (Humic Powder)']
+    }
+  },
+
+  // --- New Scientific Article 4: Seaweed Extract Ascophyllum nodosum ---
+  {
+    id: 'seaweed-biostimulants-abiotic-stress',
+    slug: 'seaweed-biostimulants-abiotic-stress',
+    aliases: ['ascophyllum-nodosum-seaweed-extract', 'biostimulant-cold-stress'],
+    imageUrl: imgSeaweedBio,
+    googleTrendKeyword: {
+      fa: 'عصاره جلبک دریایی فیکشن، آسکوفیلوم نودوسوم و ضد سرمازدگی',
+      en: 'Seaweed Extract Ascophyllum Nodosum Biostimulant for Cold & Drought Hardiness',
+      ar: 'مستخلص أعشاب بحرية لزيادة مقاومة النبات للصقيع والجفاف',
+      ur: 'سمندری جڑی بوٹیوں کا عصارہ اور سردی سے تحفظ'
+    },
+    fa: {
+      title: 'بررسی فیزیولوژیک عصاره جلبک دریایی (Ascophyllum nodosum) در القای مقاومت به سرمازدگی بهاره و تنش خشکی',
+      category: 'محرک‌های رشد و بیواستیمولانت‌ها',
+      readTime: '۸ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '۱۴۰۴/۰۷/۱۵',
+      author: 'تیم پژوهشی بیوتکنولوژی کشاورزی پیشگامان',
+      summary: 'مکانیزم عملکرد پلی‌ساکاریدهای خاص (آلژینات، فوکوئیدان، لمینارین)، هورمون‌های طبیعی سیتوکینین و بتائین‌ها در تنظیم بیان ژن‌های مقاوم به سرما در محصولات کشاورزی.',
+      abstract: 'سرمازدگی دیررس بهاره و خشکی‌های ناگهانی سالانه میلیاردها تومان خسارت به باغات شکوفه‌دار و مزارع وارد می‌سازد. محصول فیکشن (عصاره جلبک دریایی) با فعال‌سازی سیستم دفاعی درونی گیاه، آستانه تحمل دمایی را ۲ تا ۴ درجه سانتی‌گراد بهبود می‌بخشد.',
+      metaDescription: 'مقاله تخصصی درباره تأثیر عصاره جلبک دریایی فیکشن پیشگامان در جلوگیری از سرمازدگی بهاره و افزایش فتوسنتز.',
+      targetKeyword: 'عصاره جلبک دریایی فیکشن آسکوفیلوم سرمازدگی بهاره',
+      contentSections: [
+        {
+          heading: 'فیزیولوژی خسارت سرمازدگی بهاره در باغات',
+          text: 'کاهش ناگهانی دما در زمان شکوفه‌دهی باعث تشکیل کریستال‌های یخ درون‌سلولی و پارگی غشای سلول می‌شود. این امر منجر به سیاه شدن گلچه‌ها و ریزش شدید محصول می‌گردد.'
+        },
+        {
+          heading: 'پلی‌ساکاریدها و قندهای الکلی محافظ (Osmoprotectants)',
+          text: 'عصاره جلبک دریایی قهوه‌ای Ascophyllum nodosum غنی از لمینارین، آلژینات و مانیتول است. این ترکیبات نقطه انجماد مایع درون‌سلولی را پایین آورده و از کریستالیزاسیون آب جلوگیری می‌کنند.'
+        },
+        {
+          heading: 'القای تولید سیتوکینین و تحریک تقسیم سلولی',
+          text: 'وجود پیش‌سازهای هورمونی طبیعی در ترکیب فیکشن، پیری زودرس برگ‌ها را به تأخیر انداخته و عقد میوه (Fruit Set) را پس از عبور از شرایط تنش تضمین می‌کند.'
+        },
+        {
+          heading: 'شیوه و زمان‌بندی محلول‌پاشی',
+          text: 'محلول‌پاشی ۲۴ تا ۴۸ ساعت قبل از پیش‌بینی سرمای بهاره با دوز ۱ تا ۱.۵ لیتر در هزار لیتر آب، حداکثر ایمنی را برای باغات پسته، بادام، زردآلو و انگور فراهم می‌سازد.'
+        }
+      ],
+      dosageTable: [
+        { stage: 'پیش از پیش‌بینی موج سرما / تورم جوانه‌ها', crop: 'باغات پسته، بادام و میوه‌های هسته‌دار', rate: '۱-۱.۵ لیتر در ۱۰۰۰ لیتر آب', timing: 'محلول‌پاشی برگی' },
+        { stage: 'رشد رویشی و تشکیل میوه', crop: 'صیفی‌جات و گلخانه‌ها', rate: '۰.۷۵-۱ لیتر در ۱۰۰۰ لیتر آب', timing: 'تکرار هر ۱۴ روز یک‌بار' }
+      ],
+      faqs: [
+        { question: 'آیا فیکشن را می‌توان با کلات‌های میکرو اختلاط کرد؟', answer: 'بله، ترکیب فیکشن با کلات‌های میکرو و آمینواسیدها (دوپینگ) تأثیر هم‌افزایی (Synergistic) فوق‌العاده‌ای در جهش رشد گیاه دارد.' }
+      ],
+      references: [
+        'Battacharyya, D., et al. (2015). "Seaweed extracts as biostimulants in agriculture". Scientia Horticulturae, 196, 39-48.',
+        'Shukla, P. S., et al. (2019). "Ascophyllum nodosum-based biostimulants: Sustainable applications in agriculture". Frontiers in Plant Science, 10, 655.'
+      ],
+      relatedProducts: ['فیکشن (Fiction - عصاره جلبک)', 'دوپینگ (Doping)', 'جامپر (Jumper)']
+    },
+    en: {
+      title: 'Physiological Mechanism of Ascophyllum Nodosum Seaweed Extract in Priming Frost & Cold Tolerance',
+      category: 'Biostimulants & Growth Promoters',
+      readTime: '8 min',
+      date: 'October 2024',
+      lastModified: '2024-10-15',
+      author: 'Agro-Biotechnology Research Team, Pishgaman',
+      summary: 'Analyzing complex polysaccharides (alginate, fucoidan, laminarin), phytohormones, and osmoprotectants modulating frost resistance in commercial orchards.',
+      abstract: 'Late spring frosts cause devastating freeze injuries to blossoming orchards. Pishgaman Fiction (Ascophyllum nodosum) enhances endogenous antioxidant pathways and lowers intracellular freezing thresholds.',
+      metaDescription: 'Scientific insight on seaweed biostimulant Fiction preventing spring frost damage in almond, pistachio, and grape orchards.',
+      targetKeyword: 'seaweed extract ascophyllum nodosum spring frost biostimulant',
+      contentSections: [
+        {
+          heading: 'Physiology of Late Spring Freeze Damage',
+          text: 'Sudden temperature drops during bloom trigger intracellular ice crystallization, destroying cell membranes and causing blossom blast and severe yield loss.'
+        },
+        {
+          heading: 'Osmoprotectant Polysaccharides and Sugar Alcohols',
+          text: 'Ascophyllum nodosum extracts contain high levels of mannitol and laminarin, which lower intracellular freezing points and scavenge oxidative free radicals.'
+        }
+      ],
+      references: [
+        'Battacharyya, D., et al. (2015). "Seaweed extracts as biostimulants in agriculture". Scientia Horticulturae, 196, 39-48.'
+      ],
+      relatedProducts: ['Fiction (Seaweed Extract)', 'Doping', 'Jumper']
+    },
+    ar: {
+      title: 'تأثير مستخلص الأعشاب البحرية (Ascophyllum nodosum) في مقاومة الصقيع الربيعي والجفاف',
+      category: 'محيطات النمو والمحفزات الحيوية',
+      readTime: '٨ دقائق',
+      date: 'أكتوبر ٢٠٢٤',
+      author: 'فريق التكنولوجيا الحيوية - بيشغامان',
+      summary: 'دراسة دور السكريات المتعددة والهرمونات النباتية الطبيعية في حماية الأشجار من أضرار الصقيع وإجهاد الجفاف.',
+      abstract: 'يعمل مركب فيكشن من بيشغامان على رفع مناعة الأشجار المثمرة وحمايتها من أضرار الصقيع الربيعي.',
+      contentSections: [
+        {
+          heading: 'تأثير مستخلص الأعشاب البحرية',
+          text: 'يحتوي مستخلص الأعشاب البحرية على مركبات طبيعية تقلل من تأثير انخفاض درجات الحرارة والصقيع الربيعي.'
+        }
+      ],
+      references: [
+        'Battacharyya, D., et al. (2015). "Seaweed extracts as biostimulants".'
+      ],
+      relatedProducts: ['فيكشن (Fiction)', 'دوبينغ (Doping)']
+    },
+    ur: {
+      title: 'سمندری جڑی بوٹیوں کے عصارے سے فصلوں کو سردی اور کوہرے سے بچانے کا سائنسی طریقہ',
+      category: 'نمو کے محرکات',
+      readTime: '۸ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'پیشگامان بائیوٹیکنالوجی ٹیم',
+      summary: 'پودوں میں سردی اور کوہرے کے خلاف دفاعی نظام کو مضبوط بنانے کے لیے فیکشن کا استعمال۔',
+      abstract: 'سمندری جڑی بوٹیوں کے عصارے سے فصلوں میں سردی اور خشکی کے خلاف قوت مدافعت پیدا ہوتی ہے۔',
+      contentSections: [
+        {
+          heading: 'سردی سے تحفظ کی حکمت عملی',
+          text: 'فیکشن کا باقاعدہ استعمال پودے کے اندرونی خلیوں کو یخ بستہ ہونے سے بچاتا ہے۔'
+        }
+      ],
+      references: [
+        'Battacharyya, D., et al. (2015).'
+      ],
+      relatedProducts: ['فیکشن (Fiction)']
+    }
+  },
+
+  // --- New Scientific Article 5: Liquid Sulfur & Silicon Crop Defense ---
+  {
+    id: 'liquid-sulfur-silicon-crop-protection',
+    slug: 'liquid-sulfur-silicon-crop-protection',
+    aliases: ['liquid-sulfur-powdery-mildew', 'silicon-crop-defense-fungicide'],
+    imageUrl: imgSulfurSilicon,
+    googleTrendKeyword: {
+      fa: 'گوگرد مایع پیشگامان، کنتر سفیدک پودری و افزایش مقاومت مکانیکی',
+      en: 'Liquid Sulfur & Bio-Silicon Dual Action Defense against Powdery Mildew and Pests',
+      ar: 'الكبريت السائل والسيليكون لمكافحة البياض الدقيقي وتقوية جدار الخلايا',
+      ur: 'مائع سلفر اور سلیکان کا استعمال اور بیماریوں سے تحفظ'
+    },
+    fa: {
+      title: 'نقش دوگانه گوگرد و سیلیسیم مایع در تقویت ساختاری دیواره سلولی و کنترل ارگانیک قارچ سفیدک پودری',
+      category: 'تغذیه حمایتی و دفاع گیاهی',
+      readTime: '۹ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '۱۴۰۴/۰۷/۱۰',
+      author: 'دکتر علیرضا کریمی - متخصص گیاهپزشکی و آسیب‌شناسی گیاهی پیشگامان',
+      summary: 'مکانیسم رسوب‌گذاری سیلیسیم در اپیدرم برگ، ایجاد مانع فیزیکی در برابر نفوذ هيف‌های قارچی و اثر بخاردهی گوگرد مایع در مهار سفیدک حقیقی در انگور، صیفی‌جات و باغات.',
+      abstract: 'استفاده مکرر از سموم شیمیایی قارچ‌کش باعث بروز مقاومت در نژادهای قارچی و باقی‌مانده‌های زیان‌بار می‌شود. استفاده از گوگرد مایع و سیلیسیم پیشگامان با مکانیسم فیزیکی و بیوشیمیایی، علاوه بر تغذیه گوگردی، سفیدک پودری (Uncinula necator) و کنه‌ها را بدون ایجاد مقاومت کنترل می‌نماید.',
+      metaDescription: 'مقاله تخصصی درباره کاربرد گوگرد مایع و سیلیسیم پیشگامان در کنترل سفیدک پودری، افزایش ضخامت برگ و کاهش نیاز به سموم شیمیایی.',
+      targetKeyword: 'گوگرد مایع سیلیسیم سفیدک پودری ارگانیک انگور صیفی‌جات',
+      contentSections: [
+        {
+          heading: 'مکانیسم رسوب سیلیسیم در دیواره سلولی (Silicon Phytoliths)',
+          text: 'سیلیسیم جذب‌شده به صورت پلی‌سیلیسیک اسید در بافت اپیدرم رسوب کرده و یک لایه کوتیکول-سیلیسیم دوگانه (Silica-Cuticle Double Layer) ایجاد می‌کند که مانع نفوذ فیزیکی اسپورهای قارچی و خرطوم حشرات مکنده می‌شود.'
+        },
+        {
+          heading: 'فاز بخار و قارچ‌کشی ارگانیک گوگرد مایع',
+          text: 'گوگرد مایع پیشگامان با اندازه ذرات میکرونی، در سطح برگ آزادسازی تدریجی بخار گوگرد (Vapor Action) را انجام داده که تنفس سلولی قارچ‌های عامل سفیدک پودری را مختل و اسپورها را منهدم می‌کند.'
+        },
+        {
+          heading: 'کاهش تبخیر و تعرق و افزایش مقاومت به گرما',
+          text: 'لایه سیلیسی تشکیل‌شده در سطح برگ، شدت تعرق غیرروزنه‌ای را تا ۳۰٪ کاهش داده و شادابی برگ‌ها را در تابستان‌های داغ حفظ می‌کند.'
+        },
+        {
+          heading: 'برنامه مصرف و اختلاط‌‌پذیری',
+          text: 'محلول‌پاشی ۲ تا ۳ لیتر گوگرد مایع در هزار لیتر آب به همراه سیلیسیم در اوایل رشد رویشی و قبل از شیوع بیماری، پوشش کاملی ایجاد می‌نماید.'
+        }
+      ],
+      dosageTable: [
+        { stage: 'قبل از شیوع بیماری / اوایل بهار', crop: 'باغات انگور، پسته و سیب', rate: '۲-۳ لیتر گوگرد مایع در ۱۰۰۰ لیتر آب', timing: 'محلول‌پاشی برگی پوششی' },
+        { stage: 'رشد رویشی و باردهی', crop: 'خیار، گوجه‌فرنگی و خربزه گلخانه‌ای', rate: '۱.۵-۲ لیتر در ۱۰۰۰ لیتر آب', timing: 'هر ۱۵ روز یک‌بار' }
+      ],
+      faqs: [
+        { question: 'آیا گوگرد مایع پیشگامان باعث سوزندگی برگ در دمای بالا می‌شود؟', answer: 'فرمولاسیون پیشرفته گوگرد مایع پیشگامان به دلیل اندازه ذرات بسیار ریز و دوز بهینه، خطر سوزندگی گوگرد پودری سنتی را نداشته ولی توصیه می‌شود در دمای بالای ۳۵ درجه سانتی‌گراد محلول‌پاشی در ساعات خنک عصر انجام شود.' },
+        { question: 'آیا گوگرد مایع قابل اختلاط با روغن‌های معدنی است؟', answer: 'خیر، گوگرد مایع نباید با روغن‌های امولسیون شونده (مانند روغن ولک) اختلاط شود و باید فاصله حداقل ۱۴ روز رعایت گردد.' }
+      ],
+      references: [
+        'Epstein, E. (1999). "Silicon". Annual Review of Plant Physiology and Plant Molecular Biology, 50(1), 641-664.',
+        'Datnoff, L. E., Elmer, W. H., & Huber, D. M. (2007). "Mineral Nutrition and Plant Disease". APS Press.'
+      ],
+      relatedProducts: ['گوگرد مایع (Liquid Sulfur)', 'فوسفیت پتاسیم (Potassium Phosphite)', 'میکرو پیشگامان (Micro Mix)']
+    },
+    en: {
+      title: 'Dual Mode Action of Bio-Silicon & Liquid Sulfur in Crop Mechanical Defense and Powdery Mildew Suppression',
+      category: 'Supportive Nutrition & Crop Protection',
+      readTime: '9 min',
+      date: 'October 2024',
+      lastModified: '2024-10-10',
+      author: 'Dr. A. Karimi - Senior Plant Pathology Specialist',
+      summary: 'Exploring silicon phytolith deposition creating physical barriers against fungal hyphae penetrations and liquid sulfur vapor action for eco-friendly powdery mildew control.',
+      abstract: 'Repeated synthetic fungicide usage leads to pathogen resistance and chemical residue concerns. Pishgaman Liquid Sulfur and Silicon offer residue-free physical protection against powdery mildew (Uncinula necator) and mites.',
+      metaDescription: 'Scientific analysis of bio-silicon and liquid sulfur suppressing powdery mildew and enhancing foliage physical toughness.',
+      targetKeyword: 'liquid sulfur silicon powdery mildew organic fungicide',
+      contentSections: [
+        {
+          heading: 'Silicon Phytolith Deposition Mechanics',
+          text: 'Absorbed monosilicic acid polymerizes into silica-cuticle double layers across leaf epidermal walls, acting as a structural shield that impedes fungal appressoria penetration and sap-sucking insects.'
+        },
+        {
+          heading: 'Micro-sized Vapor Phase Fungicidal Action',
+          text: 'Pishgaman Liquid Sulfur features micronized particles that continuously emit elemental sulfur vapor, disrupting mitochondrial electron transport chains in powdery mildew fungi.'
+        }
+      ],
+      references: [
+        'Epstein, E. (1999). "Silicon". Annual Review of Plant Physiology, 50, 641-664.'
+      ],
+      relatedProducts: ['Liquid Sulfur', 'Potassium Phosphite', 'Micro Mix']
+    },
+    ar: {
+      title: 'الدور المزدوج للسيليكون والكبريت السائل في تقوية جدار الخلايا ومكافحة مرض البياض الدقيقي',
+      category: 'التغذية الوقائية وحماية المحاصيل',
+      readTime: '٩ دقائق',
+      date: 'أكتوبر ٢٠٢٤',
+      author: 'د. عليرضا كريمي - أخصائي أسباب أمراض النبات',
+      summary: 'دراسة دور ترسب السيليكون في أوراق النبات وتأثير أبتخرة الكبريت السائل في القضاء على الفطريات.',
+      abstract: 'يوفر الكبريت السائل والسيليكون من بيشغامان حماية عضوية متكاملة ضد البياض الدقيقي والعناكب دون ترك آثار كيميائية.',
+      contentSections: [
+        {
+          heading: 'الوقاية المزدوجة بالسيليكون والكبريت',
+          text: 'يعمل السيليكون على زيادة سمك الجدار الخلوي بينما يقضي الكبريت السائل على جراثيم البياض الدقيقي.'
+        }
+      ],
+      references: [
+        'Epstein, E. (1999). "Silicon".'
+      ],
+      relatedProducts: ['كبريت سائل (Liquid Sulfur)', 'فوسفيت البوتاسيوم (Potassium Phosphite)']
+    },
+    ur: {
+      title: 'مائع سلفر اور سلیکان کے ذریعے پودوں کی بیماریاں روکنے اور گندھک کا سائنسی استعمال',
+      category: 'حفاظتی غذائیت اور فصل کا تحفظ',
+      readTime: '۹ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'ڈاکٹر علیرضا کریمی',
+      summary: 'سلیکان کے ذریعے پتوں کو مضبوط بنانا اور مائع سلفر کے ذریعے سفیدک (پاؤڈری ملڈیو) کا نامیاتی کنٹرول۔',
+      abstract: 'مائع سلفر اور سلیکان کے ذریعے پودوں کو بیماریوں اور کیڑوں سے نامیاتی تحفظ حاصل ہوتا ہے۔',
+      contentSections: [
+        {
+          heading: 'سلیکان اور سلفر کا دوہرا عمل',
+          text: 'سلیکان پتوں کے چمڑے کو مضبوط کرتا ہے اور سلفر قارچ کو تلف کرتا ہے۔'
+        }
+      ],
+      references: [
+        'Epstein, E. (1999).'
+      ],
+      relatedProducts: ['مائع سلفر (Liquid Sulfur)']
+    }
+  },
+
   // --- 1. Google Trend #1: Amino Acids & Biostimulants ---
   {
     id: 'heat-drought-stress',
