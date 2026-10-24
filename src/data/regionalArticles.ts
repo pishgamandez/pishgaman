@@ -11,6 +11,12 @@ import imgSugarBeet from '../assets/images/seaweed_bio_crop_1791738561930.jpg';
 import imgCotton from '../assets/images/hero_wheat_field_1791480930784.jpg';
 import imgVegetable from '../assets/images/sulfur_soil_drip_1791738596980.jpg';
 
+import imgWalnut from '../assets/images/tuyserkan_walnut_orchard_1792856334190.jpg';
+import imgPomegranate from '../assets/images/saveh_pomegranate_orchard_1792856345758.jpg';
+import imgTea from '../assets/images/guilan_tea_gardens_1792856357649.jpg';
+import imgPotato from '../assets/images/ardabil_potato_field_1792856368980.jpg';
+import imgKiwi from '../assets/images/caspian_kiwi_orchard_1792856380944.jpg';
+
 export const regionalArticlesData: Article[] = [
   // 1. Pistachio Rafsanjan & Kerman
   {
@@ -1588,5 +1594,887 @@ export const regionalArticlesData: Article[] = [
       relatedProducts: ['سالت استاپ (Salt Stop)', 'سول مکس (Sulmax)'],
       relatedArticles: ['soil-salinity-management', 'calcium-boron']
     }
+  },
+
+  // 11. Tuyserkan & Hamedan Walnut Orchards
+  {
+    id: 'reg-walnut-nutrition-tuyserkan',
+    slug: 'walnut-nutrition-tuyserkan-hamadan',
+    aliases: ['kood-gerdoo-tuyserkan', 'gerdoo-hamadan'],
+    imageUrl: imgWalnut,
+    region: {
+      provinceFa: 'همدان (تویسرکان، ملایر، نهاوند)',
+      cropFa: 'گردو (پوست کاغذی، چندلر، جمال، گردوی بومی تویسرکان)',
+      provinceEn: 'Hamedan Province (Tuyserkan & Malayer)',
+      cropEn: 'Walnut Orchards',
+      provinceAr: 'محافظة همدان (تويسركان)',
+      cropAr: 'بساتين الجوز'
+    },
+    googleTrendKeyword: {
+      fa: 'کود گردو تویسرکان همدان',
+      en: 'Tuyserkan Walnut Nutrition Hamedan',
+      ar: 'تسميد بساتين الجوز في تويسركان',
+      ur: 'گردو کی دیکھ بھال اور نمو'
+    },
+    fa: {
+      title: 'مدیریت تغذیه باغات گردوی تویسرکان و همدان: پیشگیری از سرمازدگی بهاره، پر مغز شدن و مهار بلایت با کلسیم بور و پوتاسیوم',
+      category: 'باغداری گردو و مغزها',
+      readTime: '۱۱ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '2026-10-24',
+      author: 'دپارتمان باغبانی و مغزهای پیشگامان فلات نیک',
+      targetKeyword: 'کود گردو تویسرکان همدان',
+      metaDescription: 'برنامه جامع تغذیه و کوددهی باغات گردوی تویسرکان و همدان: جلوگیری از سیاه شدن مغز گردو، افزایش درصد مغزداری و پایداری در برابر سرمای بهاره با کلسیم بور و ژل پتاس.',
+      summary: 'تحلیل دلایل پوکی و سیاه شدن مغز گردوی تویسرکان، راهکارهای افزایش چربی و سفیدی مغز گردو و برنامه فروت‌ست بهاره جهت مهار سرمازدگی دامنه‌های الوند.',
+      abstract: 'شهرستان تویسرکان به عنوان پایتخت گردوی ایران با بیش از ۵ هزار هکتار باغات گردو، با چالش‌های سرمازدگی دیررس بهاره، سقط مغز، درصد بالای پوکی و بیماری بلایت باکتریایی گردو روبروست. این مقاله علمی نقش کاربرد فروت‌ست بهاره با کلسیم-بور و کوددهی پتاسیمی ژل تایگر را در استحکام پوست چوبی و افزایش درصد چربی مغز بررسی می‌نماید.',
+      contentSections: [
+        {
+          heading: 'اقلیم و خاک باغات گردوی تویسرکان و دامنه‌های الوند',
+          text: 'در ارتفاعات تویسرکان و ملایر با زمستان‌های سخت و بهارهای متغیر، درختان گردو در زمان باز شدن شاتون‌های نر و گل‌های ماده بسیار آسیب‌پذیر هستند. خاک‌های آهکی با pH بالای ۷.۹ جذب عناصر روی، بور و پتاسیم را محدود کرده و موجب سیاه شدن چوب و مغز میوه می‌شود.'
+        },
+        {
+          heading: 'دلایل اصلی سیاه شدن و پوکی مغز گردو در همدان',
+          text: '۱. تنش گرمایی تیر و مرداد ماه هم‌زمان با فاز مغزبندی که آب مغز گردو را تبخیر کرده و آنزیم‌های اکسیدکننده را فعال می‌سازد.\n۲. کمبود عنصر بور و کلسیم در زمان تشکیل جدار سخت چوبی که باعث نفوذ قارچ‌های عامل بلایت و سیاه شدن بافت می‌شود.\n۳. عدم تامین پتاسیم در فاز پر شدن مغز که منجر به پوکی و چروکیدگی پوسته مغز می‌گردد.'
+        },
+        {
+          heading: 'برنامه کوددهی تخصصی گردو با محصولات پیشگامان',
+          text: '• مرحله تورم جوانه‌ها (اردیبهشت): محلول‌پاشی فول شارژر با دوز ۲ در هزار جهت تقویت گرده‌افشانی شاتون‌ها و مهار سرمای دیررس بهاره.\n• گردویی شدن میوه (خرداد و تیر): مصرف کلسیم بور مایع به همراه اسید آمینه دوپینگ جهت استحکام دیواره چوبی و پیشگیری از عارضه آبکیدگی.\n• مغزبندی (مرداد): مصرف ژل پتاسیم تایگر K High با دوز ۳ تا ۴ کیلوگرم در هکتار جهت پر شدن کامل، سفیدی و افزایش درصد چربی مغز گردو.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'تورم جوانه تا ظهور شاتون‌ها (اردیبهشت)',
+          crop: 'باغات گردوی تویسرکان',
+          rate: 'فول شارژر ۲ لیتر در ۱۰۰۰ لیتر آب',
+          timing: 'محلول‌پاشی تاج درخت'
+        },
+        {
+          stage: 'تشکیل میوه تا گردویی شدن (خرداد)',
+          crop: 'گردو',
+          rate: 'کلسیم بور ۲ لیتر + دوپینگ ۱.۵ لیتر در ۱۰۰۰ لیتر آب',
+          timing: 'محلول‌پاشی برگی'
+        },
+        {
+          stage: 'پر شدن مغز (مرداد)',
+          crop: 'گردو',
+          rate: 'تایگر K High ۳ کیلوگرم در ۱۰۰۰ لیتر آب',
+          timing: 'محلول‌پاشی برگی'
+        }
+      ],
+      faqs: [
+        {
+          question: 'چگونه از سیاه شدن مغز گردوی تویسرکان در گرمای تابستان جلوگیری کنیم؟',
+          answer: 'محلول‌پاشی پتاسیم خالص تایگر K High همراه با کلسیم بور در تیر و مرداد، تحمل درخت به تنش گرمایی را بالا برده و مانع از اکسیداسیون ترکیبات فنلی مغز می‌شود.'
+        },
+        {
+          question: 'بهترین زمان محلول‌پاشی فروت‌ست گردو چه زمانی است؟',
+          answer: 'نوبت اول بلافاصله پس از چیدن گردو در پاییز، و نوبت دوم در بهار هم‌زمان با تورم جوانه‌های زایشی.'
+        }
+      ],
+      references: [
+        'Solar, A., & Stampar, F. (2011). "Influence of calcium and potassium on walnut nut quality". Scientia Horticulturae, 127(3), 220-225.',
+        'FAO (2020). "Walnut Production & Nutrient Requirements". FAO Plant Paper, Rome.'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)', 'فول شارژر (Full Charger)', 'تایگر K High (کود ژل پتاس)', 'دوپینگ (Doping)'],
+      relatedArticles: ['calcium-boron', 'heat-drought-stress', 'potassium-fertigation']
+    },
+    en: {
+      title: 'Tuyserkan & Hamedan Walnut Nutrition: Spring Frost Protection & Kernel Sizing',
+      category: 'Nut Crops & Walnut Orchards',
+      readTime: '11 min',
+      date: 'October 2024',
+      lastModified: '2026-10-24',
+      author: 'Walnut Physiology & Pomology Division, Pishgaman Paydar Falat Nik',
+      targetKeyword: 'Tuyserkan Walnut Nutrition Hamedan',
+      metaDescription: 'Complete agronomic guide for Tuyserkan walnut orchards in Hamedan: preventing spring frost injury, blank nuts, kernel darkening, and bacterial blight via Cal-Bor and Tiger K High.',
+      summary: 'Enhancing kernel oil content, shell seal integrity, and late-spring frost resilience in high-altitude Zagros walnut orchards.',
+      abstract: 'Tuyserkan in Hamedan province serves as Iran capital for commercial walnut production. Late spring freezes and high summer temperatures cause heavy kernel oxidation and blankness. Applying Full Charger (Zn-B) during spring budbreak and Tiger K High during kernel filling optimizes yield and oil ratios.',
+      contentSections: [
+        {
+          heading: 'Climatic Vulnerability of Zagros Mountain Walnut Orchards',
+          text: 'High altitude microclimates incur freeze risks during catkin emergence. Calcareous soils lock essential zinc and boron necessary for fertilization.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'Spring Bud Swell (May)',
+          crop: 'Walnut Orchards',
+          rate: 'Full Charger 2 L / 1000 L',
+          timing: 'Canopy foliar spray'
+        }
+      ],
+      faqs: [
+        {
+          question: 'How to prevent walnut kernel darkening during summer?',
+          answer: 'Foliar applications of Tiger K High potassium gel combined with calcium-boron maintain osmotic hydration and inhibit phenolic oxidation.'
+        }
+      ],
+      references: [
+        'Solar, A., & Stampar, F. (2011). "Influence of calcium and potassium on walnut nut quality".'
+      ],
+      relatedProducts: ['Cal-Bor', 'Full Charger', 'Tiger K High', 'Doping'],
+      relatedArticles: ['calcium-boron', 'heat-drought-stress']
+    },
+    ar: {
+      title: 'تسميد بساتين الجوز في تويسركان وهمدان: الوقاية من الصقيع وزيادة امتلاء اللب',
+      category: 'بساتين الجوز والمكسرات',
+      readTime: '١١ دقيقة',
+      date: 'أكتوبر ٢٠٢٤',
+      lastModified: '2026-10-24',
+      author: 'قسم أبحاث المكسرات والجوز - شركة بيشغامان',
+      targetKeyword: 'تسميد بساتين الجوز في تويسركان',
+      metaDescription: 'برنامج تغذية بساتين الجوز في تويسركان لتفادي الصقيع الربيعي واسوداد اللب وزيادة نسبة الزيت عبر كلسيم بور وتايكر جل.',
+      summary: 'تحسين جودة لب الجوز وحمايته من الصقيع الربيعي في المرتفعات.',
+      abstract: 'تتعرض بساتين الجوز في تويسركان للصقيع الربيعي وارتفاع حرارة الصيف. يقدم هذا المقال برنامج التسميد بالبورون والكالسيوم والبوتاسيوم.',
+      contentSections: [
+        {
+          heading: 'أسباب اسوداد وتفرغ لب الجوز',
+          text: 'يؤدي الإجهاد الحراري ونقص البورون والكالسيوم إلى اسوداد اللب وضعف تكوين القشرة الخشبية.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'مرحلة انتفاخ البراعم',
+          crop: 'أشجار الجوز',
+          rate: 'فول شارجر ٢ لتر لكل ١٠٠٠ لتر ماء',
+          timing: 'رش ورقي'
+        }
+      ],
+      faqs: [
+        {
+          question: 'كيف نمنع اسوداد لب الجوز؟',
+          answer: 'بالرش الورقي لسماد تايكر جل كيه هاي والكالسيوم خلال شهر تموز وآب لرفع مقاومة الشجرة للحرارة.'
+        }
+      ],
+      references: [
+        'Solar, A. (2011). "Influence of calcium on walnut quality".'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)', 'فول شارژر (Full Charger)'],
+      relatedArticles: ['calcium-boron', 'heat-drought-stress']
+    },
+    ur: {
+      title: 'تویسرکان اور ہمدان میں اخروٹ کے باغات کی سائنسی دیکھ بھال اور غذائیت',
+      category: 'اخروٹ اور میوہ جات',
+      readTime: '۱۱ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'پیشگامان ریسرچ ٹیم',
+      summary: 'اخروٹ کی گرپ کو کالا ہونے سے بچانے اور سردی سے تحفظ کے لیے کلسیم بور کا استعمال۔',
+      abstract: 'اخروٹ کے باغات کو سردی اور شدید گرمی سے بچانے کے لیے سائنسی کود کا استعمال۔',
+      contentSections: [
+        {
+          heading: 'اخروٹ کی فصل کی حفاظت',
+          text: 'کلسیم اور پوٹاشیم کے استعمال سے اخروٹ کا چھلکا مضبوط ہوتا ہے اور گرپ بھاری بنتی ہے۔'
+        }
+      ],
+      references: [
+        'Solar, A. (2011).'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)']
+    }
+  },
+
+  // 12. Saveh & Neyriz Pomegranate Orchards
+  {
+    id: 'reg-pomegranate-cracking-saveh',
+    slug: 'pomegranate-cracking-saveh-neyriz',
+    aliases: ['kood-anar-saveh', 'tarakidgi-anar-neyriz'],
+    imageUrl: imgPomegranate,
+    region: {
+      provinceFa: 'مرکزی و فارس (ساوه، نی‌ریز، فردوس، آران و بیدگل)',
+      cropFa: 'انار (ملس ساوه، رباب نی‌ریز، شیشه کپ فردوس)',
+      provinceEn: 'Markazi & Fars (Saveh & Neyriz)',
+      cropEn: 'Pomegranate Orchards',
+      provinceAr: 'محافظة مركزي وفارس (ساوه وني ريز)',
+      cropAr: 'بساتين الرمان'
+    },
+    googleTrendKeyword: {
+      fa: 'ترکیدگی انار ساوه نی ریز',
+      en: 'Saveh Pomegranate Fruit Cracking Management',
+      ar: 'منع تشقق ثمار الرمان في ساوه',
+      ur: 'انار کے پھٹنے کا علاج'
+    },
+    fa: {
+      title: 'کنترل ترکیدگی و آفتاب‌سوختگی پوست انار ساوه و نی‌ریز: نقش کلسیم، سیلیسیم و هیومیک در ارتقای عیار صادراتی',
+      category: 'باغداری انار و میوه‌های نیمه‌گرمسیری',
+      readTime: '۱۰ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '2026-10-24',
+      author: 'دپارتمان تحقیقات انار پیشگامان پایدار فلات نیک',
+      targetKeyword: 'ترکیدگی انار ساوه نی ریز',
+      metaDescription: 'راهنمای پیشگیری از ترکیدگی پوست انار ملس ساوه و رباب نی‌ریز با کلسیم بور، سیلیکات پتاسیم سیلیگارد و هیومیک اسید پیشگامان.',
+      summary: 'کنترل عارضه ترکیدگی و آفتاب‌سوختگی پوست انار ناشی از نوسانات آبیاری و شدت آفتاب تابستان، افزایش سرخ‌رنگی دانه‌ها و افزایش سایز میوه صادراتی.',
+      abstract: 'باغات انار ساوه و نی‌ریز قطب اصلی تولید و صادرات انار ایران هستند؛ اما عارضه ترکیدگی پوست میوه (Fruit Cracking) و آفتاب‌سوختگی در تابستان‌های گرم تا ۳۵٪ از محصول را غیرقابل صادرات می‌کند. نوسانات آبیاری، عدم انعطاف‌پذیری دیواره سلولی پوست و کمبود کلسیم و سیلیسیم عوامل اصلی این مشکل هستند. این مقاله علمی کاربرد سیلیگارد و کلسیم بور را در حل این بحران بررسی می‌کند.',
+      contentSections: [
+        {
+          heading: 'علل فیزیولوژیک ترکیدگی پوست انار در ساوه و نی‌ریز',
+          text: 'در اواخر تابستان (مرداد و شهریور) با رشد سریع آریل‌ها (دانه‌های انار) و نوسانات رطوبت خاک، فشار هیدرواستاتیک درونی میوه افزایش می‌یابد. در صورتی که پوست خارجی انار به دلیل کمبود کلسیم و سیلیسیم نازک و خشک باشد، قدرت کشسانی لازم را نداشته و دچار شکاف عمیق می‌شود.'
+        },
+        {
+          heading: 'نقش سیلیسیم و کلسیم در ضخامت و انعطاف پوست انار',
+          text: '• کلسیم بور (Cal-Bor): کلسیم پکتات دیواره سلولی را مستحکم کرده و بور نفوذ کلسیم به پوست میوه را ۳ برابر تسریع می‌کند.\n• سیلیکات پتاسیم (سیلیگارد): عنصر سیلیس لایه‌ای الاستیک و بازتاب‌دهنده نور ماوراء بنفش روی پوست انار ایجاد کرده و آفتاب‌سوختگی و ترکیدگی را مهار می‌سازد.'
+        },
+        {
+          heading: 'دستورالعمل تغذیه تخصصی انار پیشگامان',
+          text: '۱. پس از ریزش گلبرگ‌ها (خرداد): محلول‌پاشی کلسیم بور با دوز ۲ در هزار جهت تشکیل پوست اولیه قوی.\n۲. اوج گرمای تابستان (تیر و مرداد): محلول‌پاشی سیلیگارد با دوز ۲ لیتر در هکتار جهت بازتاب نور و منع آفتاب‌سوختگی.\n۳. ۳۰ روز قبل از برداشت (شهریور): مصرف ریشه‌ای هیومی فارم به همراه محلول‌پاشی پتاسیم تایگر K High جهت سرخ شدن پررنگ دانه‌ها.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'فندقی شدن میوه (خرداد)',
+          crop: 'باغات انار ساوه و نی‌ریز',
+          rate: 'کلسیم بور ۲ لیتر در ۱۰۰۰ لیتر آب',
+          timing: 'محلول‌پاشی برگی'
+        },
+        {
+          stage: 'اوج تابستان و خطر آفتاب‌سوختگی (تیر و مرداد)',
+          crop: 'انار',
+          rate: 'سیلیگارد ۲ لیتر در ۱۰۰0 لیتر آب',
+          timing: 'محلول‌پاشی برگی پوششی'
+        },
+        {
+          stage: 'درشت شدن و رنگ‌گیری (شهریور)',
+          crop: 'انار',
+          rate: 'تایگر K High ۳ کیلوگرم در ۱۰۰۰ لیتر آب',
+          timing: 'محلول‌پاشی برگی'
+        }
+      ],
+      faqs: [
+        {
+          question: 'چگونه آبیاری در مهار ترکیدگی انار نقش دارد؟',
+          answer: 'آبیاری باید منظم و بدون دوره‌های تشنگی طولانی باشد؛ ترکیب آبیاری منظم با محلول‌پاشی کلسیم بور و سیلیگارد ترکیدگی را تا ۹۰٪ مهار می‌کند.'
+        },
+        {
+          question: 'آیا سیلیگارد بر رنگ پوست انار تاثیر منفی می‌گذارد؟',
+          answer: 'خیر، سیلیگارد شفافیت و درخشندگی پوست انار را افزایش داده و مانع از سیاه شدن پوست در برابر آفتاب سوزان می‌شود.'
+        }
+      ],
+      references: [
+        'Melgarejo, P., et al. (2004). "Inhibition of pomegranate fruit cracking by calcium and boron applications". Journal of Horticultural Science, 79(2), 185-189.',
+        'FAO (2019). "Pomegranate Quality Standards & Post-Harvest Guidelines". Rome.'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)', 'سیلیگارد (سیلیکات پتاسیم)', 'تایگر K High (کود ژل پتاس)', 'هیومی فارم (Humifarm)'],
+      relatedArticles: ['calcium-boron', 'heat-drought-stress', 'potassium-fertigation']
+    },
+    en: {
+      title: 'Pomegranate Fruit Cracking & Sunscald Control in Saveh & Neyriz via Cal-Bor & Siligard',
+      category: 'Subtropical Fruits & Pomegranate',
+      readTime: '10 min',
+      date: 'October 2024',
+      lastModified: '2026-10-24',
+      author: 'Subtropical Agronomy Division, Pishgaman Paydar Falat Nik',
+      targetKeyword: 'Saveh Pomegranate Fruit Cracking Management',
+      metaDescription: 'Agronomic protocol to prevent fruit cracking and sunscald in Saveh and Neyriz pomegranate orchards using Cal-Bor, Siligard potassium silicate, and Tiger K High.',
+      summary: 'Improving peel elasticity, preventing UV sunscald, and enhancing ruby aril pigmentation in export-grade Iranian pomegranates.',
+      abstract: 'Pomegranate orchards in Saveh and Neyriz lose up to 35% of yields to late-summer rind cracking and sunburn. Applications of bioavailable calcium-boron coupled with Siligard potassium silicate enhance skin tensile strength and reflect scorching UV rays.',
+      contentSections: [
+        {
+          heading: 'Peel Tensile Mechanics and Irrigation Dynamics',
+          text: 'Rapid aril expansion under high August temperatures exerts internal hydrostatic pressure. Calcium pectate cross-links preserve peel integrity.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'Fruit Set (June)',
+          crop: 'Pomegranate Orchards',
+          rate: 'Cal-Bor 2 L / 1000 L water',
+          timing: 'Canopy spray'
+        }
+      ],
+      faqs: [
+        {
+          question: 'How does potassium silicate prevent pomegranate sunburn?',
+          answer: 'Siligard deposits a micro-silica barrier over the pericarp, reflecting thermal radiation and keeping rind tissues flexible.'
+        }
+      ],
+      references: [
+        'Melgarejo, P., et al. (2004). "Inhibition of pomegranate fruit cracking".'
+      ],
+      relatedProducts: ['Cal-Bor', 'Siligard', 'Tiger K High', 'Humifarm'],
+      relatedArticles: ['calcium-boron', 'heat-drought-stress']
+    },
+    ar: {
+      title: 'التحكم في تشقق وثمار الرمان في ساوه وني ريز: دور الكالسيوم والسيليكون',
+      category: 'بساتين الرمان والفاكهة',
+      readTime: '١٠ دقائق',
+      date: 'أكتوبر ٢٠٢٤',
+      lastModified: '2026-10-24',
+      author: 'قسم أبحاث الفاكهة - شركة بيشغامان',
+      targetKeyword: 'منع تشقق ثمار الرمان في ساوه',
+      metaDescription: 'حل مشكلة تشقق قشرة الرمان وحروق الشمس في بساتين ساوه وني ريز عبر سماد كلسيم بور وسيليكارد لرفع جودة التصدير.',
+      summary: 'تحسين مرونة قشرة الرمان وزيادة احمرار الحبات وحمايتها من حرارة الصيف.',
+      abstract: 'تسبب ضربات الشمس ونقص الكالسيوم تشقق قشرة الرمان. يقدم هذا البحث برنامجاً للرش بمركبات الكالسيوم والسيليكون السيليكارد.',
+      contentSections: [
+        {
+          heading: 'أسباب تشقق قشرة الرمان',
+          text: 'تؤدي النموات السريعة لحبات الرمان الداخلية مع جفاف القشرة الخارجية إلى تشقق الثمار وفقدان قيمتها التسويقية.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'عقد الثمار',
+          crop: 'أشجار الرمان',
+          rate: 'کلسیم بور ۲ لتر لكل ۱۰۰۰ لتر ماء',
+          timing: 'رش ورقي'
+        }
+      ],
+      faqs: [
+        {
+          question: 'كيف يمنع السيليكون حروق الشمس في الرمان؟',
+          answer: 'يشكل سيليكارد طبقة عاكسة للأشعة فوق البنفسجية تحمي القشرة من الجفاف والاحتراق.'
+        }
+      ],
+      references: [
+        'Melgarejo, P. (2004). "Inhibition of pomegranate fruit cracking".'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)', 'سیلیگارد (سیلیکات پتاسیم)'],
+      relatedArticles: ['calcium-boron', 'heat-drought-stress']
+    },
+    ur: {
+      title: 'انار کے پھٹنے اور دھوپ سے جلنے کا سائنسی علاج',
+      category: 'انار کی کاشت',
+      readTime: '۱۰ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'پیشگامان ریسرچ ٹیم',
+      summary: 'انار کے چھلکے کو پھٹنے سے بچانے کے لیے کلسیم اور سلیکان کا استعمال۔',
+      abstract: 'انار کی بہترین پیداوار کے لیے سائنسی کودی پروگرام۔',
+      contentSections: [
+        {
+          heading: 'انار کے چھلکے کی حفاظت',
+          text: 'کلسیم بور کے استعمال سے چھلکا مضبوط اور لچکدار بنتا ہے۔'
+        }
+      ],
+      references: [
+        'Melgarejo, P. (2004).'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)']
+    }
+  },
+
+  // 13. Guilan Tea Gardens
+  {
+    id: 'reg-tea-nutrition-guilan',
+    slug: 'tea-nutrition-guilan-lahijan',
+    aliases: ['kood-chay-shomal', 'chay-lahijan-roudsar'],
+    imageUrl: imgTea,
+    region: {
+      provinceFa: 'گیلان و مازندران (لاهیجان، رودسر، املش، سیاه‌کل، رامسر)',
+      cropFa: 'چای سبز و سیاه (چین بهاره، تابستانه و پاییزه)',
+      provinceEn: 'Guilan & Mazandaran (Lahijan & Roudsar)',
+      cropEn: 'Tea Plantations',
+      provinceAr: 'محافظة غيلان (لاهيجان ورودسر)',
+      cropAr: 'مزارع الشاي'
+    },
+    googleTrendKeyword: {
+      fa: 'کود چای لاهیجان رودسر',
+      en: 'Guilan Tea Plantation Nutrition Lahijan',
+      ar: 'تسميد شجيرات الشاي في غيلان',
+      ur: 'چائے کے باغات کی دیکھ بھال'
+    },
+    fa: {
+      title: 'اصلاح اسیدیته خاک و تغذیه ارگانیک بوته‌های چای گیلان: افزایش چین‌دهی، شادابی برگ سبز و جذب آهن با ردفول و دوپینگ',
+      category: 'چای و کشت‌های هیدرومورف',
+      readTime: '۱۰ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '2026-10-24',
+      author: 'دپارتمان تحقیقات چای و گیاهان صنعتی پیشگامان',
+      targetKeyword: 'کود چای لاهیجان رودسر',
+      metaDescription: 'برنامه تغذیه ارگانیک و تخصصی باغات چای لاهیجان، املش و رودسر: افزایش وزن برگ سبز، شادابی جوانه شاه‌عباسی و رفع زردی با کلات آهن ردفول و دوپینگ.',
+      summary: 'ارتقای کیفیت چین بهاره و تابستانه چای گیلان، تنظیم اسیدیته خاک‌های باغات چای و افزایش عطر و طعم چای خشک با محرک‌های رشد پیشگامان.',
+      abstract: 'بوته‌های چای گیلان در لاهیجان و املش نیازمند خاک‌های اسیدی (pH بین ۴.۵ تا ۵.۵) و غنی از آهن و نیتروژن ارگانیک هستند. آهکی شدن موضعی و کاهش ماده آلی خاک سبب زردی برگ‌های جوانه چای و افت کیفیت چای خشک می‌شود. مصرف کلات آهن ردفول و محرک رشد دوپینگ شادابی و عطر برگ سبز چای را در تمام چین‌ها تضمین می‌نماید.',
+      contentSections: [
+        {
+          heading: 'نیازهای فیزیولوژیک بوته چای در اقلیم خزری',
+          text: 'بوته چای (Camellia sinensis) گیاهی اسیددوست است. برداشت مداوم غنچه و دو برگ جوان در چین‌های سه‌گانه بهاره، تابستانه و پاییزه، نیتروژن و آهن خاک را به شدت تخلیه می‌کند. کمبود آهن موجب زردی بین رگبرگی (Interveinal Chlorosis) در برگ‌های جوان تازه جوانه زده می‌شود.'
+        },
+        {
+          heading: 'تاثیر آمینواسیدهای دوپینگ و کلات آهن ردفول در چای',
+          text: '• دوپینگ (Doping): حاوی آمینواسیدهای آزاد چپ‌گرد L است که فتوسنتز جوانه شاه‌عباسی چای را ۳ برابر کرده و سرعت بازگشت بوته برای چین بعدی را افزایش می‌دهد.\n• کود آهن ردفول (Redful): آهن قابل جذب در تمامی pHهای خاک را فراهم کرده و رنگ سبز تیره و شاداب برگ چای را بازیابی می‌کند.'
+        },
+        {
+          heading: 'دستورالعمل مصرف کودی چای در گیلان',
+          text: '۱. پس از هرس زمستانه و قبل از چین بهاره (فروردین): مصرف ریشه‌ای هیومی فارم به همراه چالکود.\n۲. پس از چین اول (اردیبهشت و خرداد): محلول‌پاشی تلفیقی دوپینگ ۲ لیتر + ردفول ۵۰ گرم در ۱۰۰۰ لیتر آب جهت تحریک سریع چین دوم.\n۳. چین تابستانه (تیر و مرداد): محلول‌پاشی تاپ استار جهت افزایش ضخامت و شادابی برگ سبز.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'استارت رشد بهاره (فروردین)',
+          crop: 'باغات چای لاهیجان و املش',
+          rate: 'هیومی فارم ۱۰ لیتر در هکتار',
+          timing: 'آبیاری یا تزریق ریشه‌ای'
+        },
+        {
+          stage: 'پس از برداشت چین اول (خرداد)',
+          crop: 'چای',
+          rate: 'دوپینگ ۲ لیتر + ردفول ۱ کیلوگرم در هکتار',
+          timing: 'محلول‌پاشی برگی'
+        },
+        {
+          stage: 'آماده‌سازی برای چین تابستانه (تیر)',
+          crop: 'چای',
+          rate: 'تاپ استار ۲ لیتر در ۱۰۰۰ لیتر آب',
+          timing: 'محلول‌پاشی برگی'
+        }
+      ],
+      faqs: [
+        {
+          question: 'چرا نباید از کودهای کلره در باغات چای استفاده کرد؟',
+          answer: 'یون کلر به شدت کیفیت چای خشک را افت داده و طعم آن را گس و نامطبوع می‌کند؛ تمامی کودهای پیشگامان ۱۰۰٪ بدون کلر هستند.'
+        },
+        {
+          question: 'چگونه می‌توان تعداد چین‌های چای را افزایش داد؟',
+          answer: 'محلول‌پاشی آمینواسید دوپینگ پس از هر چین، بیداری جوانه‌های خفته را تسریع کرده و یک چین اضافه اقتصادی به باغدار می‌دهد.'
+        }
+      ],
+      references: [
+        'Mukul, R., et al. (2018). "Tea Bush Physiology and Soil Acidification Management". Journal of Tea Science, 38(2), 112-120.',
+        'FAO (2021). "Sustainable Tea Cultivation in Caspian Basin". Rome.'
+      ],
+      relatedProducts: ['دوپینگ (Doping)', 'ردفول (Redful)', 'تاپ استار (Top Star)', 'هیومی فارم (Humifarm)'],
+      relatedArticles: ['iron-eddha-chlorosis', 'heat-drought-stress', 'humic-fulvic-root-development']
+    },
+    en: {
+      title: 'Guilan Tea Plantation Nutrition: Flushing Frequency & Organic Iron Management',
+      category: 'Industrial Plantation & Tea Crops',
+      readTime: '10 min',
+      date: 'October 2024',
+      lastModified: '2026-10-24',
+      author: 'Plantation Crops Division, Pishgaman Paydar Falat Nik',
+      targetKeyword: 'Guilan Tea Plantation Nutrition Lahijan',
+      metaDescription: 'Optimize green tea leaf plucking flushes, restore canopy iron vigor, and elevate dried tea aroma in Guilan (Lahijan & Roudsar) with Redful iron chelate and Doping L-amino acids.',
+      summary: 'Accelerating bud plucking recovery, managing acid soil iron dynamics, and enhancing aromatic polyphenol synthesis in northern Iranian tea bushes.',
+      abstract: 'Tea bushes (Camellia sinensis) in Guilan demand acidic soils (pH 4.5-5.5) and dense bioavailable iron and free amino acids. Continuous harvesting of tender two-leaf buds depletes foliage reserves. Foliar Doping biostimulant combined with Redful iron chelate restores leaf chlorophyll density across spring and summer flushes.',
+      contentSections: [
+        {
+          heading: 'Camellia Sinensis Physiology under Caspian Microclimates',
+          text: 'Spring and summer plucking regimes harvest apical tender buds. Doping free amino acids reactivate dormant axillary buds rapidly.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'Post Spring Flush (June)',
+          crop: 'Tea Bushes',
+          rate: 'Doping 2 L + Redful 1 kg/ha',
+          timing: 'Foliar spray'
+        }
+      ],
+      faqs: [
+        {
+          question: 'Why avoid chloride fertilizers in tea plantations?',
+          answer: 'Chloride ions impair dried tea aroma, flavor infusion purity, and leaf firing quality; Pishgaman inputs are 100% chloride-free.'
+        }
+      ],
+      references: [
+        'Mukul, R., et al. (2018). "Tea Bush Physiology and Soil Acidification Management".'
+      ],
+      relatedProducts: ['Doping', 'Redful', 'Top Star', 'Humifarm'],
+      relatedArticles: ['iron-eddha-chlorosis', 'heat-drought-stress']
+    },
+    ar: {
+      title: 'تسميد شجيرات الشاي في غيلان: زيادة قطفات الشاي والحديد العضوي',
+      category: 'مزارع الشاي والمحاصيل',
+      readTime: '١٠ دقائق',
+      date: 'أكتوبر ٢٠٢٤',
+      lastModified: '2026-10-24',
+      author: 'قسم المحاصيل الاستوائية - شركة بيشغامان',
+      targetKeyword: 'تسميد شجيرات الشاي في غيلان',
+      metaDescription: 'برنامج زيادة محصول الشاي في لاهيجان ورودسر وإعادة شحن المجموع الخضري بالحديد والأحماض الأمينية عبر دوبينغ وردفول.',
+      summary: 'تحفيز نمو البراعم الزهرية للشاي وزيادة الجودة والنكهة العطرية للشاي الجاف.',
+      abstract: 'يحتاج الشاي إلى تربة حمضية وتغذية مستمرة بالحديد. يقدم هذا المقال برنامج التسميد بمركب دوبينغ وشيلات الحديد ردفول لزيادة عدد القطفات.',
+      contentSections: [
+        {
+          heading: 'احتياجات الشاي الغذائية',
+          text: 'يتسبب القطاف المستمر في استنزاف مخزون شجيرة الشاي، مما يستوجب الرش الورقي بالأحماض الأمينية والحديد.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'بعد القطفة الأولى',
+          crop: 'شجيرات الشاي',
+          rate: 'دوبينغ ٢ لتر + ردفول ١ كغ للهكتار',
+          timing: 'رش ورقي'
+        }
+      ],
+      faqs: [
+        {
+          question: 'كيف نزيد عدد قطفات الشاي في الموسم؟',
+          answer: 'بالرش بمركب دوبينغ بعد كل قطفة لتحفيز البراعم الجانبية على النمو السريع.'
+        }
+      ],
+      references: [
+        'Mukul, R. (2018). "Tea Bush Physiology".'
+      ],
+      relatedProducts: ['دوپینگ (Doping)', 'ردفول (Redful)'],
+      relatedArticles: ['iron-eddha-chlorosis', 'heat-drought-stress']
+    },
+    ur: {
+      title: 'چائے کے باغات کی دیکھ بھال اور پیداوار میں اضافہ',
+      category: 'چائے کی کاشت',
+      readTime: '۱۰ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'پیشگامان ریسرچ ٹیم',
+      summary: 'چائے کی پتیاں تیزی سے اگانے اور لوہے کی کمی دور کرنے کا سائنسی طریقہ۔',
+      abstract: 'چائے کے باغات کے لیے کودی پروگرام۔',
+      contentSections: [
+        {
+          heading: 'چائے کی فصل کی دیکھ بھال',
+          text: 'آئرن چیلیٹ اور امینو ایسڈ کے استعمال سے چائے کی پتیاں سبز اور خوشبودار بنتی ہیں۔'
+        }
+      ],
+      references: [
+        'Mukul, R. (2018).'
+      ],
+      relatedProducts: ['دوپینگ (Doping)', 'ردفول (Redful)']
+    }
+  },
+
+  // 14. Ardabil & Fereydan Potato Fields
+  {
+    id: 'reg-potato-tuber-ardabil',
+    slug: 'potato-tuber-bulking-ardabil-fereydan',
+    aliases: ['kood-sibzamini-ardabil', 'ghasht-sibzamini-fereydan'],
+    imageUrl: imgPotato,
+    region: {
+      provinceFa: 'اردبیل و اصفهان (دشت اردبیل، نیر، نمین، فریدن، سمیرم)',
+      cropFa: 'سیب‌زمینی (ارقام آگریا، سانته، جلی، فونتانه)',
+      provinceEn: 'Ardabil & Isfahan (Ardabil Plain & Fereydan)',
+      cropEn: 'Potato Fields',
+      provinceAr: 'محافظة أردبيل وأصفهان',
+      cropAr: 'حقول البطاطس'
+    },
+    googleTrendKeyword: {
+      fa: 'کود سیب زمینی اردبیل فریدن',
+      en: 'Ardabil Potato Tuber Bulking Nutrition',
+      ar: 'تسميد بطاطس أردبيل وزيادة الحجم',
+      ur: 'آلو کی فصل اور جڑوں کی نمو'
+    },
+    fa: {
+      title: 'تغذیه تخصصی مزارع سیب‌زمینی دشت اردبیل و فریدن: درشت‌شدن غده‌ها، مهار سفیدک داونی و ماندگاری انبارداری با تایگر K High و فوسفیت',
+      category: 'زراعت غده‌ای و سیب‌زمینی',
+      readTime: '۱۱ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '2026-10-24',
+      author: 'دپارتمان تحقیقات زراعت غده‌ای پیشگامان',
+      targetKeyword: 'کود سیب زمینی اردبیل فریدن',
+      metaDescription: 'برنامه علمی درشت شدن غده‌های سیب‌زمینی آگریا و جلی در اردبیل و فریدن: افزایش استحکام پوست، مهار بیماری بلایت و انبارداری طولانی با ژل پتاس تایگر K High و فوسفیت پتاسیم.',
+      summary: 'افزایش تناژ سیب‌زمینی، یکنواختی سایز غده‌ها، پوست‌بستن کامل جهت کاهش انبارسوزی و ایجاد ایمنی در برابر قارچ بلایت سیب‌زمینی با کودهای ژل و مایع پیشگامان.',
+      abstract: 'دشت اردبیل و منطقه فریدن اصفهان قطب‌های اصلی تولید سیب‌زمینی کشور هستند. غده‌بندی نامفهوم، ریز ماندن سیب‌زمینی‌ها، عارضه توخالی شدن (Hollow Heart) و حمله قارچ سفیدک دروغین (Late Blight) از چالش‌های اصلی کشاورزان است. مصرف فوسفیت پتاسیم سیستم دفاعی بوته را فعال کرده و ژل تایگر K High پمپاژ نشاسته به غده‌ها را تا دو برابر تسریع می‌نماید.',
+      contentSections: [
+        {
+          heading: 'مراحل بحرانی تغذیه سیب‌زمینی در اردبیل و فریدن',
+          text: '۱. فاز غده‌انگیزی (Tuber Initiation): ۳ تا ۴ هفته پس از سبز شدن، نیاز به فسفر کلاته و محرک ریشه جامپر جهت تشکیل تعداد حداکثری غده‌های یکنواخت.\n۲. فاز حجیم شدن غده (Tuber Bulking): مصرف پتاسیم بالای ژل تایگر K High بدون کلر که نشاسته را از بوته به غده‌ها منتقل کرده و سایز غده‌ها را به بالای ۱۵۰ گرم می‌رساند.\n۳. فاز رسيدن و پوست‌بستن (Skin Set): مصرف کلسیم بور جهت ضخیم شدن پوست سیب‌زمینی و مهار پوسیدگی انبارداری.'
+        },
+        {
+          heading: 'کنترل بیماری بلایت سیب‌زمینی با فوسفیت پتاسیم پیشگامان',
+          text: 'ترکیب فوسفیت پتاسیم با تحریک تولید فیتوآلکسین‌های درونی گیاه، دیواره قارچ‌های Phytophthora infestans را منهدم کرده و علاوه بر نقش قارچ‌کشی ارگانیک، پتاسیم و فسفر بالایی به غده‌ها می‌رساند.'
+        },
+        {
+          heading: 'برنامه کوددهی میدانی سیب‌زمینی',
+          text: '• غده‌انگیزی (تیرماه): مصرف جامپر به میزان ۱۰ کیلوگرم در هکتار همراه با آبیاری قطره‌ای نوار تیپ.\n• حجیم شدن غده (مرداد): محلول‌پاشی ژل تایگر K High با دوز ۴ کیلوگرم در هکتار در دو نوبت با فاصله ۱۵ روز.\n• پیشگیری از بلایت و افزایش ماندگاری (شهریور): محلول‌پاشی فوسفیت پتاسیم با دوز ۲ لیتر در هکتار.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'غده‌انگیزی و شروع غده‌دهی (تیر)',
+          crop: 'مزارع سیب‌زمینی اردبیل و فریدن',
+          rate: 'جامپر ۱۰ کیلوگرم در هکتار',
+          timing: 'همراه با آبیاری قطره‌ای'
+        },
+        {
+          stage: 'حجیم شدن غده (مرداد)',
+          crop: 'سیب‌زمینی',
+          rate: 'تایگر K High ۴ کیلوگرم در هکتار',
+          timing: 'محلول‌پاشی برگی'
+        },
+        {
+          stage: 'قبل از برداشت و انبارداری (شهریور)',
+          crop: 'سیب‌زمینی',
+          rate: 'فوسفیت پتاسیم ۲ لیتر در هکتار',
+          timing: 'محلول‌پاشی برگی'
+        }
+      ],
+      faqs: [
+        {
+          question: 'چگونه از عارضه توخالی شدن (Hollow Heart) سیب‌زمینی جلوگیری کنیم؟',
+          answer: 'مصرف متوازن کلسیم بور و پتاسیم تایگر K High در فاز حجیم شدن غده، تقسیم سلولی مرکز غده را منسجم کرده و مانع توخالی شدن می‌شود.'
+        },
+        {
+          question: 'آیا ژل تایگر K High مانع جوانه زدن سیب‌زمینی در انبار می‌شود؟',
+          answer: 'بله، پتاسیم بالا با مستحکم کردن پوست و تعادل رطوبت، دوره خواب غده را حفظ کرده و ماندگاری انبارداری را تا ۶ ماه بالا می‌برد.'
+        }
+      ],
+      references: [
+        'Westermann, D. T. (2005). "Nutrient management practices in potato production". American Journal of Potato Research, 82(1), 61-67.',
+        'FAO (2020). "Potato Crop Disease & Nutrient Protocols". Rome.'
+      ],
+      relatedProducts: ['تایگر K High (کود ژل پتاس)', 'فوسفیت پتاسیم (Potassium Phosphite)', 'جامپر (Jumper)', 'کلسیم بور (Cal-Bor)'],
+      relatedArticles: ['potassium-fertigation', 'calcium-boron', 'heat-drought-stress']
+    },
+    en: {
+      title: 'Ardabil & Fereydan Potato Nutrition: Tuber Bulking & Late Blight Immunity',
+      category: 'Tuber Agronomy & Potato Crops',
+      readTime: '11 min',
+      date: 'October 2024',
+      lastModified: '2026-10-24',
+      author: 'Tuber Crop Agronomy Group, Pishgaman Paydar Falat Nik',
+      targetKeyword: 'Ardabil Potato Tuber Bulking Nutrition',
+      metaDescription: 'Field guide to maximize Agria and Jelly potato tuber sizing, skin setting, and late blight protection in Ardabil and Fereydan using Tiger K High and Potassium Phosphite.',
+      summary: 'Accelerating starch translocation into tuber sinks, strengthening periderm skin set, and activating systemic acquired resistance against Phytophthora infestans.',
+      abstract: 'Ardabil plain accounts for over 20% of Iranian commercial potato production. Key losses stem from uneven tuber sizing, hollow heart disease, and late blight fungal outbreaks. Fertigating chloride-free Tiger K High potassium gel combined with foliar Potassium Phosphite activates endogenous phytoalexins while sizing tubers above 150 grams.',
+      contentSections: [
+        {
+          heading: 'Tuberization and Starch Translocation Kinetics',
+          text: 'Phloem sap starch loading requires high cellular potassium levels without toxic chloride ions.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'Tuber Bulking (August)',
+          crop: 'Potato Crops',
+          rate: 'Tiger K High 4 kg/ha',
+          timing: 'Foliar application'
+        }
+      ],
+      faqs: [
+        {
+          question: 'How to prevent hollow heart in large Agria potatoes?',
+          answer: 'Apply Cal-Bor coupled with chloride-free Tiger K High during peak bulking to synchronize internal cell division with volume growth.'
+        }
+      ],
+      references: [
+        'Westermann, D. T. (2005). "Nutrient management practices in potato production".'
+      ],
+      relatedProducts: ['Tiger K High', 'Potassium Phosphite', 'Jumper', 'Cal-Bor'],
+      relatedArticles: ['potassium-fertigation', 'calcium-boron']
+    },
+    ar: {
+      title: 'تسميد بطاطس أردبيل وفرايدان: زيادة حجم الدرنات والوقاية من المافات',
+      category: 'زراعة البطاطس والدرنات',
+      readTime: '١١ دقيقة',
+      date: 'أكتوبر ٢٠٢٤',
+      lastModified: '2026-10-24',
+      author: 'قسم زراعة الدرنات - شركة بيشغامان',
+      targetKeyword: 'تسميد بطاطس أردبيل وزيادة الحجم',
+      metaDescription: 'طريقة زيادة حجم درنات البطاطس في أردبيل وتقوية القشرة للتخزين الشتوي ومكافحة الندوة المتأخرة عبر تايكر جل وفوسفيت البوتاسيوم.',
+      summary: 'تحفيز انتقال النشا إلى الدرنات وزيادة صلابة القشرة ومنع التعفن أثناء التخزين.',
+      abstract: 'تعتبر أردبيل المركز الرئيسي لإنتاج البطاطس. يوضح هذا المقال برنامج التسميد بالبوتاسيوم الخالي من الكلور وفوسفيت البوتاسيوم للوقاية من اللفحة الجافة.',
+      contentSections: [
+        {
+          heading: 'مراحل تسميد البطاطس',
+          text: 'تحتاج البطاطس إلى الفوسفور في مرحلة تكوين الدرنات، ثم إلى البوتاسيوم عالي النقاوة لتكبير حجم الدرنة.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'مرحلة تحجيم الدرنات',
+          crop: 'محصول البطاطس',
+          rate: 'تايكر جل كيه هاي ٤ كغ للهكتار',
+          timing: 'رش ورقي'
+        }
+      ],
+      faqs: [
+        {
+          question: 'كيف نحمي البطاطس من مرض اللفحة (البلايت)؟',
+          answer: 'بالرش بمركب فوسفيت البوتاسيوم الذي يحفز مناعة النبات الذاتية ويمد الدرنات بالبوتاسيوم.'
+        }
+      ],
+      references: [
+        'Westermann, D. T. (2005). "Nutrient management in potato".'
+      ],
+      relatedProducts: ['تایگر K High (کود ژل پتاس)', 'فوسفیت پتاسیم (Potassium Phosphite)'],
+      relatedArticles: ['potassium-fertigation', 'calcium-boron']
+    },
+    ur: {
+      title: 'آلو کی فصل میں جڑوں کی مضبوطی اور سائز میں اضافہ',
+      category: 'آلو کی زراعت',
+      readTime: '۱۱ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'پیشگامان ریسرچ ٹیم',
+      summary: 'آلو کے سائز کو بڑا کرنے اور بیماریوں سے بچاؤ کے لیے پوٹاشیم کا سائنسی طریقہ۔',
+      abstract: 'آلو کی سائنسی کاشت اور دیکھ بھال۔',
+      contentSections: [
+        {
+          heading: 'آلو کی پیداوار میں اضافہ',
+          text: 'پوٹاشیم جل کے استعمال سے آلو کا سائز بڑا اور چھلکا مضبوط ہوتا ہے۔'
+        }
+      ],
+      references: [
+        'Westermann, D. T. (2005).'
+      ],
+      relatedProducts: ['تایگر K High (کود ژل پتاس)']
+    }
+  },
+
+  // 15. Talesh & Tonekabon Kiwifruit Orchards
+  {
+    id: 'reg-kiwifruit-sizing-talesh',
+    slug: 'kiwifruit-sizing-talesh-tonekabon',
+    aliases: ['kood-kiwi-talesh', 'kood-kiwi-tonekabon'],
+    imageUrl: imgKiwi,
+    region: {
+      provinceFa: 'گیلان و مازندران (تالش، آستارا، تنکابن، رامسر، عباس‌آباد)',
+      cropFa: 'کیوی (هایوارد صادراتی، طلایی)',
+      provinceEn: 'Guilan & Mazandaran (Talesh & Tonekabon)',
+      cropEn: 'Kiwifruit Orchards (Hayward Export Grade)',
+      provinceAr: 'محافظة غيلان ومازندران (تالش وتنكانبن)',
+      cropAr: 'بساتين الكيوي'
+    },
+    googleTrendKeyword: {
+      fa: 'کود کیوی تالش تنکابن',
+      en: 'Talesh Kiwifruit Sizing & Brix Nutrition',
+      ar: 'تسميد الكيوي في تالش وتنكانبن',
+      ur: 'کیوی کی کاشت اور نگہداشت'
+    },
+    fa: {
+      title: 'مدیریت سایزگیری و قند بریکس در باغات کیوی تالش و تنکابن: افزایش استحکام بافت، مهار نرمی و افزایش ماندگاری سردخانه‌ای',
+      category: 'میوه‌های گرمسیری و کیوی',
+      readTime: '۱۰ دقیقه',
+      date: 'مهر ۱۴۰۴',
+      lastModified: '2026-10-24',
+      author: 'دپارتمان باغبانی و کیوی شمال پیشگامان',
+      targetKeyword: 'کود کیوی تالش تنکابن',
+      metaDescription: 'راهنمای افزایش وزن کیوی هایوارد صادراتی تالش و تنکابن به بالای ۱۰۰ گرم، پیشگیری از عارضه نرمی میوه در سردخانه با کلسیم بور و تایگر K High پیشگامان.',
+      summary: 'روش‌های نوین سایزگیری کیوی، ارتقای قند بریکس بدون افت سفتی بافت، مهار عارضه نرمی زودرس و افزایش ماندگاری ۶ ماهه کیوی صادراتی شمال در سردخانه.',
+      abstract: 'باغات کیوی نوار ساحلی خزر از تالش تا تنکابن بزرگ‌ترین قطب تولید و صادرات کیوی هایوارد ایران به کشورهای روسیه و حوزه خلیج فارس هستند. نرم شدن زودرس میوه در سردخانه (Softening) و عدم رسیدن به وزن صادراتی بالای ۱۰ تکه (۱۰۰ گرم به بالا) دو چالش کلیدی باغداران است. مصرف تقسیط‌شده کلسیم بور و ژل پتاسیم تایگر K High تراکم دیواره سلولی را ارتقا داده و کیفیت میوه را تضمین می‌کند.',
+      contentSections: [
+        {
+          heading: 'فیزیولوژی رشد و تمایز سلولی میوه کیوی در شمال',
+          text: 'میوه کیوی دارای بیشترین سرعت تقسیم سلولی در ۸ هفته اول پس از گرده‌افشانی است. در صورتی که عنصر کلسیم در این مقطع وارد دیواره سلولی نشود، میوه در پاییز حین انبارداری دچار افت سریع سفتی (Firmness Loss) شده و ماده اتیلن در سردخانه آزاد می‌سازد.'
+        },
+        {
+          heading: 'برنامه کودی سایزگیری و کیفیت کیوی هایوارد',
+          text: '• مرحله پس از ریزش گلبرگ‌ها (خرداد): محلول‌پاشی کلسیم بور با دوز ۲ در هزار جهت استحکام دیواره‌های سلولی اولیه میوه.\n• مرحله رشد سریع حجمی (تیر و مرداد): محلول‌پاشی تاپ استار و دوپینگ جهت تامین اسیدهای آمینه و روی برای تحریک تقسیم سلولی.\n• ۴۵ روز قبل از برداشت (شهریور و مهر): مصرف ژل پتاسیم بالای تایگر K High با دوز ۳ تا ۴ کیلوگرم در ۱۰۰۰ لیتر آب جهت پمپاژ قند، افزایش وزن به بالای ۱۰۰ گرم و افزایش عیار بریکس صادراتی.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: '۳ تا ۴ هفته پس از تشکیل میوه (خرداد)',
+          crop: 'باغات کیوی تالش و تنکابن',
+          rate: 'کلسیم بور ۲ لیتر در ۱۰۰۰ لیتر آب',
+          timing: 'محلول‌پاشی برگی'
+        },
+        {
+          stage: 'رشد حجمی تابستانه (تیر و مرداد)',
+          crop: 'کیوی',
+          rate: 'تاپ استار ۲ لیتر + دوپینگ ۱.۵ لیتر در ۱۰۰۰',
+          timing: 'محلول‌پاشی برگی'
+        },
+        {
+          stage: 'درشت شدن و تجمع قند (شهریور و مهر)',
+          crop: 'کیوی',
+          rate: 'تایگر K High ۳ تا ۴ کیلوگرم در ۱۰۰۰',
+          timing: 'محلول‌پاشی برگی نوبت اول و دوم'
+        }
+      ],
+      faqs: [
+        {
+          question: 'چرا کیوی در سردخانه به سرعت نرم می‌شود؟',
+          answer: 'کمبود کلسیم در دیواره سلولی و مصرف زیاد نیتروژن در اواخر فصل باعث تجزیه سریع پکتین و انتشار گاز اتیلن در سردخانه می‌شود. کلسیم بور پیشگامان این عارضه را مهار می‌سازد.'
+        },
+        {
+          question: 'کدام کود باعث رسیدن وزن کیوی به بالای ۱۰ تکه (۱۰۰ گرم) می‌شود؟',
+          answer: 'ترکیب محلول‌پاشی کلسیم بور در خرداد و ژل پتاسیم تایگر K High در شهریور، وزن متوسط هر میوه را تا ۲۰ گرم ارتقا می‌دهد.'
+        }
+      ],
+      references: [
+        'Ferguson, A. R., & Ferguson, I. B. (1990). "Kiwifruit: Science and Management". Ray Richards Publisher.',
+        'FAO (2021). "Post-Harvest Handling & Nutrition of Kiwifruit". Rome.'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)', 'تایگر K High (کود ژل پتاس)', 'دوپینگ (Doping)', 'تاپ استار (Top Star)'],
+      relatedArticles: ['calcium-boron', 'potassium-fertigation', 'heat-drought-stress']
+    },
+    en: {
+      title: 'Talesh & Tonekabon Kiwifruit Nutrition: Sizing & Cold Storage Shelf-Life',
+      category: 'Subtropical Pomology & Kiwifruit',
+      readTime: '10 min',
+      date: 'October 2024',
+      lastModified: '2026-10-24',
+      author: 'Subtropical Kiwifruit R&D Group, Pishgaman Paydar Falat Nik',
+      targetKeyword: 'Talesh Kiwifruit Sizing & Brix Nutrition',
+      metaDescription: 'Agronomic guide to achieve > 100g fruit sizing and 6-month cold storage firmness in Caspian Hayward kiwifruit orchards using Cal-Bor and Tiger K High.',
+      summary: 'Preventing premature fruit softening in cold storage, elevating Brix sugars, and optimizing Hayward kiwifruit export quality in Northern Iran.',
+      abstract: 'Kiwifruit orchards along the Caspian coastline from Talesh to Tonekabon represent major export hubs to Eurasia. Premature fruit softening in cold storage compromises shipment value. Sequential fertigation of Cal-Bor during early cell division and chloride-free Tiger K High potassium gel during pre-harvest sizing secures skin firmness and Brix levels.',
+      contentSections: [
+        {
+          heading: 'Cell Division Dynamics and Pectin Calcium Binding',
+          text: 'Early calcium binding into cell wall middle lamellae determines post-harvest ethylene resistance.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'Early Fruit Sizing (June)',
+          crop: 'Kiwifruit Orchards',
+          rate: 'Cal-Bor 2 L / 1000 L water',
+          timing: 'Canopy spray'
+        }
+      ],
+      faqs: [
+        {
+          question: 'Why does kiwifruit soften prematurely during storage?',
+          answer: 'Calcium deficiency weakens cellular pectins; Cal-Bor applications fortify cell walls against enzymatic breakdown.'
+        }
+      ],
+      references: [
+        'Ferguson, A. R. (1990). "Kiwifruit: Science and Management".'
+      ],
+      relatedProducts: ['Cal-Bor', 'Tiger K High', 'Doping', 'Top Star'],
+      relatedArticles: ['calcium-boron', 'potassium-fertigation']
+    },
+    ar: {
+      title: 'تسميد الكيوي في تالش وتنكانبن: زيادة الحجم والصلابة للتخزين',
+      category: 'بساتين الكيوي والفاكهة',
+      readTime: '١٠ دقائق',
+      date: 'أكتوبر ٢٠٢٤',
+      lastModified: '2026-10-24',
+      author: 'قسم الفاكهة الاستوائية - شركة بيشغامان',
+      targetKeyword: 'تسميد الكيوي في تالش وتنكانبن',
+      metaDescription: 'برنامج زيادة وزن ثمار الكيوي إلى أكثر من ١٠٠ غرام ومنع تطرية الثمار في التبريد عبر كلسيم بور وتايكر جل.',
+      summary: 'رفع صلابة ثمار الكيوي وزيادة نسبة السكر وتحسين التخزين والتصدير.',
+      abstract: 'تعد بساتين الكيوي في تالش وتنكانبن المورد الرئيسي للتصدير. يوضح هذا المقال برنامج التسميد بالكالسيوم والبوتاسيوم لمنع لزوجة وتطرية الثمار.',
+      contentSections: [
+        {
+          heading: 'أهمية الكالسيوم في جدار خلايا الكيوي',
+          text: 'يحافظ الكالسيوم على صلابة قشرة وثمرة الكيوي ويمنع إفراز غاز الإيثيلين المسبب للتطرية في المستودعات.'
+        }
+      ],
+      dosageTable: [
+        {
+          stage: 'بعد عقد الثمار',
+          crop: 'أشجار الكيوي',
+          rate: 'کلسیم بور ۲ لتر لكل ۱۰۰۰ لتر ماء',
+          timing: 'رش ورقي'
+        }
+      ],
+      faqs: [
+        {
+          question: 'كيف نرفع وزن ثمرة الكيوي لتناسب التصدير؟',
+          answer: 'بالرش الورقي لسماد تايكر جل كيه هاي والكالسيوم في مرحلة التحجيم الصيفية.'
+        }
+      ],
+      references: [
+        'Ferguson, A. R. (1990). "Kiwifruit Science".'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)', 'تایگر K High (کود ژل پتاس)'],
+      relatedArticles: ['calcium-boron', 'potassium-fertigation']
+    },
+    ur: {
+      title: 'کیوی کی کاشت، سائز اور کولڈ اسٹوریج کی سائنس',
+      category: 'کیوی کی کاشت',
+      readTime: '۱۰ منٹ',
+      date: 'اکتوبر ۲۰۲۴',
+      author: 'پیشگامان ریسرچ ٹیم',
+      summary: 'کیوی کے سائز کو بڑا کرنے اور کولڈ اسٹوریج میں سڑنے سے بچانے کا سائنسی طریقہ۔',
+      abstract: 'کیوی کی کاشت اور سائنسی نگہداشت۔',
+      contentSections: [
+        {
+          heading: 'کیوی کی فصل کی حفاظت',
+          text: 'کلسیم بور کے استعمال سے کیوی کی پائیداری میں اضافہ ہوتا ہے۔'
+        }
+      ],
+      references: [
+        'Ferguson, A. R. (1990).'
+      ],
+      relatedProducts: ['کلسیم بور (Cal-Bor)']
+    }
   }
 ];
+
