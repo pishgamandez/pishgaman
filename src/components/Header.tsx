@@ -120,6 +120,10 @@ export const Header: React.FC<HeaderProps> = ({
           className="flex items-center gap-3 cursor-pointer group select-none"
         >
           <PishgamanLogo variant="full" size="md" />
+          <div className="hidden sm:flex flex-col items-start">
+            <span className="text-[11px] font-black text-stone-900 tracking-tight leading-none">پیشگامان</span>
+            <span className="text-[8px] font-bold text-emerald-700 tracking-widest leading-none mt-0.5">پایدار فلات نیک</span>
+          </div>
         </div>
 
         {/* Desktop Navigation Links */}

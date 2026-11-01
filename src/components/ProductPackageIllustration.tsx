@@ -122,7 +122,7 @@ export const ProductPackageIllustration: React.FC<Props> = ({ product, className
 
           {/* Bottom Regulatory Stamp */}
           <div className="pt-1 border-t border-white/15 flex items-center justify-between text-[7px] text-white/60">
-            <span>دکتر راستین رستمی</span>
+            <span>دکتر راستین رستمی نیا</span>
             <span className="font-mono">Agri-Tech</span>
           </div>
         </div>

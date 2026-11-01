@@ -11,7 +11,7 @@ export const FloatingContactButtons: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300 border-2 border-white cursor-pointer group"
-        title="ارسال پیام در واتساپ به دکتر راستین رستمی"
+        title="ارسال پیام در واتساپ به دکتر راستین رستمی نیا"
       >
         <MessageCircle className="w-6 h-6" />
         <span className="absolute left-14 bg-stone-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">

@@ -59,7 +59,7 @@ export const ConsultationForm: React.FC<Props> = ({ prefilledProduct, onSubmitte
 
   const handleWhatsAppDirect = () => {
     const text = encodeURIComponent(
-      `${language === 'en' ? 'Hello Dr. Rostami, I am ' : language === 'ar' ? 'مرحباً د. رستمي، أنا ' : 'سلام وقت بخیر، جناب دکتر رستمی. من '}${formData.name || (language === 'en' ? 'a grower' : 'کشاورز')}${language === 'en' ? ', crop: ' : ' هستم برای محصول '}${formData.cropType}. ${formData.problem}`
+      `${language === 'en' ? 'Hello Dr. Rostami Nia, I am ' : language === 'ar' ? 'مرحباً د. رستمي نيا، أنا ' : 'سلام وقت بخیر، جناب دکتر رستمی نیا. من '}${formData.name || (language === 'en' ? 'a grower' : 'کشاورز')}${language === 'en' ? ', crop: ' : ' هستم برای محصول '}${formData.cropType}. ${formData.problem}`
     );
     window.open(`https://wa.me/989128247415?text=${text}`, '_blank');
   };

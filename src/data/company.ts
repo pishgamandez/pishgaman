@@ -3,7 +3,7 @@ export const companyInfo = {
   brand: 'پرواز نهاده',
   brandEn: 'Parvaz Nahadeh',
   nameEn: 'Pishgaman Paydar Falat Nik',
-  manager: 'دکتر راستین رستمی',
+  manager: 'دکتر راستین رستمی نیا',
   managerTitle: 'مدیریت و مشاور ارشد تغذیه گیاهی',
   phone: '09128247415',
   phoneFormatted: '09128247415',

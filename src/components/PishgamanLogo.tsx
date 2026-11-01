@@ -1,4 +1,5 @@
 import React from 'react';
+import logoJpg from '../assets/logo.jpg';
 
 interface Props {
   className?: string;
@@ -22,9 +23,12 @@ export const PishgamanLogo: React.FC<Props> = ({
     return (
       <div className={`inline-flex items-center bg-white px-3.5 py-2 rounded-2xl shadow-xl border border-stone-200 select-none ${className}`}>
         <img
-          src="/assets/aistudio/IMG_20261024_160701_73a53339.jpg"
-          alt="Pishgaman Logo"
+          src={logoJpg}
+          alt="لوگوی رسمی شرکت پیشگامان پایدار فلات نیک (برند پرواز نهاده)"
           className={`${heightClass} w-auto object-contain`}
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = './logo.jpg';
+          }}
         />
       </div>
     );
@@ -33,9 +37,12 @@ export const PishgamanLogo: React.FC<Props> = ({
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
       <img
-        src="/assets/aistudio/IMG_20261024_160701_73a53339.jpg"
-        alt="Pishgaman Logo"
+        src={logoJpg}
+        alt="لوگوی رسمی شرکت پیشگامان پایدار فلات نیک (برند پرواز نهاده)"
         className={`${heightClass} w-auto object-contain transition-transform duration-300 hover:scale-105`}
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = './logo.jpg';
+        }}
       />
     </div>
   );
