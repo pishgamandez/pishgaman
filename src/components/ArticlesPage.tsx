@@ -90,10 +90,7 @@ export const ArticlesPage: React.FC<Props> = ({ onBackToHome, onSelectArticle })
                   <span>Google Trends + مقالات محلی استان‌ها</span>
                 </div>
 
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>صفحات مستقل و قابل ایندکس</span>
-                </div>
+
               </div>
 
               <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
