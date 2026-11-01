@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({
                 className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-800 hover:bg-stone-700 text-white text-[11px] font-bold transition-all border border-stone-700 cursor-pointer"
                 title={t.languageSelect}
               >
-                <Globe className="w-3.5 h-3.5 text-emerald-400" />
+                <PishgamanLogo variant="icon" size="sm" className="h-4 w-4" />
                 <span>{currentLangObj.flag} {currentLangObj.label}</span>
               </button>
 
@@ -251,7 +251,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Language Switcher in Mobile Drawer */}
             <div className="pb-3 border-b border-stone-100 flex items-center justify-between">
               <span className="text-xs text-stone-500 flex items-center gap-1.5">
-                <Globe className="w-4 h-4 text-emerald-600" />
+                <PishgamanLogo variant="icon" size="sm" className="h-4 w-4" />
                 <span>{t.languageSelect}:</span>
               </span>
               <div className="flex items-center gap-1.5">
