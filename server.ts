@@ -1,4 +1,5 @@
 import express from 'express';
+import helmet from 'helmet';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
@@ -16,8 +17,21 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(helmet());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+
+// Auth middleware for sensitive routes
+const authMiddleware = (req: any, res: any, next: any) => {
+  const password = req.headers['x-admin-password'];
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+  
+  if (ADMIN_PASSWORD && password === ADMIN_PASSWORD) {
+    next();
+  } else {
+    res.status(403).json({ error: 'Unauthorized' });
+  }
+};
 
 // Ensure upload directory exists
 const uploadsDir = path.resolve(__dirname, 'public', 'uploads');
@@ -259,7 +273,7 @@ app.get('/api/products', (req, res) => {
 });
 
 // Products API: Save products list permanently (writes to both JSON and TypeScript source files, commits to Git, and syncs to GitHub)
-app.post('/api/products', (req, res) => {
+app.post('/api/products', authMiddleware, (req, res) => {
   try {
     const products = req.body;
     if (!Array.isArray(products)) {
@@ -293,7 +307,7 @@ app.post('/api/products', (req, res) => {
 });
 
 // Predefined Slot Image Upload API: saves user's raw file to predetermined product slot
-app.post('/api/upload', (req, res) => {
+app.post('/api/upload', authMiddleware, (req, res) => {
   try {
     const { data, filename, productId } = req.body;
     if (!data || typeof data !== 'string') {
@@ -392,7 +406,7 @@ app.get('/api/github/status', (req, res) => {
   });
 });
 
-app.post('/api/github/config', (req, res) => {
+app.post('/api/github/config', authMiddleware, (req, res) => {
   try {
     const { token, repo, branch, autoPush } = req.body;
     const current = getGithubConfig();
@@ -455,7 +469,7 @@ app.post('/api/github/test', async (req, res) => {
   }
 });
 
-app.post('/api/github/push', (req, res) => {
+app.post('/api/github/push', authMiddleware, (req, res) => {
   const result = syncGitPush();
   if (result.success) {
     return res.json(result);

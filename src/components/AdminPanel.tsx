@@ -57,6 +57,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   const [previewModalUrl, setPreviewModalUrl] = useState<string | null>(null);
   const [saveToast, setSaveToast] = useState<string | null>(null);
   const [inquiries, setInquiries] = useState<ConsultationInquiry[]>([]);
+  const [plainPassword, setPlainPassword] = useState('');
 
   // Change password states
   const [newPassword, setNewPassword] = useState('');
@@ -143,6 +144,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       if (inputHash === MASTER_PASSWORD_HASH || (customHash && inputHash === customHash)) {
         setIsAuthenticated(true);
         setAuthError(false);
+        setPlainPassword(passwordInput);
         setPasswordInput('');
       } else {
         setAuthError(true);
@@ -238,7 +240,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     try {
       fetch('/api/products', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-admin-password': plainPassword },
         body: JSON.stringify(updatedList)
       }).catch(() => {});
     } catch {}
@@ -268,7 +270,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       try {
         fetch('/api/products', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'x-admin-password': plainPassword },
           body: JSON.stringify(updated)
         }).catch(() => {});
       } catch {}
@@ -474,7 +476,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
         try {
           fetch('/api/upload', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'x-admin-password': plainPassword },
             body: JSON.stringify({
               data: finalDataUrl,
               filename: file.name,
@@ -483,7 +485,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
           }).catch(() => {});
           fetch('/api/products', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'x-admin-password': plainPassword },
             body: JSON.stringify(updatedList)
           }).catch(() => {});
         } catch {}
