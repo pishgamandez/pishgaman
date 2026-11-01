@@ -16,6 +16,30 @@ function ensureDir(dirPath: string) {
   }
 }
 
+function toGregorianIsoDate(rawDate?: string): string {
+  if (!rawDate) return '2026-10-11';
+  const str = rawDate
+    .replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d).toString())
+    .replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d).toString())
+    .trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(str)) {
+    return str;
+  }
+  const parts = str.split(/[\/\-]/);
+  if (parts.length === 3) {
+    const y = parseInt(parts[0], 10);
+    const m = parseInt(parts[1], 10);
+    const d = parseInt(parts[2], 10);
+    if (y >= 1400 && y <= 1410) {
+      const gregYear = y + 621;
+      const mm = String(m).padStart(2, '0');
+      const dd = String(d).padStart(2, '0');
+      return `${gregYear}-${mm}-${dd}`;
+    }
+  }
+  return '2026-10-11';
+}
+
 async function loadArticles(): Promise<any[]> {
   const result = await esbuild.build({
     entryPoints: [path.resolve(rootDir, 'src/data/articles.ts')],
@@ -145,7 +169,7 @@ function generateSitemap(articles: any[]) {
 
   // Add all 20 individual articles
   articles.forEach(art => {
-    const lastMod = art.fa.lastModified || '2026-10-11';
+    const lastMod = toGregorianIsoDate(art.fa.lastModified);
     const faUrl = `${baseUrl}/articles/${art.slug}/`;
     const enUrl = `${baseUrl}/en/articles/${art.slug}/`;
     const arUrl = `${baseUrl}/ar/articles/${art.slug}/`;
@@ -233,6 +257,10 @@ function buildArticleHtml(art: any, lang: 'fa' | 'en' | 'ar') {
 
   const metaDesc = (content.metaDescription || content.summary || content.abstract || '').replace(/"/g, '&quot;');
   const pageTitle = `${content.title} | پیشگامان پایدار فلات نیک`;
+  const rawLastMod = content.lastModified || art.fa?.lastModified || '2026-10-11';
+  const isoLastMod = toGregorianIsoDate(rawLastMod);
+  const authorName = content.author || 'دپارتمان تحقیقات و توسعه علمی پیشگامان';
+  const isPersonAuthor = /دکتر|مهندس|دکتور|استاد|نژاد|رستمی|پژوهشگر|Dr\.|Eng\./i.test(authorName);
 
   const schemas: any[] = [
     {
@@ -242,10 +270,10 @@ function buildArticleHtml(art: any, lang: 'fa' | 'en' | 'ar') {
       'description': metaDesc,
       'image': [`${baseUrl}/logo.png`],
       'datePublished': '2024-10-01T08:00:00+03:30',
-      'dateModified': `${content.lastModified || '2026-10-11'}T10:00:00+03:30`,
+      'dateModified': `${isoLastMod}T10:00:00+03:30`,
       'author': {
-        '@type': 'Organization',
-        'name': content.author || 'دپارتمان تحقیقات و توسعه علمی پیشگامان',
+        '@type': isPersonAuthor ? 'Person' : 'Organization',
+        'name': authorName,
         'url': `${baseUrl}/`
       },
       'publisher': {
