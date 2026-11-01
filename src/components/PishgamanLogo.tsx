@@ -32,7 +32,7 @@ export const PishgamanLogo: React.FC<Props> = ({
     <div className={`inline-flex items-center gap-2.5 sm:gap-3 select-none ${className}`}>
       {/* 1. Official Logo Image */}
       <img
-        src="/public/assets/aistudio/IMG_20261024_160701_73a53339.jpg"
+        src="/assets/aistudio/IMG_20261024_160701_73a53339.jpg"
         alt="Pishgaman Logo"
         width={dim * 2}
         height={dim * 2}
